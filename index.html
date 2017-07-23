@@ -21,7 +21,7 @@
     <nav class="navbar navbar-inverse navbar-fixed-top" id="Nav1">
         <div class="container" id="FullTNav">
             <div class="navbar-header" id="LOGOBIT">
-                <img src="Stuff/Home.png" class="navbar-brand" id="NBB1" href="#">
+                <img src="Stuff/SquirrelLogoWhite.png" class="navbar-brand" id="NBB1" href="#">
                 <a class="navbar-brand" id="NBB2" href="#">WordsWords</a>
             </div>
             <div class="PTit">
@@ -34,7 +34,7 @@
 
     <!--LOWER NAVBAR-->
     <nav class="navbar navbar-inverse navbar-fixed-top" id="Nav2">
-        <div class="container">
+        <div class="container" id="Nav2Full">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
 				<span class="sr-only">Toggle navigation</span>
@@ -44,18 +44,21 @@
 			</button>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Articles I've Written</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Things I've Made<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Design</a></li>
-                            <li><a href="#">Development</a></li>
-                            <li><a href="#">Consulting</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
+                <div class="col-xs-offset-5 col-xs-2 text-center" id=Nav2Opt>
+                    <ul class="nav navbar-nav">
+                        <li><a href="#" id="NL">Articles I've Written</a></li>
+                        <li class="dropdown">
+                            <a href="#" id="NL" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Things I've Made<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Design</a></li>
+                                <li><a href="#">Development</a></li>
+                                <li><a href="#">Consulting</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#" id="NL">Me and My Words</a></li>
+                        <li><a href="#" id="NL">Get In Touch</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </nav>
