@@ -1,0 +1,43 @@
+//TOP NAVBAR
+#Nav1 {
+    height: 1%;
+    min-height: 40px;
+}
+
+#Nav2 {
+    margin-top: 40px;
+    background-color: aliceblue;
+    border: none;
+}
+
+#NBB2 {
+    margin-left: -20px;
+    margin-top: -4px;
+    color: white;
+    float: left;
+    position: absolute;
+}
+
+#NBB1 {
+    padding: 10px 14px;
+    margin-left: -0%;
+    margin-top: -04px;
+    cursor: pointer;
+    cursor: hand;
+    float: left;
+}
+
+#FullTNav {
+    width: 100%;
+}
+
+#PageTitle {
+    margin-top: -50px;
+    color: gainsboro;
+}
+
+.PTitle {
+    width: 100%;
+    margin-left: 50%;
+    margin-right: 50%
+}
