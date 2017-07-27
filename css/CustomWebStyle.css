@@ -65,6 +65,9 @@
     background-color: #BFE1FF;
 }
     
+
+
+
 .panel-parent {
   padding-top: 140px; 
   text-align: center;
@@ -72,6 +75,33 @@
 
 #pane {
   padding: 50px;
-  max-width: 600px;
+  height: auto;
+  max-width: 75%;
   display: inline-block;
   }
+
+#sidebar {
+  background-color:#eee;
+  height:100%;
+  position:fixed;
+  right:0;
+}
+
+#sidebarl {
+  background-color:#eee;
+  height:100%;
+  position:fixed;
+  left:0;
+}
+
+.boxhead {
+  height: 180px;;
+  width: 100%;
+}
+
+#heady {
+  background-color: aliceblue;
+  margin-top: -0.1px;
+  padding-top: -8px;
+  padding-bottom: -5px;
+}
