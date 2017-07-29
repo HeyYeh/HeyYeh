@@ -11,6 +11,7 @@
   <link href="../css/CustomWebStyle.css" rel="stylesheet">
   <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
   
+  
   <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville|Libre+Franklin" rel="stylesheet">
 
   <!--[if lt IE 9]>
@@ -80,50 +81,51 @@
       <!-- Jumbotron-->
       <div class="jumbotron ">
         <h1 class="display-3">Welcome to my articles!</h1>
-        <p class="lead">This is a collection of articles that I have written on a variety of topics! Some are very long and science-y, some are very short - I tend to write about user psychology, videogames, etymology, and occasional craft stuff more than anything, but feel free to explore using the navigation below!</p>
+        <p class="lead">This is a collection of articles that I have written on a variety of topics. Some are very long and science-y, some are very short - I tend to write about user psychology, videogames, etymology, and occasional craft stuff more than anything, but feel free to explore using the navigation below!</p>
       </div>
         
         <!--Articles Nav-->
         <div>I want to read about...</div>
         <div class="container navvy-listy">
         <ul class="list-group">
-            <li class="navvy-itemy" id="vgam"><img src=../Stuff/VGIcon.svg class="icon">Videogames</li>
-            <li class="navvy-itemy"><img src=../Stuff/UXIcon.svg class="icon">UX</li>
-            <li class="navvy-itemy"><img src=../Stuff/ETIcon.svg class="icon">Etymology</li>
-            <li class="navvy-itemy"><img src=../Stuff/RMIcon.svg class="icon">Research Methods</li>
-            <li class="navvy-itemy"><img src=../Stuff/TUIcon.svg class="icon">Tutorials</li>
-            <li class="navvy-itemy"><img src=../Stuff/CRIcon.svg class="icon">Craft</li>
+            <li class="navvy-itemy" id="VGamesCat" tabindex="1"><img src=../Stuff/VGIcon.svg class="icon">Videogames</li>
+            <li class="navvy-itemy" id="UXCat" tabindex="1"><img src=../Stuff/UXIcon.svg class="icon">UX</li>
+            <li class="navvy-itemy" id="RMCat" tabindex="1"><img src=../Stuff/RMIcon.svg class="icon">Research Methods</li>
+            <li class="navvy-itemy" id="TutCat" tabindex="1"><img src=../Stuff/TUIcon.svg class="icon">Tutorials</li>
+            <li class="navvy-itemy" id="EtCat" tabindex="1"><img src=../Stuff/ETIcon.svg class="icon">Etymology</li>
+            <li class="navvy-itemy" id="CrCat" tabindex="1"><img src=../Stuff/CRIcon.svg class="icon">Craft</li>
         </ul>
         </div>
 
-      <div class="container col-sm-6" id="pane">
+        <!--Articles/Items-->
+      <div class="container col-sm-6 VGItem" id="pane">
         <div class="panel panel-default">
-          <img src="https://www.w3schools.com/css/trolltunga.jpg" class="boxhead">
-          <h4 class="panel-body" id="heady">Look at this hot damn river! Oh my God! There's even a person there!</h4>
+          <img src="https://www.w3schools.com/css/trolltunga.jpg" class="boxhead ">
+          <h4 class="panel-body" id="heady">Imagine this article is about videogames or something...</h4>
           <p> So there is totally a river right there, and there's even a yoga person just kind of hanging out in front of it on a rock; can you believe that?!</p>
         </div>
       </div>
 
-      <div class="container col-sm-6" id="pane">
+      <div class="container col-sm-6 VGUXItem" id="pane">
         <div class="panel panel-default">
-          <img src="https://www.w3schools.com/css/trolltunga.jpg" class="boxhead">
-          <h4 class="panel-body" id="heady">Look at this hot damn river! Oh my God! There's even a person there!</h4>
+          <img src="https://www.w3schools.com/css/trolltunga.jpg" class="boxhead ">
+          <h4 class="panel-body" id="heady">This article is totally about the UX of games; that's right, two categories!</h4>
           <p> So there is totally a river right there, and there's even a yoga person just kind of hanging out in front of it on a rock; can you believe that?!</p>
         </div>
       </div>
 
-      <div class="container col-sm-6" id="pane">
+      <div class="container col-sm-6 TutItem" id="pane">
         <div class="panel panel-default">
           <img src="https://www.w3schools.com/css/trolltunga.jpg" class="boxhead">
-          <h4 class="panel-body" id="heady">Look at this hot damn river! Oh my God! There's even a person there!</h4>
+          <h4 class="panel-body" id="heady">Here we have a tutorial; isn't that nice?</h4>
           <p> So there is totally a river right there, and there's even a yoga person just kind of hanging out in front of it on a rock; can you believe that?!</p>
         </div>
       </div>
 
-      <div class="container col-sm-6" id="pane">
+      <div class="container col-sm-6 EtItem" id="pane">
         <div class="panel panel-default">
-          <img src="https://www.w3schools.com/css/trolltunga.jpg" class="boxhead">
-          <h4 class="panel-body" id="heady">Look at this hot damn river! Oh my God! There's even a person there!</h4>
+          <img src="https://www.w3schools.com/css/trolltunga.jpg" class="boxhead ">
+          <h4 class="panel-body" id="heady">This one is about the etymology of the word 'toes' - crazy interesting stuff.</h4>
           <p> So there is totally a river right there, and there's even a yoga person just kind of hanging out in front of it on a rock; can you believe that?!</p>
         </div>
       </div>
@@ -134,7 +136,8 @@
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/CustomJS.js"></script>
 
 </body>
 
