@@ -619,3 +619,14 @@ $(document).ready(function () {
     })
 
 })
+
+
+jQuery(function($) {
+    $('#img').mouseover(function() {
+        var dWidth = $(window).width() - 700, // 100 = image width
+            dHeight = $(window).height() - 500, // 100 = image height
+            nextX = Math.floor(Math.random() * dWidth),
+            nextY = Math.floor(Math.random() * dHeight);
+        $(this).animate({ left: nextX + 'px', top: nextY + 'px' });
+    });
+});
