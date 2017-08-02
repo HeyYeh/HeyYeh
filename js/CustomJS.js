@@ -625,8 +625,8 @@ jQuery(function($) {
     $('#img').mouseover(function() {
         var dWidth = -$(document).width() / 2, 
             dHeight = $(window).height() - 100, 
-            nextX = Math.floor(Math.random() * dWidth),
-            nextY = Math.floor(Math.random() * dHeight);
+            nextX = Math.floor(Math.random() * dWidth + 100),
+            nextY = Math.floor(Math.random() * dHeight + 100);
         $(this).animate({ left: nextX + 'px', top: nextY + 'px' });
     });
 });

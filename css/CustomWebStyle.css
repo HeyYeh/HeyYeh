@@ -137,14 +137,14 @@ p {
 }
 
 #sidebar {
-    background-color: #eee;
+    background-color: white;
     height: 100%;
     position: fixed;
     right: 0;
 }
 
 #sidebarl {
-    background-color: #eee;
+    background-color: white;
     height: 100%;
     position: fixed;
     left: 0;
@@ -282,6 +282,5 @@ input[type=text]:focus {
 }
 
 .submit {
-  
+    border: 1px solid gray;
 }
-
