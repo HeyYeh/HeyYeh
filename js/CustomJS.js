@@ -623,7 +623,7 @@ $(document).ready(function () {
 //About me game - math needs solving
 jQuery(function($) {
     $('#img').mouseover(function() {
-        var dWidth = $(document).width() / 8, 
+        var dWidth = -$(document).width() / 2, 
             dHeight = $(window).height() - 100, 
             nextX = Math.floor(Math.random() * dWidth),
             nextY = Math.floor(Math.random() * dHeight);
