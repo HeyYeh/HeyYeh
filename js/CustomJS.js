@@ -620,13 +620,54 @@ $(document).ready(function () {
 
 })
 
-
+//About me game - math needs solving
 jQuery(function($) {
     $('#img').mouseover(function() {
-        var dWidth = $(window).width() - 700, // 100 = image width
-            dHeight = $(window).height() - 500, // 100 = image height
+        var dWidth = $(document).width() / 8, 
+            dHeight = $(window).height() - 100, 
             nextX = Math.floor(Math.random() * dWidth),
             nextY = Math.floor(Math.random() * dHeight);
         $(this).animate({ left: nextX + 'px', top: nextY + 'px' });
     });
+});
+
+
+var catches = 0;
+
+$("#img").click(function(){
+  catches = catches + 1;
+  $(".score").html("Catches: " + String(catches));
+})
+
+var FormSpeed = 2000;
+
+jQuery(function($) {
+  $(document).ready(function() {
+    $("#email").animate({ width: "30%" }, FormSpeed, function() {
+      $("#email").attr("placeholder", "Your email...");
+    });
+
+    $(document).ready(function() {
+      $("#name").animate({ width: "30%" }, FormSpeed, function() {
+        $("#name").attr("placeholder", "Your name...");
+      });
+    });
+    
+    $(document).ready(function() {
+      $("#subject").animate({ width: "60%" }, FormSpeed, function() {
+        $("#subject").attr("placeholder", "What is your message about?");
+      });
+    });
+    
+    $(document).ready(function() {
+      $("#message").animate({ width: "60%" }, FormSpeed, function() {
+        $("#message").attr("placeholder", "What would you like to say?");
+      });
+      $("#message").click(function() {
+        $(this).animate({height: "200px"});
+        $(this).css("text-align", "left")
+      });
+    });
+    
+  });
 });
