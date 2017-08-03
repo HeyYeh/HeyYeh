@@ -284,3 +284,25 @@ input[type=text]:focus {
 .submit {
     border: 1px solid gray;
 }
+
+/*Floating balls*/
+#float {
+  height: 100px;
+  width: 100px;
+  background-color: rgba(200, 100, 200, 0.4);
+  border-radius: 50%;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 25px;
+}
+#floatC {
+  height: 150px;
+  width: 150px;
+  background-color: ;
+  border-radius: 50%;
+  position: relative;
+  text-align: center;
+  margin-left: 500px;
+  margin-top: 300px;
+}
