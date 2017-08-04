@@ -116,6 +116,7 @@ p {
     max-width: 75%;
     display: inline-block;
     border-radius: 5%;
+    margin-bottom: -40px;
 }
 
 #AMpane {
@@ -172,8 +173,8 @@ p {
     z-index: 1;
     position: relative;
     padding-top: 30px;
-    margin-top: -60px;
-    margin-bottom: -30px;
+    margin-top: -70px;
+    margin-bottom: -20px;
 }
 
 #JumTest {
@@ -222,17 +223,13 @@ p {
     margin-top: -3px;
 }
 
-
+/*ball chace*/
 #img {
-  background-color: red;
-  width: 100px;
-  height: 100px;
-  border-radius: 100%;
-  display: block;
-  margin-left: 1000px;
-  margin-top: -20px;
-    z-index: 2;
-    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    margin-left: 1000px;
+    z-index: 100;
     cursor: pointer;
     position: absolute;
 }
@@ -240,8 +237,17 @@ p {
 .score {
     position: absolute;
     margin-left: -130px;
-    margin-top: -50px;
+    z-index: -2;
 }
+
+.attempts {
+    padding-top: 21px;
+}
+
+.percent {
+    padding-top: 42px;
+}
+
 
 input {
   width: 10px;

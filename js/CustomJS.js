@@ -640,7 +640,7 @@ var catches = 0;
 $("#img").click(function () {
     catches = catches + 1;
     $(".score").html("Catches: " + String(catches));
-})
+});
 
 var FormSpeed = 2000;
 
@@ -687,6 +687,16 @@ jQuery(function ($) {
 
 
 //Floating balls
+
+$(document).ready(function() {
+var red = Math.floor(Math.random() * 255);
+var green = Math.floor(Math.random() * 255);
+var blue = Math.floor(Math.random() * 255);
+
+$("#float").css("background-color", "rgba(" + red + "," + green + "," + blue + ", 0.3")
+});
+
+
 Math.Vector = function (x, y) {
     this.x = x;
     this.y = y;
@@ -799,3 +809,4 @@ $(function () {
     $('#floatC').bind('mouseover', beginEvade);
     $('#floatC').bind('mouseout', endEvade);
 });
+
