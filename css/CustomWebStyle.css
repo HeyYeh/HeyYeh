@@ -143,6 +143,7 @@ p {
     height: 100%;
     position: fixed;
     right: 0;
+    z-index: -5;
 }
 
 #sidebarl {
@@ -150,6 +151,7 @@ p {
     height: 100%;
     position: fixed;
     left: 0;
+    z-index: -5;
 }
 
 .boxhead {
@@ -305,17 +307,22 @@ p {
 .submit {
     font-size: 1.5em;
     padding: 4px;
-    padding-left: -300px;
     width: 100px;
-    margin-left: 50%;
     cursor: pointer;
     border-radius: 10%;
     box-shadow: 0px 0px 3px black;
     border: 1px solid gray;
+    display: inline-block;
 }
 
 .submit:active {
     box-shadow: 0px 0px 1px black;
+}
+
+.subcont {
+    width: 100%;
+    text-align: center;
+    height: 10px;
 }
 
 input {
