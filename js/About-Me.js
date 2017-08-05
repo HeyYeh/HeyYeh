@@ -15,11 +15,11 @@ $("#img").css("background-color", "rgba(" + red + "," + green + "," + blue + ", 
 
 jQuery(function ($) {
     $('#img').mouseover(function () {
-        var dWidth = $(document).width(),
-            dHeight = $(document).height(),
-            nextX = Math.floor(Math.random() * dWidth * Math.random()),
-            nextY = Math.floor(Math.random() * dHeight);
-
+        var offset = $("#img").offset(),
+            nextX = Math.floor((Math.random() * offset.left) - 200),
+            nextY = Math.floor((Math.random() * offset.top) + 200);
+        
+        
         $(this).animate({
             right: nextX + 'px',
             top: nextY + 'px'
