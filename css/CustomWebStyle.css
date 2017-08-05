@@ -250,7 +250,7 @@ p {
     height: 100px;
     border-radius: 100%;
     margin-left: 1000px;
-    z-index: -100;
+    z-index: 999;
     cursor: pointer;
     position: absolute;
 }
@@ -368,7 +368,7 @@ input[type=text]:focus {
     border: 2px solid black;
     border-radius: 20px;
     padding: 25px;
-    z-index: 4;
+    z-index: -1;
     position: relative;
 }
 
