@@ -190,9 +190,7 @@ p {
     /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to top, #3ca55c, #b5ac49);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
     opacity: 0.4;
-    
     width: 200%;
     position: absolute;
     height: 83%;
@@ -252,7 +250,7 @@ p {
     height: 100px;
     border-radius: 100%;
     margin-left: 1000px;
-    z-index: 100;
+    z-index: -100;
     cursor: pointer;
     position: absolute;
 }
@@ -270,7 +268,6 @@ p {
 .percent {
     padding-top: 42px;
 }
-
 
 
 /*Floating balls*/
@@ -297,13 +294,13 @@ p {
     margin-top: 300px;
 }
 
+
 /*Form stuff*/
 
 .fhead {
     margin-bottom: 30px;
     margin-top: 30px;
 }
-
 
 .submit {
     font-size: 1.5em;
@@ -360,4 +357,40 @@ input[type=text]:focus {
 #message:focus {
     border-bottom: 2px solid #03080E;
     outline: none;
+}
+
+
+/*About me page*/
+
+.aboutcont {
+    font-size: 1.3em;
+    margin-top: 30px;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 25px;
+    z-index: 4;
+    position: relative;
+}
+
+.aboutimg {
+    height: 70%;
+    position: relative;
+    margin-top: 16%;
+}
+
+.midimage {
+    left: 50%;
+    right: 50%;
+    position: relative;
+    height: 70px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.midimage1 {
+    left: 50%;
+    position: relative;
+    height: 150px;
+    margin-bottom: 40px;
+    margin-left: -20px;
 }
