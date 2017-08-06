@@ -159,6 +159,7 @@ p {
     border-top-right-radius: 2%;
     border-top-left-radius: 2%;
     width: 100%;
+    overflow: hidden
 }
 
 #heady {
@@ -168,6 +169,13 @@ p {
     padding-bottom: -5px;
 }
 
+.headimg{
+    
+}
+
+.itemtext {
+    color: black;
+}
 
 /*Jumbotron*/
 
@@ -191,6 +199,57 @@ p {
     background: -webkit-linear-gradient(to top, #3ca55c, #b5ac49);
     /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to top, #3ca55c, #b5ac49);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    opacity: 0.4;
+    width: 200%;
+    position: absolute;
+    height: 83%;
+    margin-top: -10px;
+    margin-left: -50%;
+    z-index: -4;
+    box-shadow: 0px 0px 2px black;
+}
+
+.backdrop2 {
+    background: #36d1dc;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #36d1dc, #5b86e5);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #36d1dc, #5b86e5);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    opacity: 0.4;
+    width: 200%;
+    position: absolute;
+    height: 83%;
+    margin-top: -10px;
+    margin-left: -50%;
+    z-index: -4;
+    box-shadow: 0px 0px 2px black;
+}
+
+.backdrop3 {
+    background: #f46b45;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #f46b45, #eea849);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #f46b45, #eea849);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    opacity: 0.4;
+    width: 200%;
+    position: absolute;
+    height: 83%;
+    margin-top: -10px;
+    margin-left: -50%;
+    z-index: -4;
+    box-shadow: 0px 0px 2px black;
+}
+
+.backdrop4 {
+    background: #f2994a;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #f2994a, #f2c94c);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #f2994a, #f2c94c);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     opacity: 0.4;
     width: 200%;
@@ -279,21 +338,23 @@ p {
     width: 100px;
     background-color: rgba(200, 100, 200, 0.4);
     border-radius: 50%;
-    position: relative;
+    position: absolute;
     top: 50%;
     transform: translateY(-50%);
     margin-left: 25px;
+    z-index: 999;
+        outline: none;
 }
 
 #floatC {
     height: 150px;
     width: 150px;
-    background-color: ;
     border-radius: 50%;
-    position: relative;
+    position: absolute;
     text-align: center;
-    margin-left: 500px;
-    margin-top: 300px;
+    margin-left: -140px;
+    z-index: 999;
+    outline: none;
 }
 
 
@@ -400,4 +461,47 @@ input[type=text]:focus {
     height: 150px;
     margin-bottom: 40px;
     margin-left: -20px;
+}
+
+/*Video page*/
+.filmjumbo {
+    height: 90px;
+}
+.filmhead {
+    margin-top: 10px;
+}
+.videocont {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+.videoitem {
+    margin-top: 15px;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 90%;
+    display:inline-block; 
+    box-shadow: 0px 0px 5px gray;
+}
+
+.video {
+    padding: 10px;
+}
+
+.filminfobox {
+    width: 100%;
+    text-align: center;
+}
+
+.filmtext {
+    margin-top: 10px;
+    font-size: 1.2em;
+    max-width: 80%;
+        display:inline-block
+}
+
+.filmimg {
+    display: inline-block;
+    max-width:48%;
+    margin-bottom: 20px;
 }
