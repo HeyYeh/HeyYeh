@@ -169,7 +169,11 @@ p {
     padding-bottom: -5px;
 }
 
-.headimg {}
+.headimg {
+    position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
 
 .itemtext {
     color: black;
