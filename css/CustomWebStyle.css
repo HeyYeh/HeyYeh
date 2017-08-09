@@ -197,12 +197,9 @@ p {
 }
 
 .backdrop {
-    background: #3ca55c;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to top, #3ca55c, #b5ac49);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to top, #3ca55c, #b5ac49);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-color: #ac8100;
+background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23c39b00' fill-opacity='0.43' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
+
     opacity: 0.4;
     width: 200%;
     position: absolute;
@@ -210,13 +207,19 @@ p {
     margin-top: -10px;
     margin-left: -50%;
     z-index: -4;
-    box-shadow: 0px 0px 2px black;
+    box-shadow: 0px 0px 10px black;
 }
 
 .backdrop2 {
-    background: #00d2ff;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to top, #3a7bd5, #00d2ff);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to top, #3a7bd5, #00d2ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background:
+linear-gradient(45deg, #92baac 45px, transparent 45px)64px 64px,
+linear-gradient(45deg, #92baac 45px, transparent 45px,transparent 91px, #e1ebbd 91px, #e1ebbd 135px, transparent 135px),
+linear-gradient(-45deg, #92baac 23px, transparent 23px, transparent 68px,#92baac 68px,#92baac 113px,transparent 113px,transparent 158px,#92baac 158px);
+background-color:#e1ebbd;
+background-size: 128px 128px;
+
+
+
 
 
     opacity: 0.4;
@@ -226,16 +229,13 @@ background: linear-gradient(to top, #3a7bd5, #00d2ff); /* W3C, IE 10+/ Edge, Fir
     margin-top: -10px;
     margin-left: -50%;
     z-index: -4;
-    box-shadow: 0px 0px 2px black;
+    box-shadow: 0px 0px 10px black;
 }
 
 .backdrop3 {
-    background: #f46b45;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #f46b45, #eea849);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #f46b45, #eea849);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-color: #e5df9a;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='18' viewBox='0 0 100 18'%3E%3Cpath fill='%23879d03' fill-opacity='0.4' d='M61.82 18c3.47-1.45 6.86-3.78 11.3-7.34C78 6.76 80.34 5.1 83.87 3.42 88.56 1.16 93.75 0 100 0v6.16C98.76 6.05 97.43 6 96 6c-9.59 0-14.23 2.23-23.13 9.34-1.28 1.03-2.39 1.9-3.4 2.66h-7.65zm-23.64 0H22.52c-1-.76-2.1-1.63-3.4-2.66C11.57 9.3 7.08 6.78 0 6.16V0c6.25 0 11.44 1.16 16.14 3.42 3.53 1.7 5.87 3.35 10.73 7.24 4.45 3.56 7.84 5.9 11.31 7.34zM61.82 0h7.66a39.57 39.57 0 0 1-7.34 4.58C57.44 6.84 52.25 8 46 8S34.56 6.84 29.86 4.58A39.57 39.57 0 0 1 22.52 0h15.66C41.65 1.44 45.21 2 50 2c4.8 0 8.35-.56 11.82-2z'%3E%3C/path%3E%3C/svg%3E");
+    
     opacity: 0.4;
     width: 200%;
     position: absolute;
@@ -243,16 +243,12 @@ background: linear-gradient(to top, #3a7bd5, #00d2ff); /* W3C, IE 10+/ Edge, Fir
     margin-top: -10px;
     margin-left: -50%;
     z-index: -4;
-    box-shadow: 0px 0px 2px black;
+    box-shadow: 0px 0px 10px black;
 }
 
 .backdrop4 {
-    background: #EDE574;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to bottom, #E1F5C4, #EDE574);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to bottom, #E1F5C4, #EDE574);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-color: #7eabb4;
+background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%230b5d81' fill-opacity='0.4'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
     opacity: 0.4;
     width: 200%;
     position: absolute;
@@ -260,7 +256,7 @@ background: linear-gradient(to top, #3a7bd5, #00d2ff); /* W3C, IE 10+/ Edge, Fir
     margin-top: -10px;
     margin-left: -50%;
     z-index: -4;
-    box-shadow: 0px 0px 2px black;
+    box-shadow: 0px 0px 10px black;
 }
 
 
