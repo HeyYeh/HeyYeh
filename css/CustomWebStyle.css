@@ -183,7 +183,7 @@ p {
 /*Jumbotron*/
 
 .jumbotron {
-    background-color: rgba(0,0,0,0);
+    background-color: rgba(0, 0, 0, 0);
     z-index: 1;
     position: relative;
     padding-top: 30px;
@@ -205,7 +205,6 @@ p {
     z-index: -4;
     box-shadow: 0px 0px 10px black;
 }
-
 
 #backdrop1 {
     background-color: #ac8100;
@@ -240,10 +239,6 @@ p {
 }
 
 @media screen and (max-width: 995px) {
-    .backdrop {
-        height: 230px;
-    }
-    
     #backdrop1 {
         padding-bottom: 380px;
     }
@@ -260,6 +255,7 @@ p {
         padding-bottom: 310px;
     }
 }
+
 
 /*Item type nav*/
 
@@ -510,48 +506,50 @@ input[type=text]:focus {
     margin-bottom: 20px;
 }
 
+
 /*Footer!*/
+
 #footer {
-  margin-bottom: -25px;
-  margin-top: 100px;
-  width: 100%;
-  background-color: #3F3F3F;
+    margin-bottom: -25px;
+    margin-top: 100px;
+    width: 100%;
+    background-color: #3F3F3F;
 }
 
 .footer-words {
-  color: #C0C0C0;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  width: 100%;
-  font-size: .9em;
-  text-align: center;
+    color: #C0C0C0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    font-size: .9em;
+    text-align: center;
 }
 
 .footcol {
-  display: inline-block;
-  width: 33%;
-  padding-bottom: 7px;
+    display: inline-block;
+    width: 33%;
+    padding-bottom: 7px;
 }
 
 #footcont {
-  padding-left: 65px;
-  position: absolute;
+    padding-left: 65px;
+    position: absolute;
 }
 
 #footword {
-  float: center;
-  right: 10px;
-  position: absolute;
+    float: center;
+    right: 10px;
+    position: absolute;
 }
 
 #footatt {
-  position: absolute;
+    position: absolute;
 }
 
 #foot {
-  color: #23A3FF;
+    color: #23A3FF;
 }
 
 #foot:hover {
-  color: #4BB3FF;
+    color: #4BB3FF;
 }
