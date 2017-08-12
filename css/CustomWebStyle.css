@@ -400,8 +400,8 @@ p {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    margin-left: 200px;
-    margin-top: 130px;
+    margin-left: -100px;
+    margin-top: 70px;
     z-index: 100;
     outline: none;
 }
