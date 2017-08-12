@@ -78,10 +78,7 @@ p {
     width: 100%;
     left: -117px;
     font-family: Helvetica;
-}
-
-#NL {
-    color: dimgrey;
+  color: dimgrey;
 }
 
 #NL:hover {
@@ -92,15 +89,21 @@ p {
     color: #e89460;
 }
 
-.dropdown-menu {
-    left: -147px;
-}
-
 .navbar-inverse .navbar-nav>.open>a,
 .navbar-inverse .navbar-nav>.open>a:focus,
 .navbar-inverse .navbar-nav>.open>a:hover {
     color: dimgrey;
     background-color: #FFF;
+}
+
+@media(max-width: 768px) {
+  #Nav2Opt {
+    max-height: 300px;
+    margin-left: -0px;
+  }
+  #NL {
+    left: -0%;
+  }
 }
 
 
@@ -155,11 +158,11 @@ p {
 }
 
 .boxhead {
-    height: 180px;
+    height: auto;
     border-top-right-radius: 2%;
     border-top-left-radius: 2%;
     width: 100%;
-    overflow: hidden
+    overflow: hidden;
 }
 
 #heady {
@@ -172,7 +175,7 @@ p {
 .headimg {
     position: relative;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-0%);
 }
 
 .itemtext {
@@ -238,14 +241,38 @@ p {
     height: 160px;
 }
 
+@media screen and (max-width: 1200px) {
+    #backdrop2 {
+        padding-bottom: 310px;
+    }
+}
+
 @media screen and (max-width: 995px) {
     #backdrop1 {
         padding-bottom: 380px;
+    }
+    #backdrop2 {
+        padding-bottom: 370px;
+    }
+    #backdrop3 {
+        padding-bottom: 360px;
+    }
+    #backdrop4 {
+        padding-bottom: 230px;
     }
 }
 
 @media screen and (max-width: 770px) {
     #backdrop1 {
+        padding-bottom: -0px;
+    }
+    #backdrop2 {
+        padding-bottom: 270px;
+    }
+    #backdrop3 {
+        padding-bottom: -0px;
+    }
+    #backdrop4 {
         padding-bottom: -0px;
     }
 }
@@ -256,7 +283,44 @@ p {
     }
 }
 
+@media screen and (max-width: 570px) {
+    #backdrop2 {
+        padding-bottom: 300px;
+    }
+}
 
+@media screen and (max-width: 520px) {
+    #backdrop1 {
+        padding-bottom: 370px;
+    }
+}
+
+@media screen and (max-width: 558px) {
+    #backdrop2 {
+        padding-bottom: 330px;
+    }
+}
+
+@media screen and (max-width: 494px) {
+    #backdrop2 {
+        padding-bottom: 380px;
+    }
+    #backdrop1 {
+        padding-bottom: 400px;
+    }
+    #backdrop3 {
+        padding-bottom: 320px;
+    }
+}
+
+@media screen and (max-width: 393px) {
+    #backdrop2 {
+        padding-bottom: 430px;
+    }
+    #backdrop3 {
+        padding-bottom: 380px;
+    }
+}
 /*Item type nav*/
 
 .navvy-listy {
@@ -336,8 +400,9 @@ p {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    margin-left: 25px;
-    z-index: 999;
+    margin-left: 200px;
+    margin-top: 130px;
+    z-index: 100;
     outline: none;
 }
 
@@ -347,7 +412,6 @@ p {
     border-radius: 50%;
     position: absolute;
     text-align: center;
-    margin-left: -140px;
     z-index: 999;
     outline: none;
 }
@@ -509,13 +573,12 @@ input[type=text]:focus {
 
 /*Footer!*/
 
-#footer {
-    margin-bottom: -25px;
-    margin-top: 40px;
+.footer {
+    margin-top: 90px;
     width: 100%;
     background-color: #3F3F3F;
     position: absolute;
-    bottom: -%;
+    margin-bottom: -100%;
 }
 
 .footer-words {
@@ -524,28 +587,25 @@ input[type=text]:focus {
     padding-bottom: 10px;
     width: 100%;
     font-size: .9em;
-    text-align: center;
 }
 
 .footcol {
     display: inline-block;
     width: 33%;
-    padding-bottom: 7px;
+    padding-top: 5px;
+    height:11px;
 }
 
 #footcont {
-    padding-left: 65px;
-    position: absolute;
+  text-align: center;
 }
 
 #footword {
-    float: center;
     right: 10px;
-    position: absolute;
+  text-align: right;  
 }
 
 #footatt {
-    position: absolute;
 }
 
 #foot {
@@ -557,5 +617,78 @@ input[type=text]:focus {
 }
 
 .contpage {
-    bottom: 24;
+    top: 100%;
+    margin-top: -50px;
+}
+
+@media(max-width: 1465px) {
+  #footatt, #footword {
+    bottom: 10px;
+    position: absolute;
+  }
+  
+  .footcol {
+  }
+  
+  #footer {
+    height: 60px;
+    
+  }
+}
+
+@media(max-width: 805px) {
+  #footatt, #footword {
+    bottom: 20px;
+    position: absolute;
+  }
+  
+  #footword {
+    width: 110px;
+    bottom: 12px;
+  }
+  
+  #footer {
+    height: 80px;
+    
+  }
+}
+
+@media(max-width: 529px) {
+  #footatt, #footword {
+    bottom: 30px;
+    position: absolute;
+  }
+  
+  #footword {
+    width: 110px;
+    bottom: 22px;
+  }
+  
+  #footer {
+    height: 100px;
+    
+  }
+}
+
+@media(max-width: 356px) {
+  #footatt, #footword {
+    bottom: 45px;
+    position:absolute;
+  }
+  
+  #footword {
+    width: 110px;
+    bottom: 32px;
+  }
+  
+  #footer {
+    height: 130px;
+    
+  }
+}
+
+
+/*Header hover*/
+#LOGOBIT:hover {
+  filter: sepia() saturate(10000%) hue-rotate(170deg);
 }
