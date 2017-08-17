@@ -326,9 +326,27 @@ p {
     }
 }
 
+@media screen and (max-width: 562px) {
+    #backdrop1 {
+        padding-bottom: 325px;
+    }
+}
+
 @media screen and (max-width: 558px) {
     #backdrop2 {
         padding-bottom: 330px;
+    }
+}
+
+@media screen and (max-width: 523px) {
+    #backdrop1 {
+        padding-bottom: 365px;
+    }
+}
+
+@media screen and (max-width: 502px) {
+    #backdrop1 {
+        padding-bottom: 395px;
     }
 }
 
