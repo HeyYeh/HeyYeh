@@ -223,6 +223,10 @@ p {
     color: black;
 }
 
+.contentfiller {
+    margin-bottom: 370px;
+}
+
 #JumTest {
     width: 60%;
 }
@@ -241,6 +245,12 @@ p {
     background-color: #ac8100;
     background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23c39b00' fill-opacity='0.43' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
     height: 260px;
+}
+
+#contentbackdrop1 {
+    background-color: #ac8100;
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23c39b00' fill-opacity='0.43' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
+    height: 100px;
 }
 
 #backdrop2 {
@@ -622,6 +632,12 @@ input[type=text]:focus {
     margin-bottom: 20px;
 }
 
+/*Image pages*/
+
+.portfolioImage {
+    max-height: 600px;
+    margin-top: 30px;
+}
 
 /*Footer!*/
 
