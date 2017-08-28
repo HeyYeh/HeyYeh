@@ -223,8 +223,10 @@ p {
     color: black;
 }
 
-.contentfiller {
-    margin-bottom: 370px;
+.contentfillr {
+    height: 320px;
+    max-height: 320px;
+    background-color: gray;
 }
 
 #JumTest {
@@ -239,6 +241,18 @@ p {
     left: -0%;
     z-index: -4;
     box-shadow: 0px 0px 10px black;
+}
+
+.articleHead {
+    margin: 0 auto;
+    display: block;
+    max-height: 370px;
+}
+
+.articlejumbo {
+    max-height: 390px;
+    text-align: center;
+    display: block;
 }
 
 #backdrop1 {
@@ -568,22 +582,28 @@ input[type=text]:focus {
 }
 
 .midimage {
-    left: 50%;
-    right: 50%;
     position: relative;
     height: 70px;
     margin-top: 40px;
     margin-bottom: 40px;
+    margin: 0 auto;
 }
 
 .midimage1 {
-    left: 50%;
     position: relative;
-    height: 150px;
-    margin-bottom: 40px;
-    margin-left: -20px;
+    height: 190px;   
+    margin: 0 auto;
 }
 
+.aboutImageCont {
+    text-align: center;
+    width: 100%;
+}
+
+.aboutText {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
 
 /*Video page*/
 
@@ -944,4 +964,14 @@ input[type=text]:focus {
 .week {
     font-size: 1.5em;
     font-family: "Laila", sans-serif;
+}
+
+/*Index*/
+.indexArticle {
+    margin-bottom: -30px;
+}
+
+.indexCraft {
+    margin-top: 40px;
+    margin-bottom: -30px;
 }
