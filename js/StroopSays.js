@@ -185,7 +185,7 @@ $(document).ready(function() { //one of the button checks to see if you guessed 
       
       if (buttColours[0] == computerSequence[sequenceTrack]) {  //did you just guess right?
         affirmation();
-        $("#TEST2").html(sequenceTrack);
+        
         
         if (sequenceTrack + 1 == computerSequence.length) {  //was that the last correct guess needed for a point?
           score++;
