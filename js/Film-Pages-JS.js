@@ -4,13 +4,13 @@ var green = Math.floor(Math.random() * 255);
 var blue = Math.floor(Math.random() * 255);
 
 $("#float").css("background-color", "rgba(" + red + "," + green + "," + blue + ", 0.3")
-});
+}); //randomising ball colour
 
 
 Math.Vector = function (x, y) {
     this.x = x;
     this.y = y;
-}
+}  //adding the necessary math functions
 Math.Vector.prototype = {
     clone: function () {
         return new Math.Vector(this.x, this.y);
@@ -102,18 +102,17 @@ function evade(evt) {
 
     // move bumper
     $this.offset(newCorner);
-}
+}  //setting up the ball evasions
 
-function beginEvade() {
+function beginEvade() {   //actually making them evade
     $("#floatC").bind('mousemove', evade);
 }
 
 function endEvade() {
-    $("#floatC").unbind('mousemove', evade);
+    $("#floatC").unbind('mousemove', evade);   //ending the evade
 }
 
 $(function () {
-    // you can also wrap the elements when creating them.
     $('#float').wrap('<span class="bumper" />')
 
     $('#floatC').bind('mouseover', beginEvade);

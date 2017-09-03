@@ -249,6 +249,15 @@ p {
     max-height: 370px;
 }
 
+.articlesubimage {
+    margin: 0 auto;
+    max-width: 80%;
+}
+
+.articlefiller {
+    height: 20px;
+}
+
 .articlejumbo {
     max-height: 390px;
     text-align: center;
@@ -605,7 +614,19 @@ input[type=text]:focus {
     margin-bottom: 15px;
 }
 
+.CatchGameTrack {
+    float: left;
+    position: absolute;
+    margin-top: 45px;
+    font-size: .35em;
+    width: 130px;
+}
+
 /*Video page*/
+
+.theballpit {
+    padding: 310px 0px;
+}
 
 .filmjumbo {
     height: 90px;
@@ -1095,4 +1116,26 @@ input[type=text]:focus {
   margin-top: 20px;
   font-size: 1.3em;
   font-family: 'Poppins', sans-serif;
+}
+
+/*ball pit*/
+.ballpit1 {
+    margin-left:150px;
+    margin-top:50px;
+}
+.ballpit2 {
+    margin-left:280px;
+    margin-top:50px;
+}
+.ballpit3 {
+    margin-left:410px;
+    margin-top:50px;
+}
+.ballpit4 {
+    margin-left:540px;
+    margin-top:50px;
+}
+.ballpit5 {
+    margin-left:670px;
+    margin-top:50px;
 }

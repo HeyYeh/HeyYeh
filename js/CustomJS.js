@@ -47,7 +47,9 @@ $(document).ready(function () {
             $(".EtItem").show(ShowSpeed);
             $(".CrItem").show(ShowSpeed);
             $(".VGUXItem").show(ShowSpeed);
+            $(".TutRMItem").show(ShowSpeed);
 
+            $(".TutRMItem").hide(HideSpeed, 'linear');
             $(".UXItem").hide(HideSpeed, 'linear');
             $(".RMItem").hide(HideSpeed, 'linear');
             $(".TutItem").hide(HideSpeed, 'linear');
@@ -67,6 +69,7 @@ $(document).ready(function () {
             $(".TutItem").show(ShowSpeed);
             $(".EtItem").show(ShowSpeed);
             $(".CrItem").show(ShowSpeed);
+            $(".TutRMItem").show(ShowSpeed);
             clickedVG = 0;
             $("#VGamesCat").blur();
             return;
@@ -94,7 +97,9 @@ $(document).ready(function () {
             $(".EtItem").show(ShowSpeed);
             $(".CrItem").show(ShowSpeed);
             $(".VGUXItem").show(ShowSpeed);
+            $(".TutRMItem").show(ShowSpeed);
 
+            $(".TutRMItem").hide(HideSpeed, 'linear');
             $(".VGItem").hide(HideSpeed, 'linear');
             $(".RMItem").hide(HideSpeed, 'linear');
             $(".TutItem").hide(HideSpeed, 'linear');
@@ -114,6 +119,7 @@ $(document).ready(function () {
             $(".TutItem").show(ShowSpeed);
             $(".EtItem").show(ShowSpeed);
             $(".CrItem").show(ShowSpeed);
+            $(".TutRMItem").show(ShowSpeed);
             clickedUX = 0;
             $("#UXCat").blur();
             return;
@@ -142,9 +148,11 @@ $(document).ready(function () {
             $(".EtItem").show(ShowSpeed);
             $(".CrItem").show(ShowSpeed);
             $(".VGUXItem").show(ShowSpeed);
+            $(".TutRMItem").show(ShowSpeed);
 
             $(".VGItem").hide(HideSpeed, 'linear');
             $(".VGUXItem").hide(HideSpeed, 'linear');
+            $(".UXItem").hide(HideSpeed, 'linear');
             $(".TutItem").hide(HideSpeed, 'linear');
             $(".EtItem").hide(HideSpeed, 'linear');
             $(".CrItem").hide(HideSpeed, 'linear');
@@ -162,6 +170,7 @@ $(document).ready(function () {
             $(".TutItem").show(ShowSpeed);
             $(".EtItem").show(ShowSpeed);
             $(".CrItem").show(ShowSpeed);
+            $(".TutRMItem").show(ShowSpeed);
             clickedRM = 0;
             $("#RMCat").blur();
             return;
@@ -190,9 +199,11 @@ $(document).ready(function () {
             $(".EtItem").show(ShowSpeed);
             $(".CrItem").show(ShowSpeed);
             $(".VGUXItem").show(ShowSpeed);
+            $(".TutRMItem").show(ShowSpeed);
 
             $(".VGItem").hide(HideSpeed, 'linear');
             $(".VGUXItem").hide(HideSpeed, 'linear');
+            $(".UXItem").hide(HideSpeed, 'linear');
             $(".RMItem").hide(HideSpeed, 'linear');
             $(".EtItem").hide(HideSpeed, 'linear');
             $(".CrItem").hide(HideSpeed, 'linear');
@@ -210,6 +221,7 @@ $(document).ready(function () {
             $(".TutItem").show(ShowSpeed);
             $(".EtItem").show(ShowSpeed);
             $(".CrItem").show(ShowSpeed);
+            $(".TutRMItem").show(ShowSpeed);
             clickedTut = 0;
             $("#TutCat").blur();
             return;
@@ -238,9 +250,12 @@ $(document).ready(function () {
             $(".EtItem").show(ShowSpeed);
             $(".CrItem").show(ShowSpeed);
             $(".VGUXItem").show(ShowSpeed);
+            $(".TutRMItem").show(ShowSpeed);
 
+            $(".TutRMItem").hide(HideSpeed, 'linear');
             $(".VGItem").hide(HideSpeed, 'linear');
             $(".VGUXItem").hide(HideSpeed, 'linear');
+            $(".UXItem").hide(HideSpeed, 'linear');
             $(".RMItem").hide(HideSpeed, 'linear');
             $(".TutItem").hide(HideSpeed, 'linear');
             $(".CrItem").hide(HideSpeed, 'linear');
@@ -258,6 +273,7 @@ $(document).ready(function () {
             $(".TutItem").show(ShowSpeed);
             $(".EtItem").show(ShowSpeed);
             $(".CrItem").show(ShowSpeed);
+            $(".TutRMItem").show(ShowSpeed);
             clickedEt = 0;
             $("#EtCat").blur();
             return;
@@ -287,9 +303,12 @@ $(document).ready(function () {
             $(".EtItem").show(ShowSpeed);
             $(".CrItem").show(ShowSpeed);
             $(".VGUXItem").show(ShowSpeed);
+            $(".TutRMItem").show(ShowSpeed);
 
+            $(".TutRMItem").hide(HideSpeed, 'linear');
             $(".VGItem").hide(HideSpeed, 'linear');
             $(".VGUXItem").hide(HideSpeed, 'linear');
+            $(".UXItem").hide(HideSpeed, 'linear');
             $(".RMItem").hide(HideSpeed, 'linear');
             $(".TutItem").hide(HideSpeed, 'linear');
             $(".EtItem").hide(HideSpeed, 'linear');
@@ -307,6 +326,7 @@ $(document).ready(function () {
             $(".TutItem").show(ShowSpeed);
             $(".EtItem").show(ShowSpeed);
             $(".CrItem").show(ShowSpeed);
+            $(".TutRMItem").show(ShowSpeed);
             clickedCr = 0;
             $("#CrCat").blur();
             return;
