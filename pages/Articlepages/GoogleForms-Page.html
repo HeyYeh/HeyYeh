@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quantifying Google Forms in Excel</title>
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../css/CustomWebStyle.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="../../favicon.ico" />
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville|Libre+Franklin" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <!--TOP NAVBAR-->
+    <nav class="navbar navbar-inverse navbar-fixed-top" id="Nav1">
+        <div class="container" id="FullTNav">
+            <div class="navbar-header" id="LOGOBIT">
+                <img src="../../Stuff/SquirrelLogoWhite.png" class="navbar-brand" id="NBB1">
+                <a class="navbar-brand" id="NBB2" href="../../index.html">WordsWords</a>
+            </div>
+            <div class="PTit">
+                <ul class="list-inline center-block text-center PTitle ">
+                    <li><a id="PageTitle">Quantifying Google Forms in Excel</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--LOWER NAVBAR-->
+    <nav class="navbar navbar-inverse navbar-fixed-top" id="Nav2">
+        <div class="container" id="Nav2Full">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+<span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <div class="col-xs-offset-4 col-xs-2 text-center" id=Nav2Opt>
+                    <ul class="nav navbar-nav">
+                        <li><a href="../Articles-Home.html" id="NL">Articles I've Written</a></li>
+                        <li><a href="../Portfolio-Home.html" id="NL">Things I've Made</a></li>
+                        <li><a href="../About-Me.html" id="NL">Me and My Words</a></li>
+                        <li><a href="../Contact-Page.html" id="NL">Get In Touch</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!--Mid Panel thing-->
+    <div class="container panel-parent">
+        <div class="col-xs-auto">
+
+            <!-- Jumbotron-->
+            <div class="jumbotron articlejumbo">
+                <div class="articleHeadCont">
+                    <img class="img-responsive articleHead" src="../../Stuff/ArticleImages/GoogleFormsSplash.png" />
+                </div>
+            </div>
+
+            <div id="floatC">
+                <div id="float"></div>
+            </div>
+
+            <div class="img-responsive contentfiller"></div>
+
+            <div class="container filminfobox">
+                <h1>Quantifying Google Forms results in Excel</h1>
+                <h3>or, How you can use formulas to convert qualitative data into something that you can statistically analyse</h3>
+
+                <p class="filmtext">If you haven’t tried it already, Google forms is a very good option for performing simple qualitative data collection for free: it has a very nice interface, it has a lot of features that help with questionnaire best practice, and it even presents some simple graphs of your data after you have collected it. It also offers a lot of question customisation, allowing you to make your questions as closed or open ended as you need. There are times when you would take in this information raw too, wanting to hear personal, long-form accounts of a target demographic’s opinions and thoughts, but then there are times when you want to statistically compare within or between groups. For this, you need numbers, and Google forms doesn’t easily output numbers.<br><br>First thing of note, this will be written assuming you’re trying to quantify the data from a spreadsheet that Google Forms has outputted, and you can get it to output a spreadsheet of this data with the below button, found at the top right of your ‘Responses’ page:</p>
+                <div class="articlefiller"></div>
+                    <img class="img-responsive articlesubimage" src="../../Stuff/ArticleImages/TutorialImages/GFSpreadsheetButton.png" />
+                <div class="articlefiller"></div>
+                <p class="filmtext">If you’re Excel savvy already and you’re just looking for the formulas to use without the explanations, I will put them below and then go into further detail afterwards.<br><br><u>Yes/No questions</u><br><br>=IF(<mark>AW3</mark> = "Yes", 1, 0)<br><br><u>Multiple choice questions</u><br><br>=IF(ISNUMBER(SEARCH(<mark>C$2</mark>,<mark>$A3</mark>)), 1, 0)<br><br></p>
+                <h4><b>Delving deeper: Yes/No questions</b></h4>
+                <p class="filmtext">Often, yes no questions can be displayed using descriptive statistics (<i>X</i> amount of people said ‘yes’, <i>Y</i> amount of people said ‘no’, and here are percentages),  and Google Forms is quite good at presenting this kind of data in a pretty clean way. I’ll put a link to the example data I made for this. But the graph below is the kind of thing that Forms will pump out for you:</p>
+                <div class="articlefiller"></div>
+                    <img class="img-responsive articlesubimage" src="../../Stuff/ArticleImages/TutorialImages/GFExampleGraph.png" />
+                <div class="articlefiller"></div>
+                <p class="filmtext">Hovering over the sections in the Forms output will tell you percentages and the number of people that chose each topic, but in order to compare this data to other sources you need to code it into numbers (or use something like a logistic regression, but that depends on your data and needs and is a little out of scope for this tutorial).  In the example above, we would only want to code the ‘Yes’ and the ‘No’ answers, because our quiz was aimed at Flappy Bird players. If they don’t know what Flappy Bird is, their responses won’t help us answer our questions, so we remove it; this is our exclusion criteria.<br><br>IF functions in Excel are the simplest way of coding Yes/No answers, so let’s break that down quickly. In Excel, their explanation is as follows:<br><br>IF(<mark>logical_test</mark>, [<mark>value_if_true</mark>], [<mark>value_if_false</mark>])<br><br><u>Logical test</u>: this is checking one thing against another, essentially. This is where you compare the cell with a number or string of normal letters and, if the answer determines where we go next. There are lots of comparators, but the only one we need here is the equals sign.<br><br><u>Value if true</u>: This is what will happen if the logical test turns out as being true. So with 11 = 11 for example, this part of the formula would run.<br><br><u>Value if false</u>: Similar to value if true, if our logical test is not correct, this is what runs. So with 11 = 12, this would occur because the two numbers are not equal.<br><br>=IF(<mark>AW3</mark> = "Yes", 1, 0)<br><br>Going back to the formula from earlier now, we can see that if the data in cell AW3 say ‘Yes’, the number in the cell that we have written the formula in will be a 1. Any other answer in that cell will become 0. You can drag your formula cell down using the cross that appears when you hover over the bottom right of the cell and you’ve codified your question!<br><br>This does assume that you’ve already removed the people that said “What is this ‘Flappy Bird’?” though. If you didn’t remove them, this answer would also become 0 and could cloud our data. If you don’t want to go through that hassle, extending the formula a little can fix this issue.<br><br>=IF(<mark>AW3</mark>="Yes",1,(IF(<mark>AW3</mark>="No",0,"")))<br><br>So now, if the box says ‘Yes’ it will become a 1 as usual, but we have changed our false condition to another IF statement to check if it says ‘No’ too. If it does say ‘No’, the cell will change to a 0, and if it doesn’t say ‘No’ or ‘Yes’, the cell will become an empty string of characters, signified by the two quotation marks with nothing inside: “”.</p>
+                <h4><b>Multiple choice questions</b></h4>
+                <p class="filmtext">Multiple choice questions are a little trickier, and the output for these in Google Forms is also quite nice if you only want your descriptives.</p>
+                <div class="articlefiller"></div>
+                    <img class="img-responsive articlesubimage" src="../../Stuff/ArticleImages/TutorialImages/GFMultChoiceExample.png" />
+                <div class="articlefiller"></div>
+                <p class="filmtext">If you wanted to know if there is any correlation between the people who have fond memories of flappy bird, and the people that liked the fact that there are pipes in the game, you would want to reduce these to numbers too and codify them in the same way you did your Yes/No questions. This takes a little more formatting than you might have anticipated. This is the output from forms, for example:</p>
+                <div class="articlefiller"></div>
+                    <img class="img-responsive articlesubimage" src="../../Stuff/ArticleImages/TutorialImages/GFMultChoiceOutput.png" />
+                <div class="articlefiller"></div>
+                <p class="filmtext">As you can see, each answer the participant selected is in the same cell and this causes us a lot of problems when it comes to figuring out correlations or other analyses. To codify this then, we need to give each potential answer its own column. For the formula to work though, it is very very important that the heading to each column is EXACTLY the same as the answer that your participants could choose.</p>
+                 <div class="articlefiller"></div>
+                    <img class="img-responsive articlesubimage" src="../../Stuff/ArticleImages/TutorialImages/GFMultChoiceStructure.png" />
+                <div class="articlefiller"></div>
+                <p class="filmtext">And now we can actually use our formula to easily cheat our way through this! I will say first that you <i>could</i>, if you were masochistic enough, create a very long IF statement with loads of embedded IF statements in the false conditions, but there is a much quicker way to do it that we can break down right now.<br><br>=IF(ISNUMBER(SEARCH(<mark>find_text</mark>, <mark>within_text</mark>)),[<mark>value_if_true</mark>], [<mark>value_if_false</mark>])<br><br>As we already know how the IF statement works there, I won’t go into detail again on the ‘value_if_true/false’ bits. Instead, let’s walk through the logical test in this case.<br><br><u>ISNUMBER</u>: This return true if the cell you reference with it contains a number, and return false if you reference letters or words. We use this with the SEARCH function because it converts the usual results of the SEARCH function into TRUE, or FALSE, which our IF statement can understand a little easier.<br><br><u>SEARCH</u>: Usually this is used to tell you where a piece of text is in another piece of text, and it usually outputs a single number. If you reference the letters ‘AK’ in the ‘find_text’ bit, and then reference a cell with the word ‘Break’ in the ‘within_text’ bit, it would spit out the number ‘4’. If the letters or words in ‘find_text’ aren’t found, it outputs with an error.<br><br>SO what is actually happening is the SEARCH function will give a number if the searching words are in the text, and this number is taking in by ISNUMBER which outputs TRUE (because it is now a number). The IF statement then pushes out the ‘value_if_true’ bit! The below formula will take in the column header as the ‘find_text’, and will take the answers from the Google Sheets spreadsheet as the ‘within_text’, then push out a 1 or 0 depending on the result!<br><br>=IF(ISNUMBER(SEARCH(<mark>C$2</mark>,<mark>$A3</mark>)), 1, 0)<br><br>You may have noticed the $ sign there too, and this is actually very important in this case. The $ sign locks the following term in place, so if you drag the formula along it will still reference that column or row. For our ‘find_text’ we always want it staying in the column header, so we lock the row (add a dollar sign before the number), and we always want our ‘within_text’ referencing the same column of Google Sheets answers, so we put the $ sign in front of the letter(s)! Drag the formula out from the bottom right cross symbol and we get…</p>
+                <div class="articlefiller"></div>
+                    <img class="img-responsive articlesubimage" src="../../Stuff/ArticleImages/TutorialImages/GFMultChoiceDraggedOut.png" />
+                <div class="articlefiller"></div>
+                <p class="filmtext">And there you go!</p>
+                <h4><b>Extra, open form answers – Pure qualitative analysis</b></h4>
+                <p class="filmtext">Sometimes you’ll want to take in open ended questions too, where your participants are allowed to write whatever they want. This is great for finding things that you may not have even thought of when giving those restrictive questions, and is a great way of getting actual opinions on something to do with as you need. Google Forms handle them well, as always, and you get this kind of output:</p>
+                <div class="articlefiller"></div>
+                    <img class="img-responsive articlesubimage" src="../../Stuff/ArticleImages/TutorialImages/GFOpenOutput.png" />
+                <div class="articlefiller"></div>
+                <p class="filmtext">As great as this method is though, it can be difficult to quantify. I will say first though, there are many, many reasons that you might not want to quantify it at all. Raw data like this is useful in itself, and you can pick up a lot from just reading participant’s words as opposed to reducing them into numbers.<br><br>I won’t go into too much detail here, this is an extra little section after all, but there are a couple of main ways that you would typically explore this data and those are…<br><br><u>Word frequency analysis</u>: this is as simple as it sounds! You use some kind of program to count how many times each word appears, and that will give you some idea of what your participants are broadly thinking. This can be good and bad depending on your needs though: while it will show you which words come up a lot, it won’t tell you how those words are qualified. In the above (admittedly questionable) example, if we used a simple (though very nice) tool like <a href="www.online-utility.org/text/analyzer.jsp">www.online-utility.org/text/analyzer.jsp</a>, we would see that ‘pipes’ and ‘flaps’ are spoken about a few times each, but, from our raw data, we can see that they’re spoken about in very different ways each time. One person wants more flap, another wants less; we could look for phrases, true, but even phrasing varies naturally between people.<br><br><u>Thematic coding</u>: this way simply involves making a few categories based on common answers, your hypotheses, or even results from a word-frequency analysis (the first and last of those are know as emergent themes) and either tallying every time each category is mentioned yourself, or using specialised software like Quirkos to see how common each theme is. By eye or by software each have their own problems, such as the human error element of deciding themes and whether things fit in or not when it isn’t immediately obvious, or the computer problem of requiring good spelling from participants and planning of what terms fit into what themes before you start. This choice might be determined by your data set though, as no one has the cognitive capacity to read a novel worth of data and code it with consistent accuracy the whole way through!</p>
+                <h4><b>Conclusion</b></h4>
+                <p class="filmtext">Formulas are pretty great.</p>
+
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!--FOOTER-->
+    <nav class="navbar navbar-inverse navbar-bottom footer">
+        <div class="container footer-words">
+            <div class="footcol">
+                <p id="footatt">(c) Ian 2017</p>
+            </div>
+            <div class="footcol">
+                <p id="footcont">Please send me a message with your thoughts <a id="foot" href="../Contact-Page.html">here</a>, or continue browsing <a id="foot" href="../../index.html">here</a>!</p>
+            </div>
+            <div class="footcol">
+                <p id="footword">Word of the week: <a id="foot" href="https://www.collinsdictionary.com/dictionary/english/placeholder">Placeholder</a></p>
+            </div>
+        </div>
+    </nav>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/Film-Pages-JS.js"></script>
+</body>
+
+</html>
