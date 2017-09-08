@@ -21,7 +21,7 @@ p {
     border: none;
     text-align: center;
     width: 100%;
-    box-shadow: 0px -1px 5px black;
+    box-shadow: 0 -1px 5px black;
 }
 
 #NBB2 {
@@ -33,8 +33,8 @@ p {
 }
 
 #NBB1 {
-    padding: 0px 10px 0px 1px;
-    margin-left: -0%;
+    padding: 0 10px 0 1px;
+    margin-left: -0;
     margin-top: -04px;
     cursor: pointer;
     cursor: hand;
@@ -100,10 +100,10 @@ p {
 @media(max-width: 768px) {
   #Nav2Opt {
     max-height: 300px;
-    margin-left: -0px;
+    margin-left: -0;
   }
   #NL {
-    left: -0%;
+    left: -0;
   }
 }
 
@@ -139,7 +139,7 @@ p {
 }
 
 .panel:hover {
-    box-shadow: 0px 0px 10px black;
+    box-shadow: 0 0 10px black;
 }
 
 #sidebar {
@@ -532,9 +532,6 @@ p {
 
 input {
     width: 10px;
-    border-radius: ;
-    height;
-    20px;
     border: none;
     border-bottom: 2px solid #8B8B97;
     text-align: center;
@@ -552,9 +549,6 @@ input[type=text]:focus {
 
 #message {
     width: 10px;
-    border-radius: ;
-    height;
-    20px;
     border: none;
     text-align: center;
     border-bottom: 2px solid #8B8B97;
@@ -997,7 +991,15 @@ input[type=text]:focus {
     margin-bottom: -30px;
 }
 
-//Stroop says
+.indexLink {
+    z-index: 5;
+    margin: 1px;
+    background-color: red;
+    width: 100%;
+    height: 10px;
+}
+
+/*Stroop says*/
 .globalcontainer {
   width: 100%;
   height: 100%;
@@ -1045,7 +1047,6 @@ input[type=text]:focus {
   width: 170px;
   background-color: burlywood;
   display: inline-block;
-  position: ;
   margin-top: 13px;
   border-radius: 5px;
   box-shadow: 0px 2px 4px black;
@@ -1118,24 +1119,25 @@ input[type=text]:focus {
   font-family: 'Poppins', sans-serif;
 }
 
-/*ball pit*/
-.ballpit1 {
-    margin-left:150px;
-    margin-top:50px;
+/*text media queries*/
+@media(max-width: 1000px) {    
+    .filmtext {
+        font-size: 1em;
+    }
 }
-.ballpit2 {
-    margin-left:280px;
-    margin-top:50px;
+@media(max-width: 1200px) { 
+    .CatchGameTrack {
+        visibility: hidden;
+    }
+    #img {
+        left: 0;
+        display: none;
+    }
 }
-.ballpit3 {
-    margin-left:410px;
-    margin-top:50px;
-}
-.ballpit4 {
-    margin-left:540px;
-    margin-top:50px;
-}
-.ballpit5 {
-    margin-left:670px;
-    margin-top:50px;
+
+
+@media(max-width: 500px) {
+  .filmtext {
+    font-size: .9em;
+  }
 }
