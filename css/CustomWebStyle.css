@@ -1,4 +1,3 @@
-
 * {
     font-family: 'Libre Baskerville', serif;
 }
@@ -79,7 +78,7 @@ p {
     width: 100%;
     left: -117px;
     font-family: Helvetica;
-  color: dimgrey;
+    color: dimgrey;
 }
 
 #NL:hover {
@@ -98,13 +97,13 @@ p {
 }
 
 @media(max-width: 768px) {
-  #Nav2Opt {
-    max-height: 300px;
-    margin-left: -0;
-  }
-  #NL {
-    left: -0;
-  }
+    #Nav2Opt {
+        max-height: 300px;
+        margin-left: -0;
+    }
+    #NL {
+        left: -0;
+    }
 }
 
 
@@ -184,32 +183,34 @@ p {
 }
 
 @media(max-width: 992px) {
-  #pane {
-    width: 50%
-  }
-  .panel-parent {
-    width: 100%;
-  }
+    #pane {
+        width: 50%
+    }
+    .panel-parent {
+        width: 100%;
+    }
 }
 
 @media(max-width: 767px) {
-  #pane {
-    width: 80%;
-    max-width: 100%;
-  }
-  .panel-parent {
-    width: 100%;
-  }
+    #pane {
+        width: 80%;
+        max-width: 100%;
+    }
+    .panel-parent {
+        width: 100%;
+    }
 }
+
 @media(max-width: 569px) {
-  #pane {
-    width: 100%;
-    max-width: 100%;
-  }
-  .panel-parent {
-    width: 100%;
-  }
+    #pane {
+        width: 100%;
+        max-width: 100%;
+    }
+    .panel-parent {
+        width: 100%;
+    }
 }
+
 
 /*Jumbotron*/
 
@@ -302,19 +303,36 @@ p {
     height: 160px;
 }
 
+#backdropindex {
+    height: 270px;
+    background: -moz-linear-gradient(92deg, rgba(153, 218, 255, 1) 0%, rgba(0, 128, 128, 1) 100%);
+    /* ff3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 128, 128, 1)), color-stop(100%, rgba(153, 218, 255, 1)));
+    /* safari4+,chrome */
+    background: -webkit-linear-gradient(92deg, rgba(153, 218, 255, 1) 0%, rgba(0, 128, 128, 1) 100%);
+    /* safari5.1+,chrome10+ */
+    background: -o-linear-gradient(92deg, rgba(153, 218, 255, 1) 0%, rgba(0, 128, 128, 1) 100%);
+    /* opera 11.10+ */
+    background: -ms-linear-gradient(92deg, rgba(153, 218, 255, 1) 0%, rgba(0, 128, 128, 1) 100%);
+    /* ie10+ */
+    background: linear-gradient(358deg, rgba(153, 218, 255, 1) 0%, rgba(0, 128, 128, 1) 100%);
+    /* w3c */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#008080', endColorstr='#99DAFF', GradientType=0);
+    /* ie6-9 */
+}
+
 @media screen and (max-width: 1200px) {
     #backdrop2 {
         padding-bottom: 310px;
     }
 }
 
-
 @media screen and (max-width: 995px) {
     #backdrop2 {
         padding-bottom: 370px;
     }
     #backdrop3 {
-        padding-bottom: 360px;
+        padding-bottom: 260px;
     }
     #backdrop4 {
         padding-bottom: 20px;
@@ -322,7 +340,7 @@ p {
 }
 
 @media(max-width: 946px) {
-  #backdrop1 {
+    #backdrop1 {
         padding-bottom: 380px;
     }
 }
@@ -335,7 +353,7 @@ p {
         padding-bottom: 270px;
     }
     #backdrop3 {
-        padding-bottom: -0px;
+        padding-bottom: 0;
     }
     #backdrop4 {
         padding-bottom: -0px;
@@ -343,7 +361,7 @@ p {
 }
 
 @media screen and (max-width: 660px) {
-  #backdrop1 {
+    #backdrop1 {
         padding-bottom: 310px;
     }
 }
@@ -404,6 +422,8 @@ p {
         padding-bottom: 380px;
     }
 }
+
+
 /*Item type nav*/
 
 .navvy-listy {
@@ -514,10 +534,10 @@ p {
     cursor: pointer;
     border-radius: 10%;
     box-shadow: 0px 0px 3px black;
-  background-color: white;
+    background-color: white;
     border: 1px solid gray;
     display: inline-block;
-  font-weight: bold;
+    font-weight: bold;
 }
 
 .submit:active {
@@ -594,7 +614,7 @@ input[type=text]:focus {
 
 .midimage1 {
     position: relative;
-    height: 190px;   
+    height: 190px;
     margin: 0 auto;
 }
 
@@ -615,6 +635,7 @@ input[type=text]:focus {
     font-size: .35em;
     width: 130px;
 }
+
 
 /*Video page*/
 
@@ -667,12 +688,14 @@ input[type=text]:focus {
     margin-bottom: 20px;
 }
 
+
 /*Image pages*/
 
 .portfolioImage {
     max-height: 600px;
     margin-top: 30px;
 }
+
 
 /*Footer!*/
 
@@ -696,20 +719,19 @@ input[type=text]:focus {
     display: inline-block;
     width: 33%;
     padding-top: 5px;
-    height:11px;
+    height: 11px;
 }
 
 #footcont {
-  text-align: center;
+    text-align: center;
 }
 
 #footword {
     right: 10px;
-  text-align: right;  
+    text-align: right;
 }
 
-#footatt {
-}
+#footatt {}
 
 #foot {
     color: #23A3FF;
@@ -726,102 +748,95 @@ input[type=text]:focus {
 }
 
 @media(max-width: 1465px) {
-  #footatt, #footword {
-    bottom: 10px;
-    position: absolute;
-  }
-  
-  .footcol {
-  }
+    #footatt,
+    #footword {
+        bottom: 10px;
+        position: absolute;
+    }
+    .footcol {}
 }
 
 @media(max-width: 847px) {
-  #footatt, #footword {
-    bottom: 20px;
-    position: absolute;
-  }
-  
+    #footatt,
+    #footword {
+        bottom: 20px;
+        position: absolute;
+    }
     .contpage {
         margin-top: 0px;
     }
-    
-  #footword {
-    width: 110px;
-    bottom: 12px;
-  }
-  
-  .footer {
-    height: 80px;
-    margin-top: 6em;
-  }
+    #footword {
+        width: 110px;
+        bottom: 12px;
+    }
+    .footer {
+        height: 80px;
+        margin-top: 6em;
+    }
 }
 
 @media(max-width: 770px) {
-  .footer {
-    height: 100px;
-    margin-top: 6em;
-  }
+    .footer {
+        height: 100px;
+        margin-top: 6em;
+    }
 }
 
 @media(max-width: 529px) {
-  #footatt, #footword {
-    bottom: 30px;
-    position: absolute;
-  }
-  
-  #footword {
-    width: 110px;
-    bottom: 22px;
-  }
-  
-  .footer {
-    height: 100px;
-  }
+    #footatt,
+    #footword {
+        bottom: 30px;
+        position: absolute;
+    }
+    #footword {
+        width: 110px;
+        bottom: 22px;
+    }
+    .footer {
+        height: 100px;
+    }
 }
 
 @media(max-width: 485px) {
-  #footatt, #footword {
-    bottom: 45px;
-    position:absolute;
-  }
-  
-  #footword {
-    width: 110px;
-    bottom: 32px;
-  }
-  
-  .footer {
-    height: 130px;
-    
-  }
+    #footatt,
+    #footword {
+        bottom: 45px;
+        position: absolute;
+    }
+    #footword {
+        width: 110px;
+        bottom: 32px;
+    }
+    .footer {
+        height: 130px;
+    }
 }
 
 @media(max-width: 356px) {
-  #footatt, #footword {
-    bottom: 45px;
-    position:absolute;
-  }
-  
-  #footword {
-    width: 110px;
-    bottom: 32px;
-  }
-  
-  .footer {
-    height: 150px;
-    
-  }
+    #footatt,
+    #footword {
+        bottom: 45px;
+        position: absolute;
+    }
+    #footword {
+        width: 110px;
+        bottom: 32px;
+    }
+    .footer {
+        height: 150px;
+    }
 }
 
 
 /*Header hover*/
+
 #LOGOBIT:hover {
-  filter: sepia() saturate(10000%) hue-rotate(170deg);
+    filter: sepia() saturate(10000%) hue-rotate(170deg);
 }
 
 
-
 /*Lotto game*/
+
 .lottocont {
     width: 100%;
     text-align: center;
@@ -829,13 +844,13 @@ input[type=text]:focus {
 }
 
 .lottoitem {
-  margin-top: 15px;
+    margin-top: 15px;
     border: 2px solid black;
     border-radius: 10px;
     width: 90%;
     display: inline-block;
     box-shadow: 0px 0px 5px gray;
-  height: 200px;
+    height: 200px;
 }
 
 .game {
@@ -888,7 +903,7 @@ input[type=text]:focus {
     font-size: 2em;
     cursor: pointer;
     display: inline-block;
-  margin-right: 10px;
+    margin-right: 10px;
     text-align: center;
     border: 1px solid black;
     -webkit-user-select: none;
@@ -906,7 +921,7 @@ input[type=text]:focus {
     font-size: 2em;
     cursor: pointer;
     text-align: center;
-  display: inline-block;
+    display: inline-block;
     border: 1px solid black;
     -webkit-user-select: none;
     background-color: burlywood;
@@ -940,40 +955,40 @@ input[type=text]:focus {
 .moneyP {
     width: 100%;
     text-align: center;
-  height: 50px;
-  margin-top: 30px;
+    height: 50px;
+    margin-top: 30px;
 }
 
 .money {
     font-size: 2em;
     font-family: "Laila", sans-serif;
-  display: inline-block;
-  margin-right: 100px;
+    display: inline-block;
+    margin-right: 100px;
 }
 
 .userMoney {
-  font-size: 2em;
-  font-family: "Laila", sans-serif;
-  display: inline-block;
+    font-size: 2em;
+    font-family: "Laila", sans-serif;
+    display: inline-block;
 }
 
 .Winnings {
     font-size: 2em;
     font-family: "Laila", sans-serif;
-  display: inline-block;
+    display: inline-block;
 }
 
 .userWin {
-  font-size: 2em;
-  font-family: "Laila", sans-serif;
-  display: inline-block;
+    font-size: 2em;
+    font-family: "Laila", sans-serif;
+    display: inline-block;
 }
 
 .weekP {
     width: 100%;
     text-align: center;
     margin-top: 10px;
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .week {
@@ -981,7 +996,9 @@ input[type=text]:focus {
     font-family: "Laila", sans-serif;
 }
 
+
 /*Index*/
+
 .indexArticle {
     margin-bottom: -30px;
 }
@@ -999,36 +1016,38 @@ input[type=text]:focus {
     height: 10px;
 }
 
+
 /*Stroop says*/
+
 .globalcontainer {
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  margin-top: 50px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin-top: 50px;
 }
 
 .header {
-  font-size: 3em;
-  font-family: 'Poppins', sans-serif;
+    font-size: 3em;
+    font-family: 'Poppins', sans-serif;
     margin-top: 10px;
 }
 
 .instructions {
-  font-size: 1.2em;
-  max-width: 90%;
-  margin: 0 auto;
-    margin-bottom: 60px; 
+    font-size: 1.2em;
+    max-width: 90%;
+    margin: 0 auto;
+    margin-bottom: 60px;
 }
 
 .scorecont {
-  font-size: 1.1em;
-  margin-top: 40px;
-  font-family: 'Poppins', sans-serif;
-  margin-bottom: -10px;
+    font-size: 1.1em;
+    margin-top: 40px;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: -10px;
 }
 
 .score {
-  font-size: 3em;
+    font-size: 3em;
     margin: 0 auto;
     width: 100%;
     left: 0;
@@ -1039,93 +1058,102 @@ input[type=text]:focus {
     margin: 0 auto;
 }
 
-.buttonscontainer {
-}
+.buttonscontainer {}
 
 .button {
-  height: 120px;
-  width: 170px;
-  background-color: burlywood;
-  display: inline-block;
-  margin-top: 13px;
-  border-radius: 5px;
-  box-shadow: 0px 2px 4px black;
-  cursor: pointer;
-  font-size: 2.5em;
-  -webkit-user-select: none; /* Chrome all / Safari all */
-  -moz-user-select: none; /* Firefox all */
-  -ms-user-select: none; /* IE 10+ */
-  font-family: 'Alfa Slab One', cursive;
+    height: 120px;
+    width: 170px;
+    background-color: burlywood;
+    display: inline-block;
+    margin-top: 13px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px black;
+    cursor: pointer;
+    font-size: 2.5em;
+    -webkit-user-select: none;
+    /* Chrome all / Safari all */
+    -moz-user-select: none;
+    /* Firefox all */
+    -ms-user-select: none;
+    /* IE 10+ */
+    font-family: 'Alfa Slab One', cursive;
 }
 
 .button:active {
-  box-shadow: 0px 1px 2px black;
-  font-size: 2.45em;
-  margin-bottom: -1px;
+    box-shadow: 0px 1px 2px black;
+    font-size: 2.45em;
+    margin-bottom: -1px;
 }
 
 #button0 {
-  color: blue;
-  margin-right: 10px;
+    color: blue;
+    margin-right: 10px;
 }
 
 #button1 {
-  color: yellow;
+    color: yellow;
 }
 
 #button2 {
-  color: red;
-  margin-right: 10px;
+    color: red;
+    margin-right: 10px;
 }
 
 #button3 {
-  color: green;
+    color: green;
 }
+
 .strooptext {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .startbuttoncont {
-  width: 100%;
-  text-align: center;
-  margin-top: 30px;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
 }
 
 .startbutt {
-  margin: 0 auto;
-  font-size: 1.8em;
-  font-family: 'Poppins', sans-serif;
-  height: 40px;
-  width: 100px;
-  border-radius: 5px;
-  background-color: #A78A7F;
-  box-shadow: 0px 3px 4px black;
-  -webkit-user-select: none; /* Chrome all / Safari all */
-  -moz-user-select: none; /* Firefox all */
-  -ms-user-select: none; /* IE 10+ */
-  cursor: pointer;
+    margin: 0 auto;
+    font-size: 1.8em;
+    font-family: 'Poppins', sans-serif;
+    height: 40px;
+    width: 100px;
+    border-radius: 5px;
+    background-color: #A78A7F;
+    box-shadow: 0px 3px 4px black;
+    -webkit-user-select: none;
+    /* Chrome all / Safari all */
+    -moz-user-select: none;
+    /* Firefox all */
+    -ms-user-select: none;
+    /* IE 10+ */
+    cursor: pointer;
 }
 
 .startbutt:active {
-  box-shadow: 0px 1px 2px black;
-  font-size: 1.78em;
+    box-shadow: 0px 1px 2px black;
+    font-size: 1.78em;
 }
 
 .TEST {
-  margin-top: 20px;
-  font-size: 1.3em;
-  font-family: 'Poppins', sans-serif;
+    margin-top: 20px;
+    font-size: 1.3em;
+    font-family: 'Poppins', sans-serif;
 }
 
+
 /*text media queries*/
-@media(max-width: 1000px) {    
+
+@media(max-width: 1000px) {
     .filmtext {
         font-size: 1em;
     }
 }
-@media(max-width: 1200px) { 
+
+@media(max-width: 1200px) {
     .CatchGameTrack {
         visibility: hidden;
     }
@@ -1134,10 +1162,51 @@ input[type=text]:focus {
         display: none;
     }
 }
+@media(max-width: 958px) {
+    #backdropindex {
+        height: 370px;
+    }
+}
+@media(max-width: 895px) {
+    #backdrop3 {
+        padding-bottom: 360px;       
+    }
+}
 
+@media(max-width: 768px) {
+    #backdropindex {
+        height: 270px;
+    }
+    #backdrop3 {
+        top: -40px;       
+    }
+}
 
+@media(max-width: 628px) {
+    #backdropindex {
+        height: 300px;
+    }
+}
+@media(max-width: 570px) {
+    #backdropindex {
+        height: 320px;
+    }
+}
+@media(max-width: 524px) {
+    #backdropindex {
+        height: 360px;
+    }
+}
 @media(max-width: 500px) {
-  .filmtext {
-    font-size: .9em;
-  }
+    .filmtext {
+        font-size: .9em;
+    }
+    #backdropindex {
+        height: 390px;
+    }
+}
+@media(max-width: 446px) {
+    #backdropindex {
+        height: 440px;
+    }
 }
