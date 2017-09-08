@@ -1204,9 +1204,17 @@ input[type=text]:focus {
     #backdropindex {
         height: 390px;
     }
+    #backdrop3 {
+        height: 430px;
+    }
 }
 @media(max-width: 446px) {
     #backdropindex {
         height: 440px;
+    }
+}
+@media(max-width: 438px) {
+    #backdrop1 {
+        height: 430px;
     }
 }
