@@ -1149,7 +1149,7 @@ input[type=text]:focus {
 
 @media(max-width: 1000px) {
     .filmtext {
-        font-size: 1em;
+        font-size: 1.25em;
     }
 }
 
@@ -1199,7 +1199,7 @@ input[type=text]:focus {
 }
 @media(max-width: 500px) {
     .filmtext {
-        font-size: .9em;
+        font-size: 1.2em;
     }
     #backdropindex {
         height: 390px;
