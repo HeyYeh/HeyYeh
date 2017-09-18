@@ -189,6 +189,9 @@ p {
     .panel-parent {
         width: 100%;
     }
+    .floatC float {
+        display: none;
+    }
 }
 
 @media(max-width: 767px) {
