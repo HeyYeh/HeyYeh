@@ -191,11 +191,11 @@ p {
     }
     .floatC {
         display: none;
-        left: -100px;
+        margin-left: -100px;
     }
     .float {
         display: none;
-        left: -100px;
+        margin-left: -100px;
     }
 }
 
