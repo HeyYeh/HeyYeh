@@ -189,7 +189,11 @@ p {
     .panel-parent {
         width: 100%;
     }
-    .floatC float {
+    .floatC {
+        display: none;
+        left: -100px;
+    }
+    .float {
         display: none;
         left: -100px;
     }
