@@ -189,6 +189,14 @@ p {
     .panel-parent {
         width: 100%;
     }
+    #floatC {
+        display: none;
+        margin-left: -100px;
+    }
+    #float {
+        display: none;
+        margin-left: -100px;
+    }
 }
 
 @media(max-width: 767px) {
