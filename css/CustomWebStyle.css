@@ -727,6 +727,8 @@ input[type=text]:focus {
 .portfolioImage {
     max-height: 600px;
     margin-top: 30px;
+    max-width: 80%;
+    width: auto;
 }
 
 
@@ -1250,4 +1252,8 @@ input[type=text]:focus {
     #backdrop1 {
         height: 430px;
     }
+}
+
+.embed-responsive-16by9 {
+  padding-bottom: 100%;
 }
