@@ -627,7 +627,6 @@ input[type=text]:focus {
     border: 2px solid black;
     border-radius: 20px;
     padding: 25px;
-    z-index: -1;
     position: relative;
 }
 
