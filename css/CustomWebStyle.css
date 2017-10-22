@@ -1256,3 +1256,8 @@ input[type=text]:focus {
 .embed-responsive-16by9 {
   padding-bottom: 100%;
 }
+
+.PR1 {
+    max-width: 49%;
+    display: inline-block;
+}
