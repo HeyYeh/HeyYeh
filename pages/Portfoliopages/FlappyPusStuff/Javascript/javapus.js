@@ -8,6 +8,7 @@ var score = -1;
 var highscore = 0;
 var playerAlive = true;
 var labelhighscore;
+var rockGroup;
 
 window.onload = function () {
 
@@ -66,12 +67,12 @@ window.onload = function () {
 
     function preload() {
 
-        game.load.spritesheet('player', '../Sprites/PusTiles.png', 410, 142);
-        game.load.image('background', '../Sprites/Background.png');
-        game.load.image("floor", "../Sprites/FloorFull.png");
-        game.load.image("rocksBottom", "../Sprites/RocksBottom.png");
-        game.load.image("rocksTop", "../Sprites/RocksTop.png");
-
+        game.load.spritesheet('player', 'FlappyPusStuff/Sprites/PusTiles.png', 410, 142);
+        game.load.image('background', 'FlappyPusStuff/Sprites/Background.png');
+        game.load.image("floor", "FlappyPusStuff/Sprites/FloorFull.png");
+        game.load.image("rocksBottom", "FlappyPusStuff/Sprites/RocksBottom.png");
+        game.load.image("rocksTop", "FlappyPusStuff/Sprites/RocksTop.png");
+        
     }
 
      
