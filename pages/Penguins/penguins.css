@@ -1,0 +1,139 @@
+.penguinsImg {
+    background: url("HOG.png") no-repeat;
+}
+
+.penguinsImg:hover {
+    background: url("HOGback.png") no-repeat;
+}
+
+.penguinSlide {
+    max-width: 100%;
+}
+
+.penguinText {
+    font-size: 1.5em;
+}
+
+.penguinSubHead {
+    font-size: 1.1em;
+    margin-top: 1px;
+}
+
+.penguinBreak1 {
+    margin: 0 auto;
+    max-width: 70%;
+    margin-top: -20px;
+}
+
+.penguinSectionHead {
+    font-size: 3.1em;
+}
+
+.penguinItalics {
+    font-size: 1.2em;
+}
+
+.penguinVideo {
+    border: 0 white;
+    box-shadow: 0 0 0;
+    max-height: 130px;
+    width: 100%;
+}
+
+.penguinTopicHeader {
+    font-size: 2.5em;
+}
+
+.screenbox {
+    list-style: none;
+    width: 80%;
+    background: #eee;
+    border: 1px solid #333;
+    padding: 5px 14px;
+    margin: 0 auto;
+}
+
+
+
+.screenbox li {
+    font: 1.3em/1.4em Courier, fixed;
+    text-align: left;
+    
+}
+
+.sceneheader,
+.action,
+.character {
+    padding-top: 1.5ex;
+}
+
+.action {
+    padding-right: 5%;
+}
+
+.character {
+    width: auto;
+    margin-left: 40%;
+}
+
+.dialogue {
+    margin-left: 25%;
+    padding-right: 25%;
+}
+
+.parenthetical {
+    margin-left: 32%;
+    padding-right: 30%;
+}
+
+/* special case: dialogue followed by a parenthetical; the extra line needs to be suppressed */
+
+.dialogue + .parenthetical {
+    padding-bottom: 0;
+}
+
+.transition {
+    padding-top: 3ex;
+    margin-left: 65%;
+    padding-bottom: 1.5ex;
+}
+
+
+
+.penguinNav {
+    width: 350px;
+    height: 200px;
+    position: fixed;
+    top: 110px;
+    left: 20px;
+    text-align: center;
+}
+
+.navHead {
+    font-weight: 1000;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    font-size: 1.2em;
+    margin-bottom: 8px;
+}
+
+.navLine {
+    z-index: 2;
+    width: 100%;
+}
+
+.navList {
+    list-style: none;
+    text-align: left;
+    font-size: 1.2em;
+}
+
+.navList li:hover {
+    color: cornflowerblue;
+    cursor: pointer;
+}
+
+.navSectionHead {
+    font-weight: 600;
+}
