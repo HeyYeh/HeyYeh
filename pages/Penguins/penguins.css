@@ -137,3 +137,22 @@
 .navSectionHead {
     font-weight: 600;
 }
+
+
+
+@media(max-width: 829px) {
+    .penguinNav {
+        display: none;
+    }
+    
+    .screenbox li {
+    font: 1em/1.2em Courier, fixed;
+    text-align: left;
+    
+}
+    
+    .character {
+    width: auto;
+    margin-left: 20%;
+}
+}
