@@ -155,13 +155,21 @@
         background-color: white;
     }
     
+        .character {
+    width: auto;
+    margin-left: 30%;
 }
     
-    .character {
-    width: auto;
-    margin-left: 20%;
+    .screenbox li {
+    font: 1.3em/1.4em Courier, fixed;
+    text-align: left;
+    
 }
+    
 }
+    
+
+
 
 @media(max-width: 829px) {
     .penguinNav {
