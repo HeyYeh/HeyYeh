@@ -140,6 +140,29 @@
 
 
 
+@media(max-width: 1350px) {
+    .penguinNav {
+        width: 200px;
+        overflow: hidden;
+        height: 35px;
+        font-size: .8em;
+        left: 0;
+        transition: height 1s;
+    }
+    
+    .penguinNav:hover {
+        height: 350px;
+        background-color: white;
+    }
+    
+}
+    
+    .character {
+    width: auto;
+    margin-left: 20%;
+}
+}
+
 @media(max-width: 829px) {
     .penguinNav {
         display: none;
