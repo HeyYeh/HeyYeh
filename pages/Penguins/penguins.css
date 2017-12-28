@@ -138,8 +138,24 @@
     font-weight: 600;
 }
 
+ .penguinNav {
+        width: 200px;
+        overflow: hidden;
+        height: 35px;
+        font-size: .8em;
+        left: 0;
+        transition: height 1s;
+    }
+    
+    .penguinNav:hover {
+        height: 350px;
+}
 
-
+        .penguinNav:hover {
+        height: 350px;
+        background-color: white;
+        }
+            
 @media(max-width: 1350px) {
     .penguinNav {
         width: 200px;
