@@ -694,16 +694,12 @@ jQuery(function ($) {
             }, FormSpeed, function () {
                 $("#message").attr("placeholder", "What would you like to say?");
             });
-            $("#message").click(function () {
-                $(this).animate({
-                    height: "200px"
-                });
                 $(this).css("text-align", "left")
             });
         });
 
     });
-});
+
 
 
 //Floating balls

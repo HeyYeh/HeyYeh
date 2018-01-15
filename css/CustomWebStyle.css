@@ -602,6 +602,7 @@ input[type=text]:focus {
 
 #message {
     width: 10px;
+    height: 200px;
     border: none;
     text-align: center;
     border-bottom: 2px solid #8B8B97;
@@ -899,6 +900,12 @@ input[type=text]:focus {
     font-family: "Laila", serif;
 }
 
+@media(max-width: 400px) {
+    #lottohead {
+        font-size: 3em;
+    }
+}
+
 .CompParent {
     width: 100%;
     position: relative;
@@ -993,11 +1000,20 @@ input[type=text]:focus {
     margin-top: 30px;
 }
 
+@media(max-width: 800px) {
+    .moneyP {
+        font-size: .7em;    
+    }
+    .money {
+        margin-right: 10px;
+    }
+}
+
 .money {
     font-size: 2em;
     font-family: "Laila", sans-serif;
     display: inline-block;
-    margin-right: 100px;
+    margin-right: 50px;
 }
 
 .userMoney {

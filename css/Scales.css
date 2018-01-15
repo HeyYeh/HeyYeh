@@ -27,6 +27,7 @@
     user-select: none;
     cursor: hand;
     cursor: pointer;
+    z-index: 8;
 }
 
 .randomiseButt:active {
@@ -320,7 +321,7 @@
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     width: 70px;
-    position: fixed;
+    position: absolute;
     right: 0;
     top: 150px;
     overflow: hidden;
@@ -348,6 +349,7 @@
 
 .menushadow {
     box-shadow: -2px 0 3px grey;
+    position: absolute;
 }
 
 .scalespagecont {
