@@ -285,6 +285,17 @@ p {
     height: 100px;
 }
 
+#backdrop2alt {
+    background: -moz-linear-gradient(89deg, rgba(255,255,207,1) 0%, rgba(140,190,194,1) 100%); /* ff3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(140,190,194,1)), color-stop(100%, rgba(255,255,207,1))); /* safari4+,chrome */
+background: -webkit-linear-gradient(89deg, rgba(255,255,207,1) 0%, rgba(140,190,194,1) 100%); /* safari5.1+,chrome10+ */
+background: -o-linear-gradient(89deg, rgba(255,255,207,1) 0%, rgba(140,190,194,1) 100%); /* opera 11.10+ */
+background: -ms-linear-gradient(89deg, rgba(255,255,207,1) 0%, rgba(140,190,194,1) 100%); /* ie10+ */
+background: linear-gradient(1deg, rgba(255,255,207,1) 0%, rgba(140,190,194,1) 100%); /* w3c */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8CBEC2', endColorstr='#FFFFCF',GradientType=0 ); /* ie6-9 */
+    height: 180px;
+}
+
 #backdrop2 {
     background: -moz-linear-gradient(89deg, rgba(255,255,207,1) 0%, rgba(140,190,194,1) 100%); /* ff3.6+ */
 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(140,190,194,1)), color-stop(100%, rgba(255,255,207,1))); /* safari4+,chrome */
@@ -293,7 +304,7 @@ background: -o-linear-gradient(89deg, rgba(255,255,207,1) 0%, rgba(140,190,194,1
 background: -ms-linear-gradient(89deg, rgba(255,255,207,1) 0%, rgba(140,190,194,1) 100%); /* ie10+ */
 background: linear-gradient(1deg, rgba(255,255,207,1) 0%, rgba(140,190,194,1) 100%); /* w3c */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8CBEC2', endColorstr='#FFFFCF',GradientType=0 ); /* ie6-9 */
-    height: 250px;
+    height: 260px;
 }
 
 #contentbackdrop2 {
@@ -1282,4 +1293,35 @@ input[type=text]:focus {
 .puslogo {
     position: absolute;
     left: 520px;
+}
+
+.showreelCont {
+    width: 100%;
+    background-color: ;
+    left: 0px;
+    position: absolute;
+}
+
+.showreel {
+    width: calc(65vh * 1.77);
+    height: 65vh;
+    background-color: ;
+    left: 0;
+}
+
+.showreelSpacer {
+    height: 65vh;
+}
+
+.indexThing {
+    margin-bottom: 0;
+    box-shadow: 0 0 10px -1px black; 
+}
+
+.indexBlock {
+    bottom: -20px;
+}
+
+.indexBlockB {
+    bottom: 20px;
 }
