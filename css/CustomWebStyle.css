@@ -1341,5 +1341,4 @@ input[type=text]:focus {
     display: flex;
     justify-content: center;
     align-items: center;        /* for single line flex container */
-    align-content: center;      /* for multi-line flex container */
 }
