@@ -1328,3 +1328,18 @@ input[type=text]:focus {
 .indexBlockB {
     bottom: 20px;
 }
+
+.gameparentcont {
+    display: flex;
+    flex-direction: row;     /* make main axis horizontal (default setting) */
+    justify-content: center; /* center items horizontally, in this case */
+    align-items: center;     /* center items vertically, in this case */
+    height: auto;
+}
+
+#gamecont {
+    display: flex;
+    justify-content: center;
+    align-items: center;        /* for single line flex container */
+    align-content: center;      /* for multi-line flex container */
+}
