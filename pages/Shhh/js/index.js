@@ -67,7 +67,7 @@ getSong();
 var address = "";
 
 function loadLyrics(site) {
-    songName = songName.split('-').join("");
+    //songName = songName.split('-').join("");
     //all the song name junk
     if (site == 0) {
         songName = songName.replace(/ +/g, "");
@@ -92,14 +92,13 @@ function loadLyrics(site) {
         }
     }
 
-    artistName = artistName.split('-').join(" "); //remove hyphen
+    //artistName = artistName.split('-').join(" "); //remove hyphen
     if (site == 0) {
         artistName = artistName.replace(/ +/g, "");
     } //no hyphens between words
     if (site == 1) {
         artistName = artistName.replace(/ +/g, "-");
     } //hyphens between words
-    artistName = artistName.replace(/ +/g, ""); //remove spaces
     artistName = artistName.split('.').join(""); //remove periods
     artistName = artistName.split('(').join(""); //remove open parenthesis
     artistName = artistName.split(')').join(""); //remove close parenthesis
@@ -116,6 +115,8 @@ function loadLyrics(site) {
         address = "https://www.musixmatch.com/lyrics/" + artistName + "/" + songName;
     }
     console.log(address);
+    console.log(songName);
+    console.log(artistName);
 
     $(".frame").prop('src', address);
 
@@ -132,7 +133,7 @@ $(document).ready(function () {
 
     //Getting those lyrics
     $(".musixButt").click(function () {
-        console.log(songName);
+        console.log("wut" + address);
         loadLyrics(1);
 
 
