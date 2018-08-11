@@ -115,7 +115,7 @@ function loadLyrics(site) {
     if (site = 1) {
         address = "https://www.musixmatch.com/lyrics/" + artistName + "/" + songName;
     }
-    console.log("address");
+    console.log(address);
 
     $(".frame").prop('src', address);
 
