@@ -86,18 +86,16 @@ function loadLyrics(site) {
 
     //all the artist name junk
     artistName = artistName.toLowerCase(); //make it lowercase
-    if (site = 0) {
+    if (site == 0) {
         if (artistName[0] === "t" && artistName[1] === "h" && artistName[2] === "e" && artistName[3] === " ") { //remove 'the'
             artistName = artistName.slice(3);
         }
     }
-    console.log(artistName);
     //artistName = artistName.split('-').join(" "); //remove hyphen
     if (site == 0) {
         artistName = artistName.replace(/ +/g, "");
     } //no hyphens between words
     if (site == 1) {
-        console.log(artistName);
         artistName = artistName.replace(/ +/g, "-");
     } //hyphens between words
     artistName = artistName.split('.').join(""); //remove periods
