@@ -66,14 +66,15 @@ getSong();
 //////////////////////////////////////////////////////////////
 
 
-function loadLyrics() {
+function loadLyrics(site) {
+    songName = songName.split('-').join("");
     //all the song name junk
-    songName = songName.replace(/ +/g, "");
+    if (site == 0) {songName = songName.replace(/ +/g, "");}
+    if (site == 1) {songName = songName.replace(/ +/g, "-");}
     songName = songName.toLowerCase();
     songName = songName.split('.').join("");
     songName = songName.split('(').join("");
     songName = songName.split(')').join("");
-    songName = songName.split('-').join("");
     songName = songName.split('!').join("");
     songName = songName.split('?').join("");
     songName = songName.split("'").join("");
@@ -84,23 +85,29 @@ function loadLyrics() {
     if (artistName[0] === "t" && artistName[1] === "h" && artistName[2] === "e" && artistName[3] === " ") { //remove 'the'
         artistName = artistName.slice(3);
     }
+    artistName = artistName.split('-').join("");//remove hyphen
+    if (site == 0) {artistName = artistName.replace(/ +/g, "");}//no hyphens between words
+    if (site == 1) {artistName = artistName.replace(/ +/g, "-");}//hyphens between words
     artistName = artistName.replace(/ +/g, ""); //remove spaces
     artistName = artistName.split('.').join(""); //remove periods
     artistName = artistName.split('(').join(""); //remove open parenthesis
     artistName = artistName.split(')').join(""); //remove close parenthesis
-    artistName = artistName.split('-').join("");//remove hyphen
     artistName = artistName.split('!').join("");//remove exclamation mark
     artistName = artistName.split('?').join("");//remove question mark
     artistName = artistName.split("'").join(""); //remove apostrophe
     artistName = artistName.split('"').join("");//remove quotation mark
 
-    var address = "https://www.azlyrics.com/lyrics/" + artistName + "/" + songName + ".html"
 
+    if (site = 0) {
+        var address = "https://www.azlyrics.com/lyrics/" + artistName + "/" + songName + ".html"
+    }
+    if (site = 1) {
+        var address = "https://www.musixmatch.com/lyrics/" + artistName + "/" + songName
+    }
     console.log("test2");
 
     $(".frame").prop('src', address);
 
-    console.log("www.azlyrics.com/lyrics/" + artistName + "/" + songName + ".html");
 }
 
 $(document).ready(function () {
@@ -108,7 +115,14 @@ $(document).ready(function () {
     //Getting those lyrics
     $(".testButt").click(function () {
 
-        loadLyrics();
+        loadLyrics(0);
+
+    });
+
+    //Getting those lyrics
+    $(".musixButt").click(function () {
+
+        loadLyrics(1);
 
     });
 
