@@ -91,12 +91,14 @@ function loadLyrics(site) {
             artistName = artistName.slice(3);
         }
     }
-
+    
+    console.log(artistName);
     //artistName = artistName.split('-').join(" "); //remove hyphen
     if (site == 0) {
         artistName = artistName.replace(/ +/g, "");
     } //no hyphens between words
     if (site == 1) {
+        console.log(artistName);
         artistName = artistName.replace(/ +/g, "-");
     } //hyphens between words
     artistName = artistName.split('.').join(""); //remove periods
