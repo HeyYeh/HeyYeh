@@ -91,7 +91,6 @@ function loadLyrics(site) {
             artistName = artistName.slice(3);
         }
     }
-    
     console.log(artistName);
     //artistName = artistName.split('-').join(" "); //remove hyphen
     if (site == 0) {
@@ -110,10 +109,10 @@ function loadLyrics(site) {
     artistName = artistName.split('"').join(""); //remove quotation mark
 
 
-    if (site = 0) {
+    if (site == 0) {
         address = "https://www.azlyrics.com/lyrics/" + artistName + "/" + songName + ".html";
     }
-    if (site = 1) {
+    if (site == 1) {
         address = "https://www.musixmatch.com/lyrics/" + artistName + "/" + songName;
     }
     console.log(address);
