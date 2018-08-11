@@ -69,8 +69,12 @@ var address = "";
 function loadLyrics(site) {
     songName = songName.split('-').join("");
     //all the song name junk
-    if (site == 0) {songName = songName.replace(/ +/g, "");}
-    if (site == 1) {songName = songName.replace(/ +/g, "-");}
+    if (site == 0) {
+        songName = songName.replace(/ +/g, "");
+    }
+    if (site == 1) {
+        songName = songName.replace(/ +/g, "-");
+    }
     songName = songName.toLowerCase();
     songName = songName.split('.').join("");
     songName = songName.split('(').join("");
@@ -82,27 +86,34 @@ function loadLyrics(site) {
 
     //all the artist name junk
     artistName = artistName.toLowerCase(); //make it lowercase
-    if (artistName[0] === "t" && artistName[1] === "h" && artistName[2] === "e" && artistName[3] === " ") { //remove 'the'
-        artistName = artistName.slice(3);
+    if (site = 0) {
+        if (artistName[0] === "t" && artistName[1] === "h" && artistName[2] === "e" && artistName[3] === " ") { //remove 'the'
+            artistName = artistName.slice(3);
+        }
     }
-    artistName = artistName.split('-').join("");//remove hyphen
-    if (site == 0) {artistName = artistName.replace(/ +/g, "");}//no hyphens between words
-    if (site == 1) {artistName = artistName.replace(/ +/g, "-");}//hyphens between words
+
+    artistName = artistName.split('-').join(""); //remove hyphen
+    if (site == 0) {
+        artistName = artistName.replace(/ +/g, "");
+    } //no hyphens between words
+    if (site == 1) {
+        artistName = artistName.replace(/ +/g, "-");
+    } //hyphens between words
     artistName = artistName.replace(/ +/g, ""); //remove spaces
     artistName = artistName.split('.').join(""); //remove periods
     artistName = artistName.split('(').join(""); //remove open parenthesis
     artistName = artistName.split(')').join(""); //remove close parenthesis
-    artistName = artistName.split('!').join("");//remove exclamation mark
-    artistName = artistName.split('?').join("");//remove question mark
+    artistName = artistName.split('!').join(""); //remove exclamation mark
+    artistName = artistName.split('?').join(""); //remove question mark
     artistName = artistName.split("'").join(""); //remove apostrophe
-    artistName = artistName.split('"').join("");//remove quotation mark
+    artistName = artistName.split('"').join(""); //remove quotation mark
 
 
     if (site = 0) {
-        address = "https://www.azlyrics.com/lyrics/" + artistName + "/" + songName + ".html"
+        address = "https://www.azlyrics.com/lyrics/" + artistName + "/" + songName + ".html";
     }
     if (site = 1) {
-        address = "https://www.musixmatch.com/lyrics/" + artistName + "/" + songName
+        address = "https://www.musixmatch.com/lyrics/" + artistName + "/" + songName;
     }
     console.log("address");
 
@@ -121,9 +132,9 @@ $(document).ready(function () {
 
     //Getting those lyrics
     $(".musixButt").click(function () {
-
-        loadLyrics(1);
         console.log("address");
+        loadLyrics(1);
+
 
     });
 
