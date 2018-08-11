@@ -132,7 +132,7 @@ $(document).ready(function () {
 
     //Getting those lyrics
     $(".musixButt").click(function () {
-        console.log("address");
+        console.log(address);
         loadLyrics(1);
 
 
