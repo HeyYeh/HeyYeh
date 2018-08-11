@@ -92,7 +92,7 @@ function loadLyrics(site) {
         }
     }
 
-    artistName = artistName.split('-').join(""); //remove hyphen
+    artistName = artistName.split('-').join(" "); //remove hyphen
     if (site == 0) {
         artistName = artistName.replace(/ +/g, "");
     } //no hyphens between words
