@@ -64,7 +64,7 @@ getSong();
 
 
 //////////////////////////////////////////////////////////////
-
+var address = "";
 
 function loadLyrics(site) {
     songName = songName.split('-').join("");
@@ -99,10 +99,10 @@ function loadLyrics(site) {
 
 
     if (site = 0) {
-        var address = "https://www.azlyrics.com/lyrics/" + artistName + "/" + songName + ".html"
+        address = "https://www.azlyrics.com/lyrics/" + artistName + "/" + songName + ".html"
     }
     if (site = 1) {
-        var address = "https://www.musixmatch.com/lyrics/" + artistName + "/" + songName
+        address = "https://www.musixmatch.com/lyrics/" + artistName + "/" + songName
     }
     console.log("address");
 
@@ -123,6 +123,7 @@ $(document).ready(function () {
     $(".musixButt").click(function () {
 
         loadLyrics(1);
+        console.log("address");
 
     });
 
