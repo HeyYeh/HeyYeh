@@ -27,7 +27,7 @@ const authEndpoint = 'https://accounts.spotify.com/authorize';
 
 // Replace with your app's client ID, redirect URI and desired scopes
 const clientId = '9232189db1044f8db7e22b08e4888388';
-const redirectUri = 'http://ianbousher.com/pages/spotify-lyrics.html';
+const redirectUri = 'http://www.ianbousher.com/pages/spotify-lyrics.html';
 const scopes = [
   "user-read-currently-playing"
 ];
