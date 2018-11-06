@@ -46,8 +46,8 @@ function getSong() {
         },
         success: function (data) {
             $(".songInfoText").empty();
-            $(".songInfoText").append(data.item.name + "<br><br>" + data.item.artists[0].name);
-            $(".songInfoText").append(data.item.name + "<br><br>" + data.item.artists[0].name);
+            $(".songInfoText").append(data.item.name + " - " + data.item.artists[0].name);
+            //$(".songInfoText").append(data.item.name + " - " + data.item.artists[0].name);
             console.log(data);
             songInfo = data;
             songName = songInfo.item.name;
