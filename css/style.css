@@ -4,6 +4,8 @@
     --white-replacement: #F4F4F4;
     --black-replacement: #171717;
     --blue-replacement: #2956A8;
+    --font1: ;
+    --font2: ;
 }
 
 * {
@@ -337,8 +339,8 @@ p {
     display: inline-grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    grid-column-gap: 50px;
-    grid-row-gap: 50px;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
