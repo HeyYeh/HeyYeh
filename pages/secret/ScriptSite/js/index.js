@@ -1,3 +1,13 @@
+
+var viewport = {
+    width  : $(window).width(),
+    height : $(window).height()
+};
+
+
+alert(viewport.height);
+alert(viewport.width);
+
 function linkFun() {
   
     $('a[data-id]').click(function(link) {
