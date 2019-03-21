@@ -1313,3 +1313,26 @@ textarea:valid ~ label {
         font-size: 13px
     }
 }
+
+@media screen and (max-width: 709px) {
+    
+    .screenbox {
+    list-style: none;
+    padding: 5px 4px;
+}
+    
+    .screenbox li {
+    font: 2.75vw Courier Prime Code, fixed;
+}
+    
+    .container {
+    width: 100%;
+    height: auto;
+    margin-top: 60px;
+    max-width: 750px;
+    margin: 15vh auto 100px;
+    padding: 0 1px;
+}
+    
+    
+}
