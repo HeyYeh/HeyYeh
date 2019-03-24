@@ -1,0 +1,138 @@
+<!--TO DO LIST
+
+- Add preamble fun to Index
+- Add link for Duology to both pages when it's out
+- Music and reddit app in there somewhere
+- Text underline colours problem
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>EXT. REDDIT DISTILLERY - DAY</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../../favicon.ico" />
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-42606980-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-42606980-1');
+
+    </script>
+
+</head>
+
+<body>
+
+    <link href="https://fonts.googleapis.com/css?family=Cantata+One|Cormorant+Garamond|EB+Garamond|IBM+Plex+Serif|Inknut+Antiqua|Martel|Podkova|Vidaloka|Zilla+Slab" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
+
+    <div class="container">
+        <ul class="screenbox">
+
+
+            <li class="sceneheader">INT. REDDIT SCRAPER</a> -
+                <gh id="TOD">DAY</gh>
+            </li>
+
+            <li class="action">Buttons and drop-down menus organised in a column greet you. Instructions are drawn on the wall:</li>
+
+            <li class="action">"I made this to do a language analysis of different subreddits so I could write in their tone and I liked it. It's a simple beast but it works, and it's pretty interesting to boot."</li>
+
+
+
+
+            <div class="buttonsCont">
+                <div class="redditButt" id="buttButt">
+                    <input class="subReddit redditInput" type="text" required>
+                    <label>Subreddit name</label></div>
+
+                <div class="redditButt" id="buttButt">
+                    <input class="redditInput numPosts" type="text" required>
+                    <label>No. posts to scrape</label></div>
+
+                <div class="redditButt buttButt" id="">
+                    <select class="sortingCat redditDropdown">
+                        <option value="hot">Hot</option>
+                        <option value="top">Top</option>
+                        <option value="new">New</option>
+                        <option value="controversial">Controversial</option>
+                        <option value="rising">Rising</option>
+                        <option value="gilded">Gilded</option>
+                    </select>
+                </div>
+
+                <div class="redditButt buttButt" id="">
+                    <select class="timeframe redditDropdown">
+                        <option value="hour">Hour</option>
+                        <option value="day">Day</option>
+                        <option value="week">Week</option>
+                        <option value="month">Month</option>
+                        <option value="year">Year</option>
+                        <option value="all">All</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="redditInfoCont">
+                <div class="buttonsCont">
+                    <div class="redditTriggerButt buttButt" id="titlesButt">
+                        <hop class="buttText">Fetch post titles</hop>
+                    </div>
+                    <div class="redditTriggerButt buttButt" id="contentButt">
+                        <hup class="buttText">Fetch post content</hup>
+                    </div>
+                    <div class="redditTriggerButt buttButt" id="copyContentButt">
+                        <ho class="buttText">Copy to clipboard</ho>
+                    </div>
+                </div>
+            </div>
+
+            <iframe class="frame" id='frame' style="height: 680px" src=""></iframe>
+
+
+
+        </ul>
+        <!--This is the closer for the screenbox-->
+
+
+        <div id="popStuff">
+            <div id="filterHost"></div>
+        </div>
+
+
+        <div class="emailCornerCont">
+            <p id="emailCorner">Ian@IanBousher.com</p>
+        </div>
+
+        <div class="copout">Don't like this?<br>Traditional portfolio
+            <hi><a href="../../portfolio.html" style="text-decoration: none"><b>here</b></a></hi>
+        </div>
+
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+        <script src='../../js/jquery-3.3.1.js'></script>
+        <script src="../../js/index.js"></script>
+        <script src="../../fun-extras/reddit/reddit-script.js"></script>
+
+
+
+
+
+</body>
+
+</html>

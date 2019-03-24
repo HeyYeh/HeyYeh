@@ -1,41 +1,149 @@
-//dark mode var
-var style = true;
+//main function for opening and closing stuff
+function linkFun() {
+
+    $('a[data-id]').click(function (link) {
+
+        link.preventDefault(); //stop links going anywhere for now
+
+        //data open is what you want the link to open, data close is what you want it to close
+        var openedby = $(this).attr('data-open');
+        $('[data-id="' + openedby + '"]').removeClass('disabled').addClass('enabled');
+
+        var closedby = $(this).attr('data-close');
+        $('[data-id="' + closedby + '"]').remove();
+
+        //this kills the parents of each link, creating many Batman links
+        $(this).contents().unwrap();
+
+    })
+}
+//end main function section
 
 
-//typerwriter stuff
-var typed = new Typed('#theOtherBits', {
-    strings: ["(triumphant) <br> I can't believe I tricked you into coming here.<br> ^1000 <i>So</i>... ^1000 I'm Ian.",
-            "(triumphant) <br> I can't believe I tricked you into coming here.<br> ^800 I'm a ^300 writer.",
-            "(triumphant) <br> I can't believe I tricked you into coming here.<br> ^800 I'm a ^300 film-maker.",
-           "(triumphant) <br> I can't believe I tricked you into coming here.<br> ^800 I'm an ^300 ideation executive.",
-           "(triumphant) <br> I can't believe I tricked you into coming here.<br> ^800 I'm an ^200 animal lover, crafter, baker...",
-           "(triumphant) <br> I can't believe I tricked you into coming here.<br> ^800 I'm ^650 happy to see you.^1000 <br>And I guess I need to entertain you now, huh?^1000 <br>Why don't you have a cheeky scroll down?^1000 <br>Go on, your scroll wheel is so^1000 lonely.^1000 <br>(lewdly) <br>^500 I want to see you <i>touch</i> it..."],
-    backSpeed: 25,
-    typeSpeed: 30,
-    smartBackspace: true
-});
+//section for changing time of day in script to current time. It's a pointless detail, so sue me. Don't sue me.
+$(document).ready(function () {
+    var now = new Date(),
+        hours = now.getHours();
 
-//this controls the light mode/dark mode switcher - just for fun really...
-$(".styleButton").click(function () {
+    var timeDenom = "fgf";
 
-    if (style == true) {
-        $(".styleButton").css("background-color", "grey");
-        $("body").css("background-color", "black");
-        //$("p").css("background-color", "white");
-        $(".heroCont").css("color", "white");
+    if (hours >= 0 && hours < 1) {
+        timeDenom = "WITCHING HOUR";
     }
-    if (style == false) {
-        $(".styleButton").css("background-color", "blue");
-        $("body").css("background-color", "#fbfbf8");
-        //$("p").css("background-color", "black");
-        $(".heroCont").css("color", "black");
-    };
+    if (hours >= 1 && hours < 6) {
+        timeDenom = "NIGHT";
+    }
+    if (hours >= 6 && hours < 7) {
+        timeDenom = "DAWN";
+    }
+    if (hours >= 7 && hours < 12) {
+        timeDenom = "MORNING";
+    }
+    if (hours >= 12 && hours < 13) {
+        timeDenom = "NOON";
+    }
+    if (hours >= 13 && hours < 17) {
+        timeDenom = "AFTERNOON";
+    }
+    if (hours >= 17 && hours < 19) {
+        timeDenom = "EVENING";
+    }
+    if (hours >= 19 && hours < 20) {
+        timeDenom = "DUSK";
+    }
+    if (hours >= 20 && hours < 24) {
+        timeDenom = "NIGHT";
+    }
 
 
-    style = !style;
+    $("#TOD").text(timeDenom);
+    linkFun();
+});
+//end time of day section
+
+//This section for changing to dark mode and back
+var pageColour = 0; //0 = white background
+var screenWidth = 0;
+
+$("#colourShift").click(function () {
+
+    screenWidth = $(window).width();
+
+    if (pageColour == 0) {
+        $("body").css("background-color", "#16161d"); //the black here is eisengrau
+        $("li").css("color", "#fdfdfd");
+        $("a").css("color", "#fdfdfd");
+        $("div").css("color", "#fdfdfd");
+        $("#emailCorner").css("color", "#fdfdfd");
+        $("#colourShift").html("Black");
+
+        if (screenWidth > 709) {
+            $("a").css("background-image", "url('../assets/whiteunderline2.png'");
+        }
+        if (screenWidth <= 709) {
+            $("a").css("background-image", "url('../assets/whiteunderline.png'");
+        }
+    }
+    if (pageColour == 1) {
+        $("body").css("background-color", "rgb(251,251,251)");
+        $("li").css("color", "black");
+        $("a").css("color", "black");
+        $("div").css("color", "black");
+        $("#emailCorner").css("color", "black");
+        $("#colourShift").html("White");
+
+        if (screenWidth > 709) {
+            $("a").css("background-image", "url('../assets/blackunderline2.png'");
+        }
+        if (screenWidth <= 709) {
+            $("a").css("background-image", "url('../assets/blackunderline.png'");
+        }
+    }
+
+
+    pageColour = !pageColour;
 })
 
-//video popouts
+$("#nightIcon").click(function () {
+
+    if (pageColour == 0) {
+        $("body").css("background-color", "#16161d"); //the black here is eisengrau
+        $("li").css("color", "#fdfdfd");
+        $("hi").css("color", "#fdfdfd");
+        $("hip").css("color", "#fdfdfd");
+        $("hop").css("color", "#fdfdfd");
+        $("hup").css("color", "#fdfdfd");
+        $(".aboutWords").css("color", "#fdfdfd");
+        $(".portfolioText").css("color", "#fdfdfd");
+        $(".storyTitle").css("color", "#fdfdfd");
+        $("a").css("color", "#fdfdfd");
+        $("div").css("color", "#fdfdfd");
+        $('#nightIcon').attr('src', 'assets/Day.png');
+    }
+    if (pageColour == 1) {
+        $("body").css("background-color", "rgb(251,251,251)");
+        $("li").css("color", "black");
+        $("hi").css("color", "black");
+        $("hip").css("color", "black");
+        $("hop").css("color", "black");
+        $("hup").css("color", "black");
+        $(".aboutWords").css("color", "black");
+        $(".storyTitle").css("color", "black");
+        $(".portfolioText").css("color", "black");
+        $("a").css("color", "black");
+        $("div").css("color", "black");
+        $('#nightIcon').attr('src', 'assets/Night.png');
+    }
+
+
+    pageColour = !pageColour;
+})
+
+
+//end colour shift section
+
+
+//video pop outs section
 
 //this calculates viewport width then some other stuff to know what to times the iframe by for a not-shit-looking video player
 function getMultiplier(iframeWidth) {
@@ -59,6 +167,12 @@ function popOut(video) {
     $(".popVideoPlay").css("width", ($(".popVideoPlay").width() * multValue));
     $(".popVideoPlay").css("height", ($(".popVideoPlay").height() * multValue));
 }
+
+//click filter to close it
+$("#filterHost").click(function () {
+    $("#filterHost").removeClass("popFilter");
+    $(".popVideoPlay").remove();
+})
 
 $("#item1").click(function () { //active
 
@@ -133,9 +247,20 @@ $("#item9").click(function () { //WDTG
 })
 
 
-$("#filterHost").click(function () {
-    $("#filterHost").removeClass("popFilter");
-    $(".popVideoPlay").remove();
+//email stuff
+
+var subjects = ['What up?', 'I\'m looking for advice about this weird rash', 'Is your surname not spelled with a c??', 'Hey bby g', 'I saw that thing you did with the thing - dope!', 'I appreciate that you went ahead and wrote some subject lines for emails for me, probably in the hopes to surprise me, but I\'m not your puppet', 'Need some Boush in my life', 'Do you have a favourite colour?', 'I found this picture. You have it', 'I want to talk to you about videogames', 'Slippin\' into your inbox like', 'I saw you the other day. We were across the street, heading in opposite directions. I thought to call out to you, to make things how they were, but you seemed busy... I know you said you\d always have time for me, you\d always care, and I really want to have some of that time again. How have you been?', 'You actually ginger or you just like the nicknames?', 'ARE YOU MAN ENOUGH TO READ THIS EMAIL?!?'];
+
+$("#emailAddress").click(function () {
+
+    var subject = subjects[Math.floor(Math.random() * subjects.length)]
+
+    window.location.href = "mailto:ian@ianbousher.com?subject=" + subject + "&body=";
 })
 
+$("#email").click(function () {
 
+    var subject = subjects[Math.floor(Math.random() * subjects.length)]
+
+    window.location.href = "mailto:ian@ianbousher.com?subject=" + subject + "&body=";
+})
