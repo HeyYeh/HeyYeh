@@ -70,7 +70,7 @@ a {
 
     text-decoration: none;
     background-image: url('../assets/blackunderline2.png');
-    background-position: 0 .85em;
+    background-position: 0 1.1em;
     background-repeat: repeat-x;
 }
 
@@ -93,7 +93,7 @@ hi {
 
     text-decoration: none;
     background-image: url('../assets/orangeunderline2.png');
-    background-position: 0 .85em;
+    background-position: 0 1.1em;
     background-repeat: repeat-x;
 
 }
@@ -120,7 +120,7 @@ ho {
 
     text-decoration: none;
     background-image: url('../assets/lightblueunderline2.png');
-    background-position: 0 .85em;
+    background-position: 0 1.1em;
     background-repeat: repeat-x;
 }
 
@@ -146,7 +146,7 @@ hip {
 
     text-decoration: none;
     background-image: url('../assets/redunderline2.png');
-    background-position: 0 .85em;
+    background-position: 0 1.1em;
     background-repeat: repeat-x;
 }
 
@@ -172,7 +172,7 @@ hop {
 
     text-decoration: none;
     background-image: url('../assets/purpleunderline2.png');
-    background-position: 0 .85em;
+    background-position: 0 1.1em;
     background-repeat: repeat-x;
 }
 
@@ -198,7 +198,7 @@ hup {
 
     text-decoration: none;
     background-image: url('../assets/blueunderline2.png');
-    background-position: 0 .85em;
+    background-position: 0 1.1em;
     background-repeat: repeat-x;
 }
 
@@ -1047,7 +1047,7 @@ hi:hover {
         margin-bottom: 250px;
         padding: 0 1px;
     }
-/*
+
     a {
         text-decoration: none;
         background-image: url('../assets/blackunderline2.png');
@@ -1088,7 +1088,7 @@ hi:hover {
         background-image: url('../assets/blueunderline2.png');
         background-position: 0 1em;
         background-repeat: repeat-x;
-    }*/
+    }
 
 
 }
@@ -1127,7 +1127,7 @@ hi:hover {
     #emailCorner {
         font-size: 1.3em;
     }
-/*
+
     a {
         text-decoration: none;
         background-image: url('../assets/blackunderline.png');
@@ -1166,10 +1166,10 @@ hi:hover {
     hup {
         text-decoration: none;
         background-image: url('../assets/blueunderline2.png');
-        background-position: 0 .em;
+        background-position: 0 1em;
         background-repeat: repeat-x;
     }
-*/
+
 }
 
 
@@ -1201,42 +1201,42 @@ hi:hover {
     a {
         text-decoration: none;
         background-image: url('../assets/blackunderline.png');
-        background-position: 0 .85em;
+        background-position: 0 1em;
         background-repeat: repeat-x;
     }
 
     hi {
         text-decoration: none;
         background-image: url('../assets/orangeunderline2.png');
-        background-position: 0 .85em;
+        background-position: 0 1em;
         background-repeat: repeat-x;
     }
 
     ho {
         text-decoration: none;
         background-image: url('../assets/lightblueunderline2.png');
-        background-position: 0 .85em;
+        background-position: 0 1em;
         background-repeat: repeat-x;
     }
 
     hip {
         text-decoration: none;
         background-image: url('../assets/redunderline2.png');
-        background-position: 0 .85em;
+        background-position: 0 1em;
         background-repeat: repeat-x;
     }
 
     hop {
         text-decoration: none;
         background-image: url('../assets/purpleunderline2.png');
-        background-position: 0 .85em;
+        background-position: 0 1em;
         background-repeat: repeat-x;
     }
 
     hup {
         text-decoration: none;
         background-image: url('../assets/blueunderline2.png');
-        background-position: 0 .85em;
+        background-position: 0 1em;
         background-repeat: repeat-x;
     }
 
@@ -1281,42 +1281,42 @@ hi:hover {
     a {
         text-decoration: none;
         background-image: url('../assets/blackunderline.png');
-        background-position: 0 .85em;
+        background-position: 0 .9em;
         background-repeat: repeat-x;
     }
 
     hi {
         text-decoration: none;
         background-image: url('../assets/orangeunderline2.png');
-        background-position: 0 .85em;
+        background-position: 0 .9em;
         background-repeat: repeat-x;
     }
 
     ho {
         text-decoration: none;
         background-image: url('../assets/lightblueunderline2.png');
-        background-position: 0 .85em;
+        background-position: 0 .9em;
         background-repeat: repeat-x;
     }
 
     hip {
         text-decoration: none;
         background-image: url('../assets/redunderline2.png');
-        background-position: 0 .85em;
+        background-position: 0 .9em;
         background-repeat: repeat-x;
     }
 
     hop {
         text-decoration: none;
         background-image: url('../assets/purpleunderline2.png');
-        background-position: 0 .85em;
+        background-position: 0 .9em;
         background-repeat: repeat-x;
     }
 
     hup {
         text-decoration: none;
         background-image: url('../assets/blueunderline2.png');
-        background-position: 0 .85em;
+        background-position: 0 .9em;
         background-repeat: repeat-x;
     }
 
