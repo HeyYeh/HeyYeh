@@ -244,12 +244,20 @@ $("#item9").click(function () { //WDTG
 
     popOut(videoObject);
 
-})
+}) 
+
+$("#item10").click(function () { //Duology
+
+    var videoObject = "<iframe class=\"popVideoPlay\" src=\"https://player.vimeo.com/video/326315903?title=0&byline=0&portrait=0\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>";
+
+    popOut(videoObject);
+
+}) 
 
 
 //email stuff
 
-var subjects = ['What up?', 'I\'m looking for advice about this weird rash', 'Is your surname not spelled with a c??', 'Hey bby g', 'I saw that thing you did with the thing - dope!', 'I appreciate that you went ahead and wrote some subject lines for emails for me, probably in the hopes to surprise me, but I\'m not your puppet', 'Need some Boush in my life', 'Do you have a favourite colour?', 'I found this picture. You have it', 'I want to talk to you about videogames', 'Slippin\' into your inbox like', 'I saw you the other day. We were across the street, heading in opposite directions. I thought to call out to you, to make things how they were, but you seemed busy... I know you said you\d always have time for me, you\d always care, and I really want to have some of that time again. How have you been?', 'You actually ginger or you just like the nicknames?', 'ARE YOU MAN ENOUGH TO READ THIS EMAIL?!?'];
+var subjects = ['What up?', 'I\'m looking for advice about this weird rash', 'Is your surname not spelled with a c??', 'Hey bby g', 'I saw that thing you did with the thing - dope!', 'I appreciate that you went ahead and wrote some subject lines for emails for me, probably in the hopes to surprise me, but I\'m not your puppet', 'Need some Boush in my life', 'Do you have a favourite colour?', 'I found this picture. You have it', 'I want to talk to you about videogames', 'Slippin\' into your inbox like', 'I saw you the other day. We were across the street, heading in opposite directions. I thought to call out to you, to make things how they were, but you seemed busy... I know you said you\'d always have time for me, you\'d always care, and I really want to have some of that time again. How have you been?', 'You actually ginger or you just like the nicknames?', 'ARE YOU MAN ENOUGH TO READ THIS EMAIL?!?', 'Hey kid, wanna buy some words?'];
 
 $("#emailAddress").click(function () {
 
