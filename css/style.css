@@ -1468,3 +1468,7 @@ hi:hover {
     padding: 20px;
     font-family: Courier Prime Code;
 }
+
+.a-enter-vr {
+    display: none;
+}
