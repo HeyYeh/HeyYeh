@@ -355,9 +355,9 @@ hi:hover {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-column-gap: 0;
-    grid-row-gap: 10px;
+    grid-row-gap: 100px;
     justify-items: center;
-    margin-bottom: 40px;
+    margin-bottom: 140px;
 }
 
 .contBrands {
@@ -382,7 +382,7 @@ hi:hover {
 .narrativeCont {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
-    padding-bottom: 50px;
+    padding-bottom: 0px;
 }
 
 .portfolioItemCont {
@@ -409,7 +409,6 @@ hi:hover {
 
 .storyboardImage {
     width: 100%;
-    height: calc(24vw*56.25%);
     border: 1px black solid;
 }
 
@@ -493,6 +492,10 @@ hi:hover {
 #emailCorner {}
 
 /*popout stuff*/
+
+iframe {
+    border: 0;
+}
 
 .popStuff {
     position: absolute;
@@ -586,9 +589,9 @@ hi:hover {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
         grid-column-gap: -50px;
-        grid-row-gap: 60px;
+        grid-row-gap: 170px;
         justify-items: center;
-        margin-bottom: 40px;
+        margin-bottom: 120px;
         padding-bottom: 50px;
     }
 
@@ -606,7 +609,6 @@ hi:hover {
 
     .storyboardImage {
         width: 100%;
-        height: calc(34vw*56.25%);
         border: 1px black solid;
     }
 
@@ -629,35 +631,34 @@ hi:hover {
 @media screen and (max-width: 790px) {
 
     .bigCont {
-        width: 80vw;
-        max-height: calc(775px*3);
+        width: 90vw;
+        max-height: calc(375px*3);
         grid-column-start: 2;
         background-color: blac;
         display: inline-grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-column-gap: 0;
-        grid-row-gap: 25px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-column-gap: -10px;
+        grid-row-gap: 180px;
         justify-items: center;
-        margin-bottom: 50px;
-        padding-bottom: 10px;
+        margin-bottom: 190px;
+        padding-bottom: 50px;
     }
 
     .narrativeCont {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
         padding-bottom: 0px;
     }
 
-    .portfolioItemCont {
+.portfolioItemCont {
         background-color: burlywoo;
-        width: 80vw;
-        height: calc(60vw*.75);
+        width: 42vw;
+        height: calc(24vw*.75);
     }
 
     .storyboardImage {
         width: 100%;
-        height: calc(80vw*56.25%);
         border: 1px black solid;
     }
 
@@ -696,6 +697,95 @@ hi:hover {
     #emailAddress {
         font-size: 2.5em;
     }
+}
+
+@media screen and (max-width: 641px) {
+
+    .bigCont {
+        width: 90vw;
+        max-height: calc(375px*3);
+        grid-column-start: 2;
+        background-color: blac;
+        display: inline-grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-column-gap: -10px;
+        grid-row-gap: 180px;
+        justify-items: center;
+        margin-bottom: 190px;
+        padding-bottom: 50px;
+    }
+
+    .narrativeCont {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        padding-bottom: 0px;
+    }
+
+.portfolioItemCont {
+        background-color: burlywoo;
+        width: 44vw;
+        height: calc(24vw*.75);
+    }
+
+    .storyboardImage {
+        width: 100%;
+        border: 1px black solid;
+    }
+
+    .brandImageContPort {
+        width: 90%;
+        position: relative;
+        margin: auto;
+        display: block;
+        bottom: 0px;
+    }
+
+}
+
+@media screen and (max-width: 612px) {
+
+    .bigCont {
+        width: 90vw;
+        max-height: calc(375px*3);
+        grid-column-start: 2;
+        background-color: blac;
+        display: inline-grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-column-gap: -10px;
+        grid-row-gap: 320px;
+        justify-items: center;
+        margin-bottom: 1430px;
+        padding-bottom: 50px;
+    }
+
+    .narrativeCont {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        padding-bottom: 0px;
+        margin-bottom: 330px;
+    }
+
+.portfolioItemCont {
+        background-color: burlywoo;
+        width: 80vw;
+        height: calc(24vw*.75);
+    }
+
+    .storyboardImage {
+        width: 100%;
+        border: 1px black solid;
+    }
+
+    .brandImageContPort {
+        width: 90%;
+        position: relative;
+        margin: auto;
+        display: block;
+        bottom: 0px;
+    }
+
 }
 
 @media screen and (max-width: 610px) {
@@ -769,51 +859,55 @@ hi:hover {
 
 @media screen and (max-width: 537px) {
 
+    
     .bigCont {
-        width: 100vw;
+        width: 90vw;
         max-height: calc(775px*3);
         grid-column-start: 1;
         background-color: blac;
         display: inline-grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-column-gap: 0;
-        grid-row-gap: 25px;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-column-gap: -10px;
+        grid-row-gap: 320px;
         justify-items: center;
-        margin-bottom: 50px;
-        padding-bottom: 10px;
+        margin-bottom: 280px;
+        padding-bottom: 50px;
     }
 
     .narrativeCont {
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 1fr;
         padding-bottom: 0px;
+        margin-bottom: 330px;
     }
 
     .portfolioItemCont {
         background-color: burlywoo;
-        width: 100vw;
-        height: auto;
+        width: 80vw;
+        height: calc(24vw*.75);
     }
 
     .storyboardImage {
         width: 100%;
-        height: calc(80vw*56.25%);
         border: 1px black solid;
     }
 
     .brandImageContPort {
-        width: 95%;
+        width: 90%;
         position: relative;
         margin: auto;
         display: block;
         bottom: 0px;
     }
-
+    
+  
+/*
     .textCont {
         width: 90vw;
         margin: 0 auto;
     }
+*/
 
     #nightToggle {
         position: absolute;
@@ -910,6 +1004,78 @@ hi:hover {
 
 }
 
+@media screen and (max-width: 470px) {
+
+    
+    .bigCont {
+        width: 90vw;
+        max-height: calc(775px*3);
+        grid-column-start: 1;
+        background-color: blac;
+        display: inline-grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-column-gap: -10px;
+        grid-row-gap: 320px;
+        justify-items: center;
+        margin-bottom: 280px;
+        padding-bottom: 50px;
+    }
+
+    .narrativeCont {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        padding-bottom: 0px;
+        margin-bottom: 330px;
+    }
+
+    .portfolioItemCont {
+        background-color: burlywoo;
+        width: 90vw;
+        height: calc(24vw*.75);
+    }
+
+    .storyboardImage {
+        width: 100%;
+        border: 1px black solid;
+    }
+
+    .brandImageContPort {
+        width: 90%;
+        position: relative;
+        margin: auto;
+        display: block;
+        bottom: 0px;
+    }
+    
+  
+/*
+    .textCont {
+        width: 90vw;
+        margin: 0 auto;
+    }
+*/
+
+    #nightToggle {
+        position: absolute;
+        top: 65px;
+        right: 20px;
+        height: 30px;
+        width: 30px;
+        text-align: center;
+    }
+
+    #nightIcon {
+        width: 25px;
+        height: 25px;
+        position: relative;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
+}
+
 @media screen and (max-width: 415px) {
 
     .storyTitle {
@@ -964,6 +1130,78 @@ hi:hover {
         margin: 0 auto;
         position: relative;
     }
+}
+
+@media screen and (max-width: 537px) {
+
+    
+    .bigCont {
+        width: 90vw;
+        max-height: calc(775px*3);
+        grid-column-start: 1;
+        background-color: blac;
+        display: inline-grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-column-gap: -10px;
+        grid-row-gap: 230px;
+        justify-items: center;
+        margin-bottom: 190px;
+        padding-bottom: 50px;
+    }
+
+    .narrativeCont {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        padding-bottom: 0px;
+        margin-bottom: 330px;
+    }
+
+    .portfolioItemCont {
+        background-color: burlywoo;
+        width: 80vw;
+        height: calc(24vw*.75);
+    }
+
+    .storyboardImage {
+        width: 100%;
+        border: 1px black solid;
+    }
+
+    .brandImageContPort {
+        width: 90%;
+        position: relative;
+        margin: auto;
+        display: block;
+        bottom: 0px;
+    }
+    
+  
+/*
+    .textCont {
+        width: 90vw;
+        margin: 0 auto;
+    }
+*/
+
+    #nightToggle {
+        position: absolute;
+        top: 65px;
+        right: 20px;
+        height: 30px;
+        width: 30px;
+        text-align: center;
+    }
+
+    #nightIcon {
+        width: 25px;
+        height: 25px;
+        position: relative;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
 }
 
 @media screen and (max-width: 1000px) {
@@ -1244,10 +1482,6 @@ hi:hover {
 
 @media screen and (max-width: 537px) {
 
-    body {
-        overflow: hidden;
-    }
-
     .screenbox {
         list-style: none;
         padding: 5px 4px;
@@ -1337,10 +1571,6 @@ hi:hover {
 }
 
 @media screen and (max-width: 425px) {
-
-    * {
-        overflow-x: hidden;
-    }
 
     .screenbox {
         list-style: none;

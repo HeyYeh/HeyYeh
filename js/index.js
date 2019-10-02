@@ -216,7 +216,7 @@ $("#item5").click(function () { //Seraphim
 
 $("#item6").click(function () { //OFITC
 
-    var videoObject = "<iframe class=\"popVideoPlay\" src=\"https://www.youtube-nocookie.com/embed/R0VsnCOEHwM\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>";
+    var videoObject = "<iframe class=\"popVideoPlay\" allow=\"autoplay; fullscreen\" allowfullscreen=\"\" src=\"https://player.vimeo.com/video/324843376?app_id=122963&amp;wmode=opaque&amp;autoplay=1\" ></iframe>";
 
     popOut(videoObject);
 
@@ -224,7 +224,7 @@ $("#item6").click(function () { //OFITC
 
 $("#item7").click(function () { //Breathe
 
-    var videoObject = "<iframe class=\"popVideoPlay\" src=\"https://www.youtube-nocookie.com/embed/_xPMOC-8Jrw\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>";
+    var videoObject = "<iframe class=\"popVideoPlay\" src=\"https://player.vimeo.com/video/343941212?app_id=122963&amp;wmode=opaque\" allow=\"autoplay; fullscreen\" allowfullscreen=\"\"></iframe>";
 
     popOut(videoObject);
 
@@ -238,7 +238,7 @@ $("#item8").click(function () { //IAGASU
 
 })
 
-$("#item9").click(function () { //WDTG
+$("#item9").click(function () { //H&H
 
     var videoObject = "<iframe class=\"popVideoPlay\" src=\"https://www.youtube-nocookie.com/embed/BYwRLo4hDBo\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>";
 
@@ -253,6 +253,23 @@ $("#item10").click(function () { //Duology
     popOut(videoObject);
 
 }) 
+
+$("#item11").click(function () { //APING
+
+    var videoObject = "<iframe class=\"popVideoPlay\" src=\"https://player.vimeo.com/video/356048623?autoplay=1&title=0&byline=0&portrait=0\" allow=\"autoplay; fullscreen\" allowfullscreen></iframe>";
+
+    popOut(videoObject);
+
+}) 
+
+//$("#item12").click(function () { //BA
+//
+//    var videoObject = "<iframe class=\"popVideoPlay\" allow=\"autoplay; fullscreen\" allowfullscreen="" src=\"https://player.vimeo.com/video/355293965?\" /iframe>";
+//
+//    popOut(videoObject);
+//
+//}) 
+
 
 
 //email stuff
