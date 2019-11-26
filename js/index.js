@@ -180,7 +180,7 @@ $("#item1").click(function () { //active
 
     popOut(videoObject);
 
-})
+});
 
 $("#item2").click(function () { //I've been blind
 
@@ -188,7 +188,7 @@ $("#item2").click(function () { //I've been blind
 
     popOut(videoObject);
 
-})
+});
 
 $("#item3").click(function () { //Totem
 
@@ -196,7 +196,7 @@ $("#item3").click(function () { //Totem
 
     popOut(videoObject);
 
-})
+});
 
 $("#item4").click(function () { //DYAF
 
@@ -204,7 +204,7 @@ $("#item4").click(function () { //DYAF
 
     popOut(videoObject);
 
-})
+});
 
 $("#item5").click(function () { //Seraphim
 
@@ -212,7 +212,7 @@ $("#item5").click(function () { //Seraphim
 
     popOut(videoObject);
 
-})
+});
 
 $("#item6").click(function () { //OFITC
 
@@ -220,7 +220,7 @@ $("#item6").click(function () { //OFITC
 
     popOut(videoObject);
 
-})
+});
 
 $("#item7").click(function () { //Breathe
 
@@ -228,7 +228,7 @@ $("#item7").click(function () { //Breathe
 
     popOut(videoObject);
 
-})
+});
 
 $("#item8").click(function () { //IAGASU
 
@@ -236,15 +236,15 @@ $("#item8").click(function () { //IAGASU
 
     popOut(videoObject);
 
-})
+});
 
 $("#item9").click(function () { //H&H
 
     var videoObject = "<iframe class=\"popVideoPlay\" src=\"https://www.youtube-nocookie.com/embed/BYwRLo4hDBo\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>";
 
-    popOut(videoObject);
+    popOut(videoObject); 
 
-}) 
+});
 
 $("#item10").click(function () { //Duology
 
@@ -252,7 +252,7 @@ $("#item10").click(function () { //Duology
 
     popOut(videoObject);
 
-}) 
+});
 
 $("#item11").click(function () { //APING
 
@@ -260,16 +260,31 @@ $("#item11").click(function () { //APING
 
     popOut(videoObject);
 
-}) 
+});
 
-//$("#item12").click(function () { //BA
-//
-//    var videoObject = "<iframe class=\"popVideoPlay\" allow=\"autoplay; fullscreen\" allowfullscreen="" src=\"https://player.vimeo.com/video/355293965?\" /iframe>";
-//
-//    popOut(videoObject);
-//
-//}) 
+$("#item12").click(function () { //BA
 
+    var videoObject = "<iframe class=\"popVideoPlay\" allow=\"autoplay; fullscreen\" allowfullscreen=\"\" src=\"https://player.vimeo.com/video/355293965?\"</iframe>";
+
+    popOut(videoObject);
+
+});
+
+$("#item13").click(function () { //Starburst
+
+    var videoObject = "<iframe class=\"popVideoPlay\" allow=\"autoplay; fullscreen\" allowfullscreen=\"\" src=\"https://player.vimeo.com/video/365971429?title=0&byline=0&portrait=0\"</iframe>";
+
+    popOut(videoObject);
+
+});
+
+$("#item14").click(function () { //BA
+
+    var videoObject = "<iframe class=\"popVideoPlay\" allow=\"autoplay; fullscreen\" allowfullscreen=\"\" src=\"https://www.youtube.com/embed/S5hhZRJkEtU\"</iframe>";
+
+    popOut(videoObject);
+
+});
 
 
 //email stuff
@@ -289,3 +304,4 @@ $("#email").click(function () {
 
     window.location.href = "mailto:ian@ianbousher.com?subject=" + subject + "&body=";
 })
+
