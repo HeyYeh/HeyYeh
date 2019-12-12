@@ -192,10 +192,10 @@ $("#item2").click(function () { //I've been blind
 
 $("#item3").click(function () { //Totem
 
-    var videoObject = "<iframe class=\"popVideoPlay\" src=\"https://www.youtube-nocookie.com/embed/72BgoQwoycI\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>";
+    var videoObject = "<iframe class=\"popVideoPlay\" src=\"https://www.youtube.com/embed/hXwozor5qz8\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; \" allowfullscreen></iframe>";
 
     popOut(videoObject);
-
+    
 });
 
 $("#item4").click(function () { //DYAF
