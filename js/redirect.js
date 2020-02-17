@@ -23,6 +23,6 @@ function doTheThing() {
 
 doTheThing()
 
-window.location.replace(randVid);
+window.location = "./NATIONAL%20PIZZA%20DAY%20-%20February%209,%202020%20%20%20National%20Today.html";
 
     
