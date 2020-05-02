@@ -368,22 +368,23 @@ hi:hover {
     grid-column-gap: 0;
     grid-row-gap: 100px;
     justify-items: center;
-    margin-bottom: 140px;
+    margin-bottom: 40px;
 }
 
 .frontVidCont {
     width: 80vw;
-    top: 50%;
+    top: 55%;
     grid-column-start: 2;
     background-color: tel;
     display: inline-grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 0;
     grid-row-gap: 100px;
-    height: auto;
-    position: absolute;
-    left:0;right:0;
-    margin: auto;
+    height: 0;
+    position: relative;
+    left: 50%;
+    -webkit-transform: translate(-50%, 170%);
+    transform: translate(-50%, 170%);
     padding-bottom: 50px;
 }
 
@@ -690,7 +691,7 @@ iframe {
         grid-template-rows: 1fr 1fr 1fr;
         grid-column-gap: -10px;
         grid-row-gap: 260px;
-        margin-bottom: 250px;
+        margin-bottom: 20px;
         padding-bottom: 50px;
     }
 
