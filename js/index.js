@@ -230,9 +230,10 @@ $("#item7").click(function () { //Breathe
 
 });
 
-$("#item8").click(function () { //IAGASU
 
-    var videoObject = "<iframe class=\"popVideoPlay\" src=\"https://player.vimeo.com/video/180205217?title=0&byline=0&portrait=0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>";
+$("#item8").click(function () { //Grapes
+
+    var videoObject = "<iframe class=\"popVideoPlay\" src=\"https://player.vimeo.com/video/399522332?title=0&byline=0&portrait=0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>";
 
     popOut(videoObject);
 
@@ -289,6 +290,31 @@ $("#item14").click(function () { //BA
 $("#item15").click(function () { //Mop
 
     var videoObject = "<iframe class=\"popVideoPlay\" allow=\"autoplay; fullscreen\" allowfullscreen=\"\" src=\"https://player.vimeo.com/video/382424356?title=0&byline=0&portrait=0\"</iframe>";
+
+    popOut(videoObject);
+
+});
+
+
+$("#item16").click(function () { //Sad Happy
+
+    var videoObject = "<iframe class=\"popVideoPlay\" allow=\"autoplay; fullscreen\" allowfullscreen=\"\" src=\"https://www.youtube.com/embed/5_8MAhaoyVk\"</iframe>";
+
+    popOut(videoObject);
+
+});
+
+$("#item17").click(function () { //Juicy Punishment
+
+    var videoObject = "<iframe class=\"popVideoPlay\" allow=\"autoplay; fullscreen\" allowfullscreen=\"\" src=\"https://player.vimeo.com/video/365969871?title=0&byline=0&portrait=0\"</iframe>";
+
+    popOut(videoObject);
+
+});
+
+$("#item18").click(function () { //Juicy Punishment
+
+    var videoObject = "<iframe class=\"popVideoPlay\" allow=\"autoplay; fullscreen\" allowfullscreen=\"\" src=\"https://player.vimeo.com/video/365970280?title=0&byline=0&portrait=0\"</iframe>";
 
     popOut(videoObject);
 
