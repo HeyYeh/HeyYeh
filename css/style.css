@@ -582,9 +582,10 @@ iframe {
 }
 
 .aboutMe {
-    width: 70%;
+    width: 55%;
     margin: 0 auto;
     position: relative;
+    font-family: Courier Prime Code;
 }
 
 .aboutWords {
