@@ -76,6 +76,8 @@ $("#colourShift").click(function () {
         $("div").css("color", "#fdfdfd");
         $("#emailCorner").css("color", "#fdfdfd");
         $("#colourShift").html("Black");
+    
+        $(".portfolioText").css("color", "white");
 
         if (screenWidth > 709) {
             $("a").css("background-image", "url('../assets/whiteunderline2.png'");
@@ -91,6 +93,7 @@ $("#colourShift").click(function () {
         $("div").css("color", "black");
         $("#emailCorner").css("color", "black");
         $("#colourShift").html("White");
+        $(".portfolioText").css("color", "black");
 
         if (screenWidth > 709) {
             $("a").css("background-image", "url('../assets/blackunderline2.png'");
