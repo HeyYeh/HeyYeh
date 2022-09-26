@@ -572,7 +572,7 @@ $("#item21").click(function () { //MAKEMEFEELALIVE
 
 //Add the sections in
 
-var gamesSection = `<div id="gamesChunk" class="portfolioChunk outline1">
+var gamesSection = `<div id="gamesChunk1" class="portfolioChunk outline1">
                     <div class="chunkTitleCont outline2">
                         <div class="chunkTitle outline3">Games Writing</div>
                     </div>
@@ -617,7 +617,7 @@ var gamesSection = `<div id="gamesChunk" class="portfolioChunk outline1">
                     </div>
                 </div>`;
 
-var narrativeSection = `<div id="narrativeChunk" class="portfolioChunk outline1">
+var narrativeSection = `<div id="narrativeChunk1" class="portfolioChunk outline1">
                     <div class="chunkTitleCont outline2">
                         <div class="chunkTitle outline3">Narrative Writing</div>
                     </div>
@@ -660,7 +660,7 @@ var narrativeSection = `<div id="narrativeChunk" class="portfolioChunk outline1"
                     </div>
                 </div>`;
 
-var musicSection = `<div id="musicChunk" class="portfolioChunk outline1">
+var musicSection = `<div id="musicChunk1" class="portfolioChunk outline1">
                     <div class="chunkTitleCont outline2">
                         <div class="chunkTitle outline3">Music Videos</div>
                     </div>
@@ -736,7 +736,7 @@ var musicSection = `<div id="musicChunk" class="portfolioChunk outline1">
                     </div>
                 </div>`;
 
-var brandSection = `<div id="BrandChunk" class="portfolioChunk outline1">
+var brandSection = `<div id="BrandChunk1" class="portfolioChunk outline1">
                     <div class="chunkTitleCont outline2">
                         <div class="chunkTitle outline3">Brand Videos</div>
                     </div>
@@ -836,7 +836,7 @@ $("#showGames").click(function () {
         gamesVisible = true;
     }
 
-    window.location = (""+window.location).replace(/#[A-Za-z0-9_]*$/,'')+"#gamesChunk"
+    window.location = (""+window.location).replace(/#[A-Za-z0-9_]*$/,'')+"#gamesChunk1"
     
 
 });
@@ -850,7 +850,7 @@ $("#showGames2").click(function () {
         gamesVisible = true;
     }
 
-    window.location = (""+window.location).replace(/#[A-Za-z0-9_]*$/,'')+"#gamesChunk"
+    window.location = (""+window.location).replace(/#[A-Za-z0-9_]*$/,'')+"#gamesChunk1"
     
 
 });
@@ -865,7 +865,7 @@ $("#showMusic").click(function () {
         musicVisible = true;
     }
 
-    window.location = (""+window.location).replace(/#[A-Za-z0-9_]*$/,'')+"#musicChunk"
+    window.location = (""+window.location).replace(/#[A-Za-z0-9_]*$/,'')+"#musicChunk1"
 
 });
 
@@ -878,7 +878,7 @@ $("#showMusic2").click(function () {
         musicVisible = true;
     }
 
-    window.location = (""+window.location).replace(/#[A-Za-z0-9_]*$/,'')+"#musicChunk"
+    window.location = (""+window.location).replace(/#[A-Za-z0-9_]*$/,'')+"#musicChunk1"
 
 });
 
@@ -892,7 +892,7 @@ $("#showBranded").click(function () {
         brandVisible = true;
     }
 
-    window.location = (""+window.location).replace(/#[A-Za-z0-9_]*$/,'')+"#BrandChunk"
+    window.location = (""+window.location).replace(/#[A-Za-z0-9_]*$/,'')+"#BrandChunk1"
 
 });
 
@@ -905,7 +905,7 @@ $("#showBranded2").click(function () {
         brandVisible = true;
     }
 
-    window.location = (""+window.location).replace(/#[A-Za-z0-9_]*$/,'')+"#BrandChunk"
+    window.location = (""+window.location).replace(/#[A-Za-z0-9_]*$/,'')+"#BrandChunk1"
 
 });
 
@@ -919,7 +919,7 @@ $("#showNarrative").click(function () {
         narrativeVisible = true;
     }
 
-   window.location = (""+window.location).replace(/#[A-Za-z0-9_]*$/,'')+"#narrativeChunk"
+   window.location = (""+window.location).replace(/#[A-Za-z0-9_]*$/,'')+"#narrativeChunk1"
 
 });
 
@@ -932,7 +932,7 @@ $("#showNarrative2").click(function () {
         narrativeVisible = true;
     }
 
-   window.location = (""+window.location).replace(/#[A-Za-z0-9_]*$/,'')+"#narrativeChunk"
+   window.location = (""+window.location).replace(/#[A-Za-z0-9_]*$/,'')+"#narrativeChunk1"
 
 });
 
