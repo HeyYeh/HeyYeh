@@ -1,578 +1,792 @@
-//main function for opening and closing stuff
-function linkFun() {
+$(document).ready(function () {
 
-    $('a[data-id]').click(function (link) {
 
-        link.preventDefault(); //stop links going anywhere for now
+    //main function for opening and closing stuff
+    function linkFun() {
 
-        //data open is what you want the link to open, data close is what you want it to close
-        var openedby = $(this).attr('data-open');
-        $('[data-id="' + openedby + '"]').removeClass('disabled').addClass('enabled');
+        $('a[data-id]').click(function (link) {
 
-        var closedby = $(this).attr('data-close');
-        $('[data-id="' + closedby + '"]').remove();
+            link.preventDefault(); //stop links going anywhere for now
 
-        //this kills the parents of each link, creating many Batman links
-        $(this).contents().unwrap();
+            //data open is what you want the link to open, data close is what you want it to close
+            var openedby = $(this).attr('data-open');
+            $('[data-id="' + openedby + '"]').removeClass('disabled').addClass('enabled');
+
+            var closedby = $(this).attr('data-close');
+            $('[data-id="' + closedby + '"]').remove();
+
+            //this kills the parents of each link, creating many Batman links
+            $(this).contents().unwrap();
+
+        })
+    }
+    //end main function section
+
+
+    //section for changing time of day in script to current time. It's a pointless detail, so sue me. Don't sue me.
+    $(document).ready(function () {
+        var now = new Date(),
+            hours = now.getHours();
+
+        var timeDenom = "fgf";
+
+        if (hours >= 0 && hours < 1) {
+            timeDenom = "WITCHING HOUR";
+        }
+        if (hours >= 1 && hours < 6) {
+            timeDenom = "NIGHT";
+        }
+        if (hours >= 6 && hours < 7) {
+            timeDenom = "DAWN";
+        }
+        if (hours >= 7 && hours < 12) {
+            timeDenom = "MORNING";
+        }
+        if (hours >= 12 && hours < 13) {
+            timeDenom = "NOON";
+        }
+        if (hours >= 13 && hours < 17) {
+            timeDenom = "AFTERNOON";
+        }
+        if (hours >= 17 && hours < 19) {
+            timeDenom = "EVENING";
+        }
+        if (hours >= 19 && hours < 20) {
+            timeDenom = "DUSK";
+        }
+        if (hours >= 20 && hours < 24) {
+            timeDenom = "NIGHT";
+        }
+
+
+        $("#TOD").text(timeDenom);
+        linkFun();
+    });
+    //end time of day section
+
+
+
+    //START TOPNAV STUFF
+
+    var menuOpen = false;
+    var currentMenuOpen = 0; //0 is no menu
+
+    //When you click on a button, make it appear, give it the clicked styling, say that the menu is open, then say which menu is open
+    $("#button1").click(function () {
+        $("#buttonStuffCont1").removeClass("displayNone");
+        $("#button1").addClass("topNavButtonClicked");
+        menuOpen = true;
+        currentMenuOpen = 1;
+    })
+
+    $("#button2").click(function () {
+        $("#buttonStuffCont2").removeClass("displayNone");
+        $("#button2").addClass("topNavButtonClicked");
+        menuOpen = true;
+        currentMenuOpen = 2;
+    })
+
+    $("#button3").click(function () {
+        $("#buttonStuffCont3").removeClass("displayNone");
+        $("#button3").addClass("topNavButtonClicked");
+        menuOpen = true;
+        currentMenuOpen = 3;
+    })
+
+    $("#button4").click(function () {
+        $("#buttonStuffCont4").removeClass("displayNone");
+        $("#button4").addClass("topNavButtonClicked");
+        menuOpen = true;
+        currentMenuOpen = 4;
+    })
+
+    $("#button5").click(function () {
+        $("#buttonStuffCont5").removeClass("displayNone");
+        $("#button5").addClass("topNavButtonClicked");
+        menuOpen = true;
+        currentMenuOpen = 5;
+    })
+
+    //If the menu is open and you hover over another menu, make the open menu disappear and remove the open styling, then make the hovered menu appear and add the styling to it and set the current menu to the hovered menu
+    function closeOtherMenus(currentMenuHovered) {
+
+        if (menuOpen) {
+            if (currentMenuOpen !== currentMenuHovered) {
+                $("#buttonStuffCont" + currentMenuOpen).addClass("displayNone");
+                //if (pageColour == 0) {
+                $("#button" + currentMenuOpen).removeClass("topNavButtonClicked");
+                //}
+                //dark mode
+                //if (pageColour == 1) {
+                $("#button" + currentMenuOpen).removeClass("darkModeTopNavButtonClicked");
+                //}
+
+                $("#buttonStuffCont" + currentMenuHovered).removeClass("displayNone");
+                if (pageColour == 0) {
+                    $("#button" + currentMenuHovered).addClass("topNavButtonClicked");
+                }
+                //dark mode
+                if (pageColour == 1) {
+                    $("#button" + currentMenuOpen).addClass("darkModeTopNavButtonClicked");
+                }
+                currentMenuOpen = currentMenuHovered;
+            }
+        }
+
+    }
+
+
+    //If a menu is already open, then we do a bit of special behaviour
+    $("#button1").hover(function () {
+        closeOtherMenus(1);
+    });
+
+    $("#button2").hover(function () {
+        closeOtherMenus(2)
+    })
+
+    $("#button3").hover(function () {
+        closeOtherMenus(3);
+    });
+
+    $("#button4").hover(function () {
+        closeOtherMenus(4);
+    });
+
+    $("#button5").hover(function () {
+        closeOtherMenus(5);
+    });
+
+
+    $(".container").click(function () {
+
+        if (menuOpen) {
+            $("#buttonStuffCont" + currentMenuOpen).addClass("displayNone");
+            $("#button" + currentMenuOpen).removeClass("topNavButtonClicked");
+            menuOpen = false;
+        }
 
     })
-}
-//end main function section
 
 
-//section for changing time of day in script to current time. It's a pointless detail, so sue me. Don't sue me.
-$(document).ready(function () {
-    var now = new Date(),
-        hours = now.getHours();
-
-    var timeDenom = "fgf";
-
-    if (hours >= 0 && hours < 1) {
-        timeDenom = "WITCHING HOUR";
-    }
-    if (hours >= 1 && hours < 6) {
-        timeDenom = "NIGHT";
-    }
-    if (hours >= 6 && hours < 7) {
-        timeDenom = "DAWN";
-    }
-    if (hours >= 7 && hours < 12) {
-        timeDenom = "MORNING";
-    }
-    if (hours >= 12 && hours < 13) {
-        timeDenom = "NOON";
-    }
-    if (hours >= 13 && hours < 17) {
-        timeDenom = "AFTERNOON";
-    }
-    if (hours >= 17 && hours < 19) {
-        timeDenom = "EVENING";
-    }
-    if (hours >= 19 && hours < 20) {
-        timeDenom = "DUSK";
-    }
-    if (hours >= 20 && hours < 24) {
-        timeDenom = "NIGHT";
-    }
-
-
-    $("#TOD").text(timeDenom);
-    linkFun();
-});
-//end time of day section
+    //END TOPNAV STUFF
 
 
 
-//START TOPNAV STUFF
 
-var menuOpen = false;
-var currentMenuOpen = 0; //0 is no menu
 
-//When you click on a button, make it appear, give it the clicked styling, say that the menu is open, then say which menu is open
-$("#button1").click(function () {
-    $("#buttonStuffCont1").removeClass("displayNone");
-    $("#button1").addClass("topNavButtonClicked");
-    menuOpen = true;
-    currentMenuOpen = 1;
-})
+    //This section for changing to dark mode and back
+    var pageColour = 0; //0 = white background
+    var screenWidth = 0;
 
-$("#button2").click(function () {
-    $("#buttonStuffCont2").removeClass("displayNone");
-    $("#button2").addClass("topNavButtonClicked");
-    menuOpen = true;
-    currentMenuOpen = 2;
-})
+    $("#colourShift").click(function () {
 
-$("#button3").click(function () {
-    $("#buttonStuffCont3").removeClass("displayNone");
-    $("#button3").addClass("topNavButtonClicked");
-    menuOpen = true;
-    currentMenuOpen = 3;
-})
+        screenWidth = $(window).width();
 
-$("#button4").click(function () {
-    $("#buttonStuffCont4").removeClass("displayNone");
-    $("#button4").addClass("topNavButtonClicked");
-    menuOpen = true;
-    currentMenuOpen = 4;
-})
+        if (pageColour == 0) {
+            $("body").css("background-color", "#16161d"); //the black here is eisengrau
+            $("li").css("color", "#fdfdfd");
+            $("a").css("color", "#fdfdfd");
+            $("div").css("color", "#fdfdfd");
+            $("#emailCorner").css("color", "#fdfdfd");
+            $("#colourShift").html("Black");
 
-$("#button5").click(function () {
-    $("#buttonStuffCont5").removeClass("displayNone");
-    $("#button5").addClass("topNavButtonClicked");
-    menuOpen = true;
-    currentMenuOpen = 5;
-})
+            $(".portfolioText").css("color", "white");
 
-//If the menu is open and you hover over another menu, make the open menu disappear and remove the open styling, then make the hovered menu appear and add the styling to it and set the current menu to the hovered menu
-function closeOtherMenus(currentMenuHovered) {
-
-    if (menuOpen) {
-        if (currentMenuOpen !== currentMenuHovered) {
-            $("#buttonStuffCont" + currentMenuOpen).addClass("displayNone");
-            //if (pageColour == 0) {
-            $("#button" + currentMenuOpen).removeClass("topNavButtonClicked");
-            //}
-            //dark mode
-            //if (pageColour == 1) {
-            $("#button" + currentMenuOpen).removeClass("darkModeTopNavButtonClicked");
-            //}
-
-            $("#buttonStuffCont" + currentMenuHovered).removeClass("displayNone");
-            if (pageColour == 0) {
-                $("#button" + currentMenuHovered).addClass("topNavButtonClicked");
+            if (screenWidth > 709) {
+                $("a").css("background-image", "url('../assets/whiteunderline2.png'");
             }
-            //dark mode
-            if (pageColour == 1) {
-                $("#button" + currentMenuOpen).addClass("darkModeTopNavButtonClicked");
+            if (screenWidth <= 709) {
+                $("a").css("background-image", "url('../assets/whiteunderline.png'");
             }
-            currentMenuOpen = currentMenuHovered;
         }
-    }
+        if (pageColour == 1) {
+            $("body").css("background-color", "rgb(251,251,251)");
+            $("li").css("color", "black");
+            $("a").css("color", "black");
+            $("div").css("color", "black");
+            $("#emailCorner").css("color", "black");
+            $("#colourShift").html("White");
+            $(".portfolioText").css("color", "black");
 
-}
-
-
-//If a menu is already open, then we do a bit of special behaviour
-$("#button1").hover(function () {
-    closeOtherMenus(1);
-});
-
-$("#button2").hover(function () {
-    closeOtherMenus(2)
-})
-
-$("#button3").hover(function () {
-    closeOtherMenus(3);
-});
-
-$("#button4").hover(function () {
-    closeOtherMenus(4);
-});
-
-$("#button5").hover(function () {
-    closeOtherMenus(5);
-});
-
-
-$(".container").click(function () {
-
-    if (menuOpen) {
-        $("#buttonStuffCont" + currentMenuOpen).addClass("displayNone");
-        $("#button" + currentMenuOpen).removeClass("topNavButtonClicked");
-        menuOpen = false;
-    }
-
-})
-
-
-//END TOPNAV STUFF
-
-
-
-
-
-//This section for changing to dark mode and back
-var pageColour = 0; //0 = white background
-var screenWidth = 0;
-
-$("#colourShift").click(function () {
-
-    screenWidth = $(window).width();
-
-    if (pageColour == 0) {
-        $("body").css("background-color", "#16161d"); //the black here is eisengrau
-        $("li").css("color", "#fdfdfd");
-        $("a").css("color", "#fdfdfd");
-        $("div").css("color", "#fdfdfd");
-        $("#emailCorner").css("color", "#fdfdfd");
-        $("#colourShift").html("Black");
-
-        $(".portfolioText").css("color", "white");
-
-        if (screenWidth > 709) {
-            $("a").css("background-image", "url('../assets/whiteunderline2.png'");
+            if (screenWidth > 709) {
+                $("a").css("background-image", "url('../assets/blackunderline2.png'");
+            }
+            if (screenWidth <= 709) {
+                $("a").css("background-image", "url('../assets/blackunderline.png'");
+            }
         }
-        if (screenWidth <= 709) {
-            $("a").css("background-image", "url('../assets/whiteunderline.png'");
+
+
+        pageColour = !pageColour;
+    })
+
+    function switchColor() {
+        //dark mode
+        if (pageColour == 0) {
+            $("body").css("background-color", "#16161d"); //the black here is eisengrau
+            $("li").css("color", "#fdfdfd");
+            $("p").css("color", "#fdfdfd");
+            $("hi").css("color", "#fdfdfd");
+            $("hip").css("color", "#fdfdfd");
+            $("hop").css("color", "#fdfdfd");
+            $("hup").css("color", "#fdfdfd");
+            $(".aboutWords").css("color", "#fdfdfd");
+            $(".portfolioText").css("color", "#fdfdfd");
+            $(".storyTitle").css("color", "#fdfdfd");
+            $("a").css("color", "#fdfdfd");
+            $("a").css("background-image", 'url(../assets/whiteunderline2.png)');
+            $("div").css("color", "#fdfdfd");
+            $(".buttonStuffCont").css("background-color", "#141414");
+            $(".topNavButton").css("background-color", "rgba(22, 22, 29, 0)");
+            $("#topBar").css("background-color", "rgba(22, 22, 29, 1)");
+            $(".buttonItem").addClass("darkModeButtonItem");
+
+
+            $('#nightIcon').attr('src', 'assets/Day.png');
+            $('#nightIcon').html('Light Mode');
         }
-    }
-    if (pageColour == 1) {
-        $("body").css("background-color", "rgb(251,251,251)");
-        $("li").css("color", "black");
-        $("a").css("color", "black");
-        $("div").css("color", "black");
-        $("#emailCorner").css("color", "black");
-        $("#colourShift").html("White");
-        $(".portfolioText").css("color", "black");
+        if (pageColour == 1) {
+            $("body").css("background-color", "rgb(251,251,251)");
+            $("li").css("color", "black");
+            $("p").css("color", "black");
+            $("hi").css("color", "black");
+            $("hip").css("color", "black");
+            $("hop").css("color", "black");
+            $("hup").css("color", "black");
+            $(".aboutWords").css("color", "black");
+            $(".storyTitle").css("color", "black");
+            $(".portfolioText").css("color", "black");
+            $("a").css("color", "black");
+            $("a").css("background-image", 'url(../assets/blackunderline2.png)');
+            $("div").css("color", "black");
+            $(".buttonStuffCont").css("background-color", "#f0f0f0");
+            //Jquery doesn't like hover selectors so I have to switch the class for this
+            $(".buttonItem").removeClass("darkModeButtonItem");
+            $(".buttonItem").removeClass("darkModeTopNavButtonClicked");
+            $(".topNavButton").css("background-color", "");
+            $("#topBar").css("background-color", "rgb(251, 251, 251)");
 
-        if (screenWidth > 709) {
-            $("a").css("background-image", "url('../assets/blackunderline2.png'");
+
+            $('#nightIcon').html('Dark Mode');
+            $('#nightIcon').attr('src', 'assets/Night.png');
         }
-        if (screenWidth <= 709) {
-            $("a").css("background-image", "url('../assets/blackunderline.png'");
+
+
+        pageColour = !pageColour;
+    }
+
+
+    $("#nightIcon").click(function () {
+
+        switchColor();
+
+    })
+
+
+    //end colour shift section
+
+
+    //Start paper texture section
+    var paperOn = false;
+
+    var paperHTML = `<div id="overlay"></div>`;
+
+    $("#togglePaper").click(function () {
+
+        if (!paperOn) {
+            $("body").append(paperHTML);
+            $("#togglePaper").html("Remove Paper Texture");
         }
+
+        if (paperOn) {
+            $("#overlay").remove();
+            $("#togglePaper").html("Add Paper Texture");
+        }
+
+        paperOn = !paperOn;
+
+    })
+
+
+    //End paper texture section
+    var coffeeOn = false;
+
+    var coffeeHTML = `<img id="coffee" src="assets/CoffeeStain.png"/>`;
+
+    $("#toggleCoffee").click(function () {
+
+        if (!coffeeOn) {
+            $("body").append(coffeeHTML);
+            $("#toggleCoffee").html("Remove Coffee Stain");
+        }
+
+        if (coffeeOn) {
+            $("#coffee").remove();
+            $("#toggleCoffee").html("Add Coffee Stain");
+        }
+
+        coffeeOn = !coffeeOn;
+
+    })
+
+    //Start coffee section
+
+
+    //End coffee section
+
+
+    //Refresh button
+
+    $("#closeAll").click(function () {
+
+        location.reload();
+
+    })
+
+    //End refresh button
+
+
+    //video pop outs section
+
+    //this calculates viewport width then some other stuff to know what to times the iframe by for a not-shit-looking video player
+    function getMultiplier(iframeWidth) {
+        var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+        var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+
+        var value = (w - (w * 0.25)) / iframeWidth;
+        return value;
     }
 
+    //This is the basic function that brings up the faded background and loads the video in. Seperating them like this was to keep the individual video click prompts tidier.
+    function popOut(video) {
+        
+        $("#filterHost").addClass("popFilter");
+        $("body").append(video);
 
-    pageColour = !pageColour;
-})
+        var multValue = (getMultiplier($(".popVideoPlay").width())).toFixed(1);
+        if (multValue == 1) {
+            multValue = 1.2
+        };
 
-function switchColor() {
-    //dark mode
-    if (pageColour == 0) {
-        $("body").css("background-color", "#16161d"); //the black here is eisengrau
-        $("li").css("color", "#fdfdfd");
-        $("p").css("color", "#fdfdfd");
-        $("hi").css("color", "#fdfdfd");
-        $("hip").css("color", "#fdfdfd");
-        $("hop").css("color", "#fdfdfd");
-        $("hup").css("color", "#fdfdfd");
-        $(".aboutWords").css("color", "#fdfdfd");
-        $(".portfolioText").css("color", "#fdfdfd");
-        $(".storyTitle").css("color", "#fdfdfd");
-        $("a").css("color", "#fdfdfd");
-        $("a").css("background-image", 'url(../assets/whiteunderline2.png)');
-        $("div").css("color", "#fdfdfd");
-        $(".buttonStuffCont").css("background-color", "#141414");
-        $(".topNavButton").css("background-color", "rgba(22, 22, 29, 0)");
-        $("#topBar").css("background-color", "rgba(22, 22, 29, 1)");
-        $(".buttonItem").addClass("darkModeButtonItem");
-
-
-        $('#nightIcon').attr('src', 'assets/Day.png');
-        $('#nightIcon').html('Light Mode');
-    }
-    if (pageColour == 1) {
-        $("body").css("background-color", "rgb(251,251,251)");
-        $("li").css("color", "black");
-        $("p").css("color", "black");
-        $("hi").css("color", "black");
-        $("hip").css("color", "black");
-        $("hop").css("color", "black");
-        $("hup").css("color", "black");
-        $(".aboutWords").css("color", "black");
-        $(".storyTitle").css("color", "black");
-        $(".portfolioText").css("color", "black");
-        $("a").css("color", "black");
-        $("a").css("background-image", 'url(../assets/blackunderline2.png)');
-        $("div").css("color", "black");
-        $(".buttonStuffCont").css("background-color", "#f0f0f0");
-        //Jquery doesn't like hover selectors so I have to switch the class for this
-        $(".buttonItem").removeClass("darkModeButtonItem");
-        $(".buttonItem").removeClass("darkModeTopNavButtonClicked");
-        $(".topNavButton").css("background-color", "");
-        $("#topBar").css("background-color", "rgb(251, 251, 251)");
-
-
-        $('#nightIcon').html('Dark Mode');
-        $('#nightIcon').attr('src', 'assets/Night.png');
+        $(".popVideoPlay").css("width", ($(".popVideoPlay").width() * multValue));
+        $(".popVideoPlay").css("height", ($(".popVideoPlay").height() * multValue));
     }
 
-
-    pageColour = !pageColour;
-}
-
-
-$("#nightIcon").click(function () {
-
-    switchColor();
-
-})
-
-
-//end colour shift section
-
-
-//Start paper texture section
-var paperOn = false;
-
-var paperHTML = `<div id="overlay"></div>`;
-
-$("#togglePaper").click(function() {
-    
-    if (!paperOn) {
-        $("body").append(paperHTML);
-        $("#togglePaper").html("Remove Paper Texture");
+    function settingsPopup(popupContent) {
+        $("#filterHost").addClass("popFilter");
     }
+
+    $("#printButt").click(function () {
+        window.print();
+    })
+
+    $("#newButt").click(function () {
+        window.open('index.html', '')
+    })
+
+    $("#closeButt").click(function () {
+        window.open('blank.html', '_self')
+    })
+
+
+
+
+
+
+
+    //click filter to close it
+    $("#filterHost").click(function () {
+        $("#filterHost").removeClass("popFilter");
+        $(".popVideoPlay").remove();
+    });
+
     
-    if (paperOn) {
-        $("#overlay").remove();
-        $("#togglePaper").html("Add Paper Texture");
-    }
+    $("body").on("click", "#item1", function(){
+        
+        
+        var videoObject = "<iframe class=\"popVideoPlay\" src=\"https://www.youtube-nocookie.com/embed/VEOJcZk8R5U/&vq=hd1080\"  allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>";
+
+        popOut(videoObject);
+
+        
+    })
     
-    paperOn = !paperOn;
+//    $("#item1").click(function () { //active
+//
+//        var videoObject = "<iframe class=\"popVideoPlay\" src=\"https://www.youtube-nocookie.com/embed/VEOJcZk8R5U/&vq=hd1080\"  allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>";
+//
+//        popOut(videoObject);
+//
+//    });
     
-})
+    $("body").on("click", "#item2", function(){
 
-
-//End paper texture section
-var coffeeOn = false;
-
-var coffeeHTML = `<img id="coffee" src="assets/CoffeeStain.png"/>`;
-
-$("#toggleCoffee").click(function() {
     
-    if (!coffeeOn) {
-        $("body").append(coffeeHTML);
-        $("#toggleCoffee").html("Remove Coffee Stain");
-    }
+        var videoObject = "<iframe class=\"popVideoPlay\" src=\"https://www.youtube-nocookie.com/embed/omcdhqMEMzw/&vq=hd1080\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>";
+
+        popOut(videoObject);
+
+    })
+//    
+//    
+//    $("#item2").click(function () { //I've been blind
+//
+//        var videoObject = "<iframe class=\"popVideoPlay\" src=\"https://www.youtube-nocookie.com/embed/omcdhqMEMzw/&vq=hd1080\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>";
+//
+//        popOut(videoObject);
+//
+//    });
+
     
-    if (coffeeOn) {
-        $("#coffee").remove();
-        $("#toggleCoffee").html("Add Coffee Stain");
-    }
+    $("body").on("click", "#item3", function(){
+
+        
+        var videoObject = "<iframe class=\"popVideoPlay\" src=\"https://www.youtube.com/embed/hXwozor5qz8\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; \" allowfullscreen></iframe>";
+
+        popOut(videoObject);
+
+        
+    })
+//    
+//    $("#item3").click(function () { //Jaqueline
+//
+//        var videoObject = "<iframe class=\"popVideoPlay\" src=\"https://www.youtube.com/embed/hXwozor5qz8\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; \" allowfullscreen></iframe>";
+//
+//        popOut(videoObject);
+//
+//    });
+
+
+            $("body").on("click", "#item4", function(){
+
+                
+        var videoObject = "<iframe class=\"popVideoPlay\" src=\"https://www.youtube-nocookie.com/embed/An4yDDyYJG8\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>";
+
+        popOut(videoObject);
+                
+            })
+//    
+//    $("#item4").click(function () { //DYAF
+//
+//        var videoObject = "<iframe class=\"popVideoPlay\" src=\"https://www.youtube-nocookie.com/embed/An4yDDyYJG8\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>";
+//
+//        popOut(videoObject);
+//
+//    });
     
-    coffeeOn = !coffeeOn;
+
+        $("body").on("click", "#item5", function(){
+
+            
+        var videoObject = "<iframe class=\"popVideoPlay\" src=\"https://www.youtube-nocookie.com/embed/Ejb3sITMIoM\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>";
+
+        popOut(videoObject);
+            
+        })
     
-})
-
-//Start coffee section
-
-
-//End coffee section
-
-
-//Refresh button
-
-$("#closeAll").click(function () {
-
-    location.reload();
-
-})
-
-//End refresh button
-
-
-//video pop outs section
-
-//this calculates viewport width then some other stuff to know what to times the iframe by for a not-shit-looking video player
-function getMultiplier(iframeWidth) {
-    var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-    var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-
-    var value = (w - (w * 0.25)) / iframeWidth;
-    return value;
-}
-
-//This is the basic function that brings up the faded background and loads the video in. Seperating them like this was to keep the individual video click prompts tidier.
-function popOut(video) {
-    $("#filterHost").addClass("popFilter");
-    $("body").append(video);
-
-    var multValue = (getMultiplier($(".popVideoPlay").width())).toFixed(1);
-    if (multValue == 1) {
-        multValue = 1.2
-    };
-
-    $(".popVideoPlay").css("width", ($(".popVideoPlay").width() * multValue));
-    $(".popVideoPlay").css("height", ($(".popVideoPlay").height() * multValue));
-}
-
-function settingsPopup(popupContent) {
-    $("#filterHost").addClass("popFilter");
-}
-
-$("#printButt").click(function () {
-    window.print();
-})
-
-$("#newButt").click(function () {
-    window.open('index.html', '')
-})
-
-$("#closeButt").click(function () {
-    window.open('blank.html', '_self')
-})
-
-
-
-
-
-
-
-//click filter to close it
-$("#filterHost").click(function () {
-    $("#filterHost").removeClass("popFilter");
-    $(".popVideoPlay").remove();
-})
-
-$("#item1").click(function () { //active
-
-    var videoObject = "<iframe class=\"popVideoPlay\" src=\"https://www.youtube-nocookie.com/embed/VEOJcZk8R5U/&vq=hd1080\"  allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>";
-
-    popOut(videoObject);
-
-});
-
-$("#item2").click(function () { //I've been blind
-
-    var videoObject = "<iframe class=\"popVideoPlay\" src=\"https://www.youtube-nocookie.com/embed/omcdhqMEMzw/&vq=hd1080\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>";
-
-    popOut(videoObject);
-
-});
-
-$("#item3").click(function () { //Jaqueline
-
-    var videoObject = "<iframe class=\"popVideoPlay\" src=\"https://www.youtube.com/embed/hXwozor5qz8\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; \" allowfullscreen></iframe>";
-
-    popOut(videoObject);
-
-});
-
-$("#item4").click(function () { //DYAF
-
-    var videoObject = "<iframe class=\"popVideoPlay\" src=\"https://www.youtube-nocookie.com/embed/An4yDDyYJG8\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>";
-
-    popOut(videoObject);
-
-});
-
-$("#item5").click(function () { //Seraphim
-
-    var videoObject = "<iframe class=\"popVideoPlay\" src=\"https://www.youtube-nocookie.com/embed/Ejb3sITMIoM\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>";
-
-    popOut(videoObject);
-
-});
-
-$("#item6").click(function () { //OFITC - America
-
-    var videoObject = "<iframe class=\"popVideoPlay\" allow=\"autoplay; fullscreen\" allowfullscreen=\"\" src=\"https://player.vimeo.com/video/324843376?app_id=122963&amp;wmode=opaque&amp;autoplay=1\" ></iframe>";
-
-    popOut(videoObject);
-
-});
-
-$("#item7").click(function () { //Breathe
-
-    var videoObject = "<iframe class=\"popVideoPlay\" src=\"https://player.vimeo.com/video/343941212?app_id=122963&amp;wmode=opaque\" allow=\"autoplay; fullscreen\" allowfullscreen=\"\"></iframe>";
-
-    popOut(videoObject);
-
-});
-
-
-$("#item8").click(function () { //Grapes
-
-    var videoObject = "<iframe class=\"popVideoPlay\" src=\"https://player.vimeo.com/video/399522332?title=0&byline=0&portrait=0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>";
-
-    popOut(videoObject);
-
-});
-
-$("#item9").click(function () { //H&H
-
-    var videoObject = "<iframe class=\"popVideoPlay\" src=\"https://www.youtube-nocookie.com/embed/BYwRLo4hDBo\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>";
-
-    popOut(videoObject);
-
-});
-
-$("#item10").click(function () { //Duology
-
-    var videoObject = "<iframe class=\"popVideoPlay\" src=\"https://player.vimeo.com/video/326315903?title=0&byline=0&portrait=0\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>";
-
-    popOut(videoObject);
-
-});
-
-$("#item11").click(function () { //APING
-
-    var videoObject = "<iframe class=\"popVideoPlay\" src=\"https://player.vimeo.com/video/356048623?autoplay=1&title=0&byline=0&portrait=0\" allow=\"autoplay; fullscreen\" allowfullscreen></iframe>";
-
-    popOut(videoObject);
-
-});
-
-$("#item12").click(function () { //BA
-
-    var videoObject = "<iframe class=\"popVideoPlay\" allow=\"autoplay; fullscreen\" allowfullscreen=\"\" src=\"https://player.vimeo.com/video/355293965?\"</iframe>";
-
-    popOut(videoObject);
-
-});
-
-$("#item13").click(function () { //Secret
-
-    var videoObject = "<iframe class=\"popVideoPlay\" allow=\"autoplay; fullscreen\" allowfullscreen=\"\" src=\"https://player.vimeo.com/video/365971429?title=0&byline=0&portrait=0\"</iframe>";
-
-    popOut(videoObject);
-
-});
-
-$("#item14").click(function () { //Currys?
-
-    var videoObject = "<iframe class=\"popVideoPlay\" allow=\"autoplay; fullscreen\" allowfullscreen=\"\" src=\"https://www.youtube.com/embed/S5hhZRJkEtU\"</iframe>";
-
-    popOut(videoObject);
-
-});
-
-$("#item15").click(function () { //Mop
-
-    var videoObject = "<iframe class=\"popVideoPlay\" allow=\"autoplay; fullscreen\" allowfullscreen=\"\" src=\"https://player.vimeo.com/video/382424356?title=0&byline=0&portrait=0\"</iframe>";
-
-    popOut(videoObject);
-
-});
-
-
-$("#item16").click(function () { //Sad Happy
-
-    var videoObject = "<iframe class=\"popVideoPlay\" allow=\"autoplay; fullscreen\" allowfullscreen=\"\" src=\"https://www.youtube.com/embed/5_8MAhaoyVk\"</iframe>";
-
-    popOut(videoObject);
-
-});
-
-$("#item17").click(function () { //Juicy Punishment
-
-    var videoObject = "<iframe class=\"popVideoPlay\" allow=\"autoplay; fullscreen\" allowfullscreen=\"\" src=\"https://player.vimeo.com/video/365969871?title=0&byline=0&portrait=0\"</iframe>";
-
-    popOut(videoObject);
-
-});
-
-$("#item18").click(function () { //Juicy Punishment
-
-    var videoObject = "<iframe class=\"popVideoPlay\" allow=\"autoplay; fullscreen\" allowfullscreen=\"\" src=\"https://player.vimeo.com/video/365970280?title=0&byline=0&portrait=0\"</iframe>";
-
-    popOut(videoObject);
-
-});
-
-$("#item19").click(function () { //Skywind
-
-    var videoObject = "<iframe class=\"popVideoPlay\" allow=\"autoplay; fullscreen\" allowfullscreen=\"\" src=\"https://www.youtube.com/embed/s_K7Kpt7X84\"</iframe>";
-
-    popOut(videoObject);
-
-});
-
-$("#item20").click(function () { //YAR
-
-    var videoObject = "<iframe class=\"popVideoPlay\" allow=\"autoplay; fullscreen\" allowfullscreen=\"\" src=\"https://player.vimeo.com/video/714719574?h=17fa25261e\"</iframe>";
-
-    popOut(videoObject);
-
-});
-
-
-$("#item21").click(function () { //MAKEMEFEELALIVE
-
-    var videoObject = "<iframe class=\"popVideoPlay\" allow=\"autoplay; fullscreen\" allowfullscreen=\"\" src=\"https://www.youtube.com/embed/N-tqNiIGmO8\"</iframe>";
-
-    popOut(videoObject);
-
-});
-
-
-
-//Add the sections in
-
-var gamesSection = `<div id="gamesChunk1" class="portfolioChunk outline1">
+//
+//    $("#item5").click(function () { //Seraphim
+//
+//        var videoObject = "<iframe class=\"popVideoPlay\" src=\"https://www.youtube-nocookie.com/embed/Ejb3sITMIoM\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>";
+//
+//        popOut(videoObject);
+//
+//    });
+
+    
+    $("body").on("click", "#item6", function(){
+        
+        
+        var videoObject = "<iframe class=\"popVideoPlay\" allow=\"autoplay; fullscreen\" allowfullscreen=\"\" src=\"https://player.vimeo.com/video/324843376?app_id=122963&amp;wmode=opaque&amp;autoplay=1\" ></iframe>";
+
+        popOut(videoObject);
+        
+    })
+//    
+//    $("#item6").click(function () { //OFITC - America
+//
+//        var videoObject = "<iframe class=\"popVideoPlay\" allow=\"autoplay; fullscreen\" allowfullscreen=\"\" src=\"https://player.vimeo.com/video/324843376?app_id=122963&amp;wmode=opaque&amp;autoplay=1\" ></iframe>";
+//
+//        popOut(videoObject);
+//
+//    });
+
+    
+      $("body").on("click", "#item7", function(){
+
+      
+        var videoObject = "<iframe class=\"popVideoPlay\" src=\"https://player.vimeo.com/video/343941212?app_id=122963&amp;wmode=opaque\" allow=\"autoplay; fullscreen\" allowfullscreen=\"\"></iframe>";
+
+        popOut(videoObject);
+          
+      })
+//    
+//    
+//    $("#item7").click(function () { //Breathe
+//
+//        var videoObject = "<iframe class=\"popVideoPlay\" src=\"https://player.vimeo.com/video/343941212?app_id=122963&amp;wmode=opaque\" allow=\"autoplay; fullscreen\" allowfullscreen=\"\"></iframe>";
+//
+//        popOut(videoObject);
+//
+//    });
+
+
+        $("body").on("click", "#item8", function(){
+
+            
+        var videoObject = "<iframe class=\"popVideoPlay\" src=\"https://player.vimeo.com/video/399522332?title=0&byline=0&portrait=0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>";
+
+        popOut(videoObject);
+            
+        })
+//    
+//    $("#item8").click(function () { //Grapes
+//
+//        var videoObject = "<iframe class=\"popVideoPlay\" src=\"https://player.vimeo.com/video/399522332?title=0&byline=0&portrait=0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>";
+//
+//        popOut(videoObject);
+//
+//    });
+//    
+    $("body").on("click", "#item9", function(){
+
+        
+        var videoObject = "<iframe class=\"popVideoPlay\" src=\"https://www.youtube-nocookie.com/embed/BYwRLo4hDBo\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>";
+
+        popOut(videoObject);
+
+        
+    })
+//
+//    $("#item9").click(function () { //H&H
+//
+//        var videoObject = "<iframe class=\"popVideoPlay\" src=\"https://www.youtube-nocookie.com/embed/BYwRLo4hDBo\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>";
+//
+//        popOut(videoObject);
+//
+//    });
+
+    
+        $("body").on("click", "#item10", function(){
+            
+            
+        var videoObject = "<iframe class=\"popVideoPlay\" src=\"https://player.vimeo.com/video/326315903?title=0&byline=0&portrait=0\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>";
+
+        popOut(videoObject);
+            
+        })
+//    
+//    $("#item10").click(function () { //Duology
+//
+//        var videoObject = "<iframe class=\"popVideoPlay\" src=\"https://player.vimeo.com/video/326315903?title=0&byline=0&portrait=0\" allow=\"autoplay; encrypted-media\" allowfullscreen></iframe>";
+//
+//        popOut(videoObject);
+//
+//    });
+
+    
+    $("body").on("click", "#item11", function(){
+        
+        
+        var videoObject = "<iframe class=\"popVideoPlay\" src=\"https://player.vimeo.com/video/356048623?autoplay=1&title=0&byline=0&portrait=0\" allow=\"autoplay; fullscreen\" allowfullscreen></iframe>";
+
+        popOut(videoObject);
+
+        
+    })
+//    
+//    $("#item11").click(function () { //APING
+//
+//        var videoObject = "<iframe class=\"popVideoPlay\" src=\"https://player.vimeo.com/video/356048623?autoplay=1&title=0&byline=0&portrait=0\" allow=\"autoplay; fullscreen\" allowfullscreen></iframe>";
+//
+//        popOut(videoObject);
+//
+//    });
+//
+    
+    $("body").on("click", "#item12", function(){
+
+        
+        var videoObject = "<iframe class=\"popVideoPlay\" allow=\"autoplay; fullscreen\" allowfullscreen=\"\" src=\"https://player.vimeo.com/video/355293965?\"</iframe>";
+
+        popOut(videoObject);
+
+        
+    })
+//    
+//    $("#item12").click(function () { //BA
+//
+//        var videoObject = "<iframe class=\"popVideoPlay\" allow=\"autoplay; fullscreen\" allowfullscreen=\"\" src=\"https://player.vimeo.com/video/355293965?\"</iframe>";
+//
+//        popOut(videoObject);
+//
+//    });
+    
+    $("body").on("click", "#item13", function(){
+        
+        var videoObject = "<iframe class=\"popVideoPlay\" allow=\"autoplay; fullscreen\" allowfullscreen=\"\" src=\"https://player.vimeo.com/video/365971429?title=0&byline=0&portrait=0\"</iframe>";
+
+        popOut(videoObject);
+        
+    })
+//
+//    $("#item13").click(function () { //Secret
+//
+//        var videoObject = "<iframe class=\"popVideoPlay\" allow=\"autoplay; fullscreen\" allowfullscreen=\"\" src=\"https://player.vimeo.com/video/365971429?title=0&byline=0&portrait=0\"</iframe>";
+//
+//        popOut(videoObject);
+//
+//    });
+
+    
+    $("body").on("click", "#item14", function(){
+
+    
+        var videoObject = "<iframe class=\"popVideoPlay\" allow=\"autoplay; fullscreen\" allowfullscreen=\"\" src=\"https://www.youtube.com/embed/S5hhZRJkEtU\"</iframe>";
+
+        popOut(videoObject);
+        
+    })
+//    
+//    $("#item14").click(function () { //Currys?
+//
+//        var videoObject = "<iframe class=\"popVideoPlay\" allow=\"autoplay; fullscreen\" allowfullscreen=\"\" src=\"https://www.youtube.com/embed/S5hhZRJkEtU\"</iframe>";
+//
+//        popOut(videoObject);
+//
+//    });
+//    
+//    $("body").find("div[id^='item15-']").live('click', function(){
+//        console.log("test");
+//        //$(this).next('div[id^="item15-"]').toggle()
+//    });
+
+    
+    $("body").on("click", "#item15", function(){
+        
+        var videoObject = "<iframe class=\"popVideoPlay\" allow=\"autoplay; fullscreen\" allowfullscreen=\"\" src=\"https://player.vimeo.com/video/382424356?title=0&byline=0&portrait=0\"</iframe>";
+
+        popOut(videoObject);
+        
+    })
+//    
+//    $("#item15").click(function () { //Mop
+//        
+//        console.log("test");
+//
+//        var videoObject = "<iframe class=\"popVideoPlay\" allow=\"autoplay; fullscreen\" allowfullscreen=\"\" src=\"https://player.vimeo.com/video/382424356?title=0&byline=0&portrait=0\"</iframe>";
+//
+//        popOut(videoObject);
+//
+//    });
+
+
+    $("body").on("click", "#item16", function(){
+        
+        var videoObject = "<iframe class=\"popVideoPlay\" allow=\"autoplay; fullscreen\" allowfullscreen=\"\" src=\"https://www.youtube.com/embed/5_8MAhaoyVk\"</iframe>";
+
+        popOut(videoObject);
+        
+    })
+//    
+//    $("#item16").click(function () { //Sad Happy
+//
+//        var videoObject = "<iframe class=\"popVideoPlay\" allow=\"autoplay; fullscreen\" allowfullscreen=\"\" src=\"https://www.youtube.com/embed/5_8MAhaoyVk\"</iframe>";
+//
+//        popOut(videoObject);
+//
+//    });
+
+     $("body").on("click", "#item17", function(){
+         
+         var videoObject = "<iframe class=\"popVideoPlay\" allow=\"autoplay; fullscreen\" allowfullscreen=\"\" src=\"https://player.vimeo.com/video/365969871?title=0&byline=0&portrait=0\"</iframe>";
+
+        popOut(videoObject);
+         
+     })
+//    
+//    $("#item17").click(function () { //Juicy Punishment
+//
+//        var videoObject = "<iframe class=\"popVideoPlay\" allow=\"autoplay; fullscreen\" allowfullscreen=\"\" src=\"https://player.vimeo.com/video/365969871?title=0&byline=0&portrait=0\"</iframe>";
+//
+//        popOut(videoObject);
+//
+//    });
+
+    
+    $("body").on("click", "#item18", function(){
+        
+        var videoObject = "<iframe class=\"popVideoPlay\" allow=\"autoplay; fullscreen\" allowfullscreen=\"\" src=\"https://player.vimeo.com/video/365970280?title=0&byline=0&portrait=0\"</iframe>";
+
+        popOut(videoObject);
+        
+    })
+//    
+//    $("#item18").click(function () { //Juicy Punishment
+//
+//        var videoObject = "<iframe class=\"popVideoPlay\" allow=\"autoplay; fullscreen\" allowfullscreen=\"\" src=\"https://player.vimeo.com/video/365970280?title=0&byline=0&portrait=0\"</iframe>";
+//
+//        popOut(videoObject);
+//
+//    });
+    
+    $("body").on("click", "#item19", function(){
+        
+        var videoObject = "<iframe class=\"popVideoPlay\" allow=\"autoplay; fullscreen\" allowfullscreen=\"\" src=\"https://www.youtube.com/embed/s_K7Kpt7X84\"</iframe>";
+
+        popOut(videoObject);
+        
+    })
+//
+//    $("#item19").click(function () { //Skywind
+//
+//        var videoObject = "<iframe class=\"popVideoPlay\" allow=\"autoplay; fullscreen\" allowfullscreen=\"\" src=\"https://www.youtube.com/embed/s_K7Kpt7X84\"</iframe>";
+//
+//        popOut(videoObject);
+//
+//    });
+
+        $("body").on("click", "#item20", function(){
+            
+            
+        var videoObject = "<iframe class=\"popVideoPlay\" allow=\"autoplay; fullscreen\" allowfullscreen=\"\" src=\"https://player.vimeo.com/video/714719574?h=17fa25261e\"</iframe>";
+
+        popOut(videoObject);
+            
+        })
+//    
+//    $("#item20").click(function () { //YAR
+//
+//        var videoObject = "<iframe class=\"popVideoPlay\" allow=\"autoplay; fullscreen\" allowfullscreen=\"\" src=\"https://player.vimeo.com/video/714719574?h=17fa25261e\"</iframe>";
+//
+//        popOut(videoObject);
+//
+//    });
+
+
+    $("body").on("click", "#item21", function(){
+                
+        var videoObject = "<iframe class=\"popVideoPlay\" allow=\"autoplay; fullscreen\" allowfullscreen=\"\" src=\"https://www.youtube.com/embed/N-tqNiIGmO8\"</iframe>";
+
+        popOut(videoObject);
+
+        
+    })
+//    
+//    $("#item21").click(function () { //MAKEMEFEELALIVE
+//
+//        var videoObject = "<iframe class=\"popVideoPlay\" allow=\"autoplay; fullscreen\" allowfullscreen=\"\" src=\"https://www.youtube.com/embed/N-tqNiIGmO8\"</iframe>";
+//
+//        popOut(videoObject);
+//
+//    });
+
+
+
+    //Add the sections in
+
+    var gamesSection = `<div id="gamesChunk1" class="portfolioChunk outline1">
                     <div class="chunkTitleCont outline2">
                         <div class="chunkTitle outline3">Games Writing</div>
                     </div>
@@ -617,7 +831,7 @@ var gamesSection = `<div id="gamesChunk1" class="portfolioChunk outline1">
                     </div>
                 </div>`;
 
-var narrativeSection = `<div id="narrativeChunk1" class="portfolioChunk outline1">
+    var narrativeSection = `<div id="narrativeChunk1" class="portfolioChunk outline1">
                     <div class="chunkTitleCont outline2">
                         <div class="chunkTitle outline3">Narrative Writing</div>
                     </div>
@@ -660,7 +874,7 @@ var narrativeSection = `<div id="narrativeChunk1" class="portfolioChunk outline1
                     </div>
                 </div>`;
 
-var musicSection = `<div id="musicChunk1" class="portfolioChunk outline1">
+    var musicSection = `<div id="musicChunk1" class="portfolioChunk outline1">
                     <div class="chunkTitleCont outline2">
                         <div class="chunkTitle outline3">Music Videos</div>
                     </div>
@@ -736,7 +950,7 @@ var musicSection = `<div id="musicChunk1" class="portfolioChunk outline1">
                     </div>
                 </div>`;
 
-var brandSection = `<div id="BrandChunk1" class="portfolioChunk outline1">
+    var brandSection = `<div id="BrandChunk1" class="portfolioChunk outline1">
                     <div class="chunkTitleCont outline2">
                         <div class="chunkTitle outline3">Brand Videos</div>
                     </div>
@@ -814,179 +1028,184 @@ var brandSection = `<div id="BrandChunk1" class="portfolioChunk outline1">
 
 
 
-function jump(h){
-    var url = location.href;               //Save down the URL without hash.
-    location.href = "#"+h;                 //Go to the target element.
-    history.replaceState(null,null,url);   //Don't like hashes. Changing it back.
-}
+    function jump(h) {
+        var url = location.href; //Save down the URL without hash.
+        location.href = "#" + h; //Go to the target element.
+        history.replaceState(null, null, url); //Don't like hashes. Changing it back.
+    }
 
 
-var gamesVisible = false,
-    narrativeVisible = false,
-    brandVisible = false,
-    musicVisible = false;
+    var gamesVisible = false,
+        narrativeVisible = false,
+        brandVisible = false,
+        musicVisible = false;
 
-//When you click on the thing, make the thing appear (if it isn't there already), do the colour change twice because this is a full Italian dinner's worth of spaghetti, then animate to the added section
-$("#showGames").click(function () {
+    //When you click on the thing, make the thing appear (if it isn't there already), do the colour change twice because this is a full Italian dinner's worth of spaghetti, then animate to the added section
+    $("#showGames").click(function () {
 
-    if (gamesVisible == false) {
+        if (gamesVisible == false) {
+            $("#portfolioBigCont").append(gamesSection);
+            switchColor();
+            switchColor();
+            gamesVisible = true;
+        }
+
+        window.location = ("" + window.location).replace(/#[A-Za-z0-9_]*$/, '') + "#gamesChunk1"
+
+
+    });
+
+    $("#showGames2").click(function () {
+
+        if (gamesVisible == false) {
+            $("#portfolioBigCont").append(gamesSection);
+            switchColor();
+            switchColor();
+            gamesVisible = true;
+        }
+
+        window.location = ("" + window.location).replace(/#[A-Za-z0-9_]*$/, '') + "#gamesChunk1"
+
+
+    });
+
+    //Add the music chunk
+    $("#showMusic").click(function () {
+
+        if (musicVisible == false) {
+            $("#portfolioBigCont").append(musicSection);
+            switchColor();
+            switchColor();
+            musicVisible = true;
+        }
+
+        window.location = ("" + window.location).replace(/#[A-Za-z0-9_]*$/, '') + "#musicChunk1"
+
+    });
+
+    $("#showMusic2").click(function () {
+
+        if (musicVisible == false) {
+            $("#portfolioBigCont").append(musicSection);
+            switchColor();
+            switchColor();
+            musicVisible = true;
+        }
+
+        window.location = ("" + window.location).replace(/#[A-Za-z0-9_]*$/, '') + "#musicChunk1"
+
+    });
+
+    //Add the brands chunk
+    $("#showBranded").click(function () {
+
+        if (brandVisible == false) {
+            $("#portfolioBigCont").append(brandSection);
+            switchColor();
+            switchColor();
+            brandVisible = true;
+        }
+
+        window.location = ("" + window.location).replace(/#[A-Za-z0-9_]*$/, '') + "#BrandChunk1"
+
+    });
+
+    $("#showBranded2").click(function () {
+
+        if (brandVisible == false) {
+            $("#portfolioBigCont").append(brandSection);
+            switchColor();
+            switchColor();
+            brandVisible = true;
+        }
+
+        window.location = ("" + window.location).replace(/#[A-Za-z0-9_]*$/, '') + "#BrandChunk1"
+
+    });
+
+    //Add the narrative chunk
+    $("#showNarrative").click(function () {
+
+        if (narrativeVisible == false) {
+            $("#portfolioBigCont").append(narrativeSection);
+            switchColor();
+            switchColor();
+            narrativeVisible = true;
+        }
+
+        window.location = ("" + window.location).replace(/#[A-Za-z0-9_]*$/, '') + "#narrativeChunk1"
+
+    });
+
+    $("#showNarrative2").click(function () {
+
+        if (narrativeVisible == false) {
+            $("#portfolioBigCont").append(narrativeSection);
+            switchColor();
+            switchColor();
+            narrativeVisible = true;
+        }
+
+        window.location = ("" + window.location).replace(/#[A-Za-z0-9_]*$/, '') + "#narrativeChunk1"
+
+    });
+
+    //Show just the portfolio stuff
+    $("#justPortfolio").click(function () {
+
+        //        $("#screenbox > *:not('#portfolioBigCont')").remove();
+        $('#screenbox').find('*').not('#portfolioBigCont').remove();
+
+
         $("#portfolioBigCont").append(gamesSection);
-        switchColor();
-        switchColor();
         gamesVisible = true;
-    }
 
-    window.location = (""+window.location).replace(/#[A-Za-z0-9_]*$/,'')+"#gamesChunk1"
-    
-
-});
-
-$("#showGames2").click(function () {
-
-    if (gamesVisible == false) {
-        $("#portfolioBigCont").append(gamesSection);
-        switchColor();
-        switchColor();
-        gamesVisible = true;
-    }
-
-    window.location = (""+window.location).replace(/#[A-Za-z0-9_]*$/,'')+"#gamesChunk1"
-    
-
-});
-
-//Add the music chunk
-$("#showMusic").click(function () {
-
-    if (musicVisible == false) {
-        $("#portfolioBigCont").append(musicSection);
-        switchColor();
-        switchColor();
-        musicVisible = true;
-    }
-
-    window.location = (""+window.location).replace(/#[A-Za-z0-9_]*$/,'')+"#musicChunk1"
-
-});
-
-$("#showMusic2").click(function () {
-
-    if (musicVisible == false) {
-        $("#portfolioBigCont").append(musicSection);
-        switchColor();
-        switchColor();
-        musicVisible = true;
-    }
-
-    window.location = (""+window.location).replace(/#[A-Za-z0-9_]*$/,'')+"#musicChunk1"
-
-});
-
-//Add the brands chunk
-$("#showBranded").click(function () {
-
-    if (brandVisible == false) {
-        $("#portfolioBigCont").append(brandSection);
-        switchColor();
-        switchColor();
-        brandVisible = true;
-    }
-
-    window.location = (""+window.location).replace(/#[A-Za-z0-9_]*$/,'')+"#BrandChunk1"
-
-});
-
-$("#showBranded2").click(function () {
-
-    if (brandVisible == false) {
-        $("#portfolioBigCont").append(brandSection);
-        switchColor();
-        switchColor();
-        brandVisible = true;
-    }
-
-    window.location = (""+window.location).replace(/#[A-Za-z0-9_]*$/,'')+"#BrandChunk1"
-
-});
-
-//Add the narrative chunk
-$("#showNarrative").click(function () {
-
-    if (narrativeVisible == false) {
+        
         $("#portfolioBigCont").append(narrativeSection);
-        switchColor();
-        switchColor();
         narrativeVisible = true;
-    }
+        
+        $("#portfolioBigCont").append(brandSection);
+        brandVisible = true;
 
-   window.location = (""+window.location).replace(/#[A-Za-z0-9_]*$/,'')+"#narrativeChunk1"
+
+        $("#portfolioBigCont").append(musicSection);
+        musicVisible = true;
+
+
+        switchColor();
+        switchColor();
+
+
+
+    })
+
+
+
+    //End section for adding chunks to main screen
+
+
+    //email stuff
+
+    var subjects = ['What up?', 'I\'m looking for advice about this weird rash', 'Is your surname not spelled with a c??', 'Hey bby g', 'I saw that thing you did with the thing - dope!', 'I appreciate that you went ahead and wrote some subject lines for emails for me, probably in the hopes to surprise me, but I\'m not your puppet', 'Need some Boush in my life', 'Do you have a favourite colour?', 'I found this picture. You have it', 'I want to talk to you about videogames', 'Slippin\' into your inbox like', 'I saw you the other day. We were across the street, heading in opposite directions. I thought to call out to you, to make things how they were, but you seemed busy... I know you said you\'d always have time for me, you\'d always care, and I really want to have some of that time again. How have you been?', 'You actually ginger or you just like the nicknames?', 'ARE YOU MAN ENOUGH TO READ THIS EMAIL?!?', 'Hey kid, wanna buy some words?', 'LOVE ME', 'I sat next to you once in math and you smelled like cherries. How ya been?', 'This is a list of the names I\'ve given to my toes', 'ATTENTION GRABBING HEADLINE', 'Hello, I would like one writing please', 'My name is Chris and we need to talk. (If your name really is Chris, I bet you\'re bloody freaked out right now)', 'Be less ginger'];
+
+    $("#emailAddress").click(function () {
+
+        var subject = subjects[Math.floor(Math.random() * subjects.length)]
+
+        window.location.href = "mailto:ian@ianbousher.com?subject=" + subject + "&body=";
+    })
+
+    $("#email").click(function () {
+
+        var subject = subjects[Math.floor(Math.random() * subjects.length)]
+
+        window.location.href = "mailto:ian@ianbousher.com?subject=" + subject + "&body=";
+    })
+
+    $("#websiteButt").click(function () {
+        window.open("https://www.bousherandgee.com/");
+    })
+
+
 
 });
-
-$("#showNarrative2").click(function () {
-
-    if (narrativeVisible == false) {
-        $("#portfolioBigCont").append(narrativeSection);
-        switchColor();
-        switchColor();
-        narrativeVisible = true;
-    }
-
-   window.location = (""+window.location).replace(/#[A-Za-z0-9_]*$/,'')+"#narrativeChunk1"
-
-});
-
-//Show just the portfolio stuff
-$("#justPortfolio").click(function () {
-
-//        $("#screenbox > *:not('#portfolioBigCont')").remove();
-    $('#screenbox').find('*').not('#portfolioBigCont').remove();
-
-
-    $("#portfolioBigCont").append(gamesSection);
-    gamesVisible = true;
-
-
-    $("#portfolioBigCont").append(brandSection);
-    brandVisible = true;
-
-
-    $("#portfolioBigCont").append(musicSection);
-    musicVisible = true;
-
-
-    $("#portfolioBigCont").append(narrativeSection);
-    switchColor();
-    switchColor();
-    narrativeVisible = true;
-
-
-
-})
-
-
-
-//End section for adding chunks to main screen
-
-
-//email stuff
-
-var subjects = ['What up?', 'I\'m looking for advice about this weird rash', 'Is your surname not spelled with a c??', 'Hey bby g', 'I saw that thing you did with the thing - dope!', 'I appreciate that you went ahead and wrote some subject lines for emails for me, probably in the hopes to surprise me, but I\'m not your puppet', 'Need some Boush in my life', 'Do you have a favourite colour?', 'I found this picture. You have it', 'I want to talk to you about videogames', 'Slippin\' into your inbox like', 'I saw you the other day. We were across the street, heading in opposite directions. I thought to call out to you, to make things how they were, but you seemed busy... I know you said you\'d always have time for me, you\'d always care, and I really want to have some of that time again. How have you been?', 'You actually ginger or you just like the nicknames?', 'ARE YOU MAN ENOUGH TO READ THIS EMAIL?!?', 'Hey kid, wanna buy some words?', 'LOVE ME', 'I sat next to you once in math and you smelled like cherries. How ya been?', 'This is a list of the names I\'ve given to my toes', 'ATTENTION GRABBING HEADLINE', 'Hello, I would like one writing please', 'My name is Chris and we need to talk. (If your name really is Chris, I bet you\'re bloody freaked out right now)', 'Be less ginger'];
-
-$("#emailAddress").click(function () {
-
-    var subject = subjects[Math.floor(Math.random() * subjects.length)]
-
-    window.location.href = "mailto:ian@ianbousher.com?subject=" + subject + "&body=";
-})
-
-$("#email").click(function () {
-
-    var subject = subjects[Math.floor(Math.random() * subjects.length)]
-
-    window.location.href = "mailto:ian@ianbousher.com?subject=" + subject + "&body=";
-})
-
-$("#websiteButt").click(function () {
-    window.open("https://www.bousherandgee.com/");
-})
