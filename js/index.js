@@ -750,7 +750,7 @@ $(document).ready(function () {
         $("body").on("click", "#item20", function(){
             
             
-        var videoObject = "<iframe class=\"popVideoPlay\" allow=\"autoplay; fullscreen\" allowfullscreen=\"\" src=\"https://player.vimeo.com/video/714719574?h=17fa25261e\"</iframe>";
+        var videoObject = "<iframe class=\"popVideoPlay\" allow=\"autoplay; fullscreen\" allowfullscreen=\"\" src=\"https://player.vimeo.com/video/702055416?h=d10235695a&title=0&byline=0&portrait=0\"</iframe>";
 
         popOut(videoObject);
             
@@ -758,7 +758,7 @@ $(document).ready(function () {
 //    
 //    $("#item20").click(function () { //YAR
 //
-//        var videoObject = "<iframe class=\"popVideoPlay\" allow=\"autoplay; fullscreen\" allowfullscreen=\"\" src=\"https://player.vimeo.com/video/714719574?h=17fa25261e\"</iframe>";
+//        var videoObject = "<iframe class=\"popVideoPlay\" allow=\"autoplay; fullscreen\" allowfullscreen=\"\" src=\"https://player.vimeo.com/video/702055416?h=d10235695a&title=0&byline=0&portrait=0\"</iframe>";
 //
 //        popOut(videoObject);
 //
@@ -845,7 +845,7 @@ $(document).ready(function () {
                                 <p id="">You're Absolutely Right!</p>
                             </div>
                             <div class="chunkItemStuff chunkItemText outline4">
-                                <p class="itemText">COMING SOON! A short film about a lonely hoarder driven to extreme action by a hotline that always tells her that she's right. I made a <a href="https://www.youreabsolutelyright.co.uk/" target="_blank">cool microsite</a>, and we have a conspiracy-filled <a href="https://www.instagram.com/youreabsolutelyrightshortfilm/" target="_blank">Instagram campaign</a> supporting it.</p>
+                                <p class="itemText">A short film about a lonely hoarder driven to extreme action by a hotline that always tells her that she's right. I made a <a href="https://www.youreabsolutelyright.co.uk/" target="_blank">cool microsite</a>, and we have a conspiracy-filled <a href="https://www.instagram.com/youreabsolutelyrightshortfilm/" target="_blank">Instagram campaign</a> supporting it.</p>
                             </div>
                         </div>
                         <div class="chunkItem outline2">
