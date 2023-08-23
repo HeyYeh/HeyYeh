@@ -791,6 +791,19 @@ $(document).ready(function () {
                         <div class="chunkTitle outline3">Games Writing</div>
                     </div>
                     <div class="chunkItemCont outline3">
+                    <div class="chunkItem outline2">
+                            <a href="https://store.steampowered.com/app/1844380/Warhammer_Age_of_Sigmar_Realms_of_Ruin/" target="_blank">
+                            <div class="chunkItemStuff chunkItemImage outline4"  id="">
+                                <img class="chunkImage" src="assets/RealmsOfRuin.png"/>
+                            </div>
+                                </a>
+                            <div class="chunkItemStuff chunkItemTitle outline4">
+                                <p id="">Warhammer: Realms of Ruin</p>
+                            </div>
+                            <div class="chunkItemStuff chunkItemText outline4">
+                                <p class="itemText">Conquer the savage realm of beasts in this deep fantasy RTS. I handled the majority of written in-game text, from pure flavour to pure instructional UX.</p>
+                            </div>
+                        </div>
                         <div class="chunkItem outline2">
                             <a href="https://store.steampowered.com/app/1708520/F1_Manager_2022/" target="_blank">
                             <div class="chunkItemStuff chunkItemImage outline4"  id="">
@@ -802,6 +815,19 @@ $(document).ready(function () {
                             </div>
                             <div class="chunkItemStuff chunkItemText outline4">
                                 <p class="itemText">Drive every decision and experience the thrills of managing an F1 team. I supported the project as a game writer, penning the majority of the in-game text.</p>
+                            </div>
+                        </div>
+                        <div class="chunkItem outline2">
+                            <a href="https://store.steampowered.com/app/2287220/F1_Manager_2023/" target="_blank">
+                            <div class="chunkItemStuff chunkItemImage outline4"  id="">
+                                <img class="chunkImage" src="assets/F1Manager23.png"/>
+                            </div>
+                                </a>
+                            <div class="chunkItemStuff chunkItemTitle outline4">
+                                <p id="">F1 Manager 2023</p>
+                            </div>
+                            <div class="chunkItemStuff chunkItemText outline4">
+                                <p class="itemText">The second installment in the franchise. I once again penned the majority of in-game text, including the design and writing of exciting new dilemma emails.</p>
                             </div>
                         </div>
                         <div class="chunkItem outline2">
@@ -826,6 +852,19 @@ $(document).ready(function () {
                             </div>
                             <div class="chunkItemStuff chunkItemText outline4">
                                 <p class="itemText">A game jam project written, coded, and art-ed by me. It's set in a world that still (mercifully) includes BBC's teletext, which you use to determine which plague-time food is safe to eat.</p>
+                            </div>
+                        </div>
+                        <div class="chunkItem outline2">
+                            <a href="https://heyyeh.itch.io/captcha-rpg" target="_blank">
+                            <div class="chunkItemStuff chunkItemImage outline4">
+                                <img class="chunkImage" src="assets/Captcha.png"/>
+                            </div>
+                            </a>
+                            <div class="chunkItemStuff chunkItemTitle outline4">
+                                <p id="">Captcha RPG</p>
+                            </div>
+                            <div class="chunkItemStuff chunkItemText outline4">
+                                <p class="itemText">A short and strange little narrative adventure set entirely inside one of those Captcha things you use to verify that you're not a robot. Praise Nimbet!</p>
                             </div>
                         </div>
                     </div>
