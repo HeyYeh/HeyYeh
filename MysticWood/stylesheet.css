@@ -236,20 +236,20 @@ p {
         width: 90%;
       }
       p {
-        font-size: 8pt;
-      }
-      h3 {
         font-size: 10pt;
       }
+      h3 {
+        font-size: 12pt;
+      }
       strong {
-        font-size: 8pt;
+        font-size: 10pt;
       }
       li a {
-        font-size: 8pt;
+        font-size: 10pt;
         line-height: 6px;
       }
       .menu p {
-        font-size: 8pt;
+        font-size: 10pt;
       }
       br {
         line-height: 4px;
