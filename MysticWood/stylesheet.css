@@ -64,7 +64,8 @@ h3  {
 }
 
 strong  {
-    font-family: "Merriweather Black";
+    font-family: "Merriweather";
+    font-weight: bold;
 }
 
 body  {
@@ -195,7 +196,8 @@ p {
     a:link {
       color: black;
       font-weight: bold;
-      text-decoration: underline dotted;
+      text-decoration: underline solid rgb(0, 144, 0) 2px;
+      text-underline-offset: 4px;
     }
 
     a:visited {
