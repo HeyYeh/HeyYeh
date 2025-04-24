@@ -792,9 +792,22 @@ $(document).ready(function () {
                     </div>
                     <div class="chunkItemCont outline3">
                     <div class="chunkItem outline2">
+                            <a href="https://www.planetcoaster.com/" target="_blank">
+                            <div class="chunkItemStuff chunkItemImage outline4"  id="">
+                                <img class="chunkImage" src="assets/Square/PC2.png"/>
+                            </div>
+                                </a>
+                            <div class="chunkItemStuff chunkItemTitle outline4">
+                                <p id="">Planet Coaster 2</p>
+                            </div>
+                            <div class="chunkItemStuff chunkItemText outline4">
+                                <p class="itemText">I made a splash (get it? GET IT?) by handling the majority of in game text and supporting on scriptwriting.</p>
+                            </div>
+                        </div>
+                    <div class="chunkItem outline2">
                             <a href="https://store.steampowered.com/app/1844380/Warhammer_Age_of_Sigmar_Realms_of_Ruin/" target="_blank">
                             <div class="chunkItemStuff chunkItemImage outline4"  id="">
-                                <img class="chunkImage" src="assets/RealmsOfRuin.png"/>
+                                <img class="chunkImage" src="assets/Square/RoR.png"/>
                             </div>
                                 </a>
                             <div class="chunkItemStuff chunkItemTitle outline4">
@@ -805,9 +818,22 @@ $(document).ready(function () {
                             </div>
                         </div>
                         <div class="chunkItem outline2">
-                            <a href="https://store.steampowered.com/app/1708520/F1_Manager_2022/" target="_blank">
+                            <a href="https://www.planetzoogame.com/buy/console-ultimate-edition" target="_blank">
                             <div class="chunkItemStuff chunkItemImage outline4"  id="">
-                                <img class="chunkImage" src="assets/F1Manager.png"/>
+                                <img class="chunkImage" src="assets/Square/PZCE.png"/>
+                            </div>
+                                </a>
+                            <div class="chunkItemStuff chunkItemTitle outline4">
+                                <p id="">Planet Zoo Console</p>
+                            </div>
+                            <div class="chunkItemStuff chunkItemText outline4">
+                                <p class="itemText">The console version of this incredible zoo management game. I dealt with all UI text and dialogue for the conversion. Also, I like the red pandas.</p>
+                            </div>
+                        </div>
+                        <div class="chunkItem outline2">
+                            <a href="https://www.f1manager.com/" target="_blank">
+                            <div class="chunkItemStuff chunkItemImage outline4"  id="">
+                                <img class="chunkImage" src="assets/Square/F1M22.png"/>
                             </div>
                                 </a>
                             <div class="chunkItemStuff chunkItemTitle outline4">
@@ -818,9 +844,9 @@ $(document).ready(function () {
                             </div>
                         </div>
                         <div class="chunkItem outline2">
-                            <a href="https://store.steampowered.com/app/2287220/F1_Manager_2023/" target="_blank">
+                            <a href="https://www.f1manager.com/" target="_blank">
                             <div class="chunkItemStuff chunkItemImage outline4"  id="">
-                                <img class="chunkImage" src="assets/F1Manager23.png"/>
+                                <img class="chunkImage" src="assets/Square/F1M23.png"/>
                             </div>
                                 </a>
                             <div class="chunkItemStuff chunkItemTitle outline4">
@@ -831,8 +857,21 @@ $(document).ready(function () {
                             </div>
                         </div>
                         <div class="chunkItem outline2">
+                            <a href="https://www.f1manager.com/" target="_blank">
+                            <div class="chunkItemStuff chunkItemImage outline4"  id="">
+                                <img class="chunkImage" src="assets/Square/F1M24.png"/>
+                            </div>
+                                </a>
+                            <div class="chunkItemStuff chunkItemTitle outline4">
+                                <p id="">F1 Manager 2024</p>
+                            </div>
+                            <div class="chunkItemStuff chunkItemText outline4">
+                                <p class="itemText">The third and most advanced installment in the franchise. I continued my role of handling all in game text and supporting on script writing.</p>
+                            </div>
+                        </div>
+                        <div class="chunkItem outline2">
                             <div class="chunkItemStuff chunkItemImage outline4" id="item19">
-                                <img class="chunkImage" src="assets/SkywindHead.png"/>
+                                <img class="chunkImage" src="assets/Square/Skywind.png"/>
                             </div>
                             <div class="chunkItemStuff chunkItemTitle outline4">
                                 <p id="">Skywind</p>
@@ -842,22 +881,22 @@ $(document).ready(function () {
                             </div>
                         </div>
                         <div class="chunkItem outline2">
-                            <a href="https://heyyeh.itch.io/ceefax" target="_blank">
+                            <a href="https://www.elitedangerous.com/" target="_blank">
                             <div class="chunkItemStuff chunkItemImage outline4">
-                                <img class="chunkImage" src="assets/ceefaxHead.png"/>
+                                <img class="chunkImage" src="assets/Square/Elite.png"/>
                             </div>
                             </a>
                             <div class="chunkItemStuff chunkItemTitle outline4">
-                                <p id="">BBC CEEFAX: PLAGUE</p>
+                                <p id="">Elite Dangerous</p>
                             </div>
                             <div class="chunkItemStuff chunkItemText outline4">
-                                <p class="itemText">A game jam project written, coded, and art-ed by me. It's set in a world that still (mercifully) includes BBC's teletext, which you use to determine which plague-time food is safe to eat.</p>
+                                <p class="itemText">I designed the narrative for the Elite resurgence of features in advance of the game's 10 year anniversary.</p>
                             </div>
                         </div>
                         <div class="chunkItem outline2">
                             <a href="https://heyyeh.itch.io/captcha-rpg" target="_blank">
                             <div class="chunkItemStuff chunkItemImage outline4">
-                                <img class="chunkImage" src="assets/Captcha.png"/>
+                                <img class="chunkImage" src="assets/Square/Captcha.png"/>
                             </div>
                             </a>
                             <div class="chunkItemStuff chunkItemTitle outline4">
